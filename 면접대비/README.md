@@ -5,7 +5,7 @@
 - prepare_frontend_interview
 질문 빈도 (JS > CS > React > HTML/CSS)
 
-## <a href="./cs.md">① Computer Science</a>
+## <a href="./1_CS.md">① Computer Science</a>
 - `프로세스와 스레드 🔥`
   - 프로세스
   - 스레드
