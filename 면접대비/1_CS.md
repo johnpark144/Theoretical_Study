@@ -218,26 +218,26 @@
       - 
   - 제네릭이란?
       - 클래스, 함수, 인터페이스 등을 다양한 타입으로 재 사용가능하게 해주는 문법
-```      
-function getSize(arr: number[] | string[] | boolean[]): number {  // 제네릭 X
-  return arr.length;
-}
+         ```      
+         function getSize(arr: number[] | string[] | boolean[]): number {  // 제네릭 X
+           return arr.length;
+         }
 
-const arr = [1, 2, 3];
-getSize(arr); 
+         const arr = [1, 2, 3];
+         getSize(arr); 
 
-const arr2 = ["a", "b", "c"];
-getSize(arr2);
-```  
+         const arr2 = ["a", "b", "c"];
+         getSize(arr2);
+         ```  
 
-``` 
-function getSize<T>(arr: T[]): number {   // 제네릭 O
-  return arr.length;
-}
+         ``` 
+         function getSize<T>(arr: T[]): number {   // 제네릭 O
+           return arr.length;
+         }
 
-const arr = [1, 2, 3];
-getSize<number>(arr);
+         const arr = [1, 2, 3];
+         getSize<number>(arr);
 
-const arr2 = ["a", "b", "c"];
-getSize<string>(arr2);
-```
+         const arr2 = ["a", "b", "c"];
+         getSize<string>(arr2);
+         ```
