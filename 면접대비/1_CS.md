@@ -219,7 +219,8 @@
   - 제네릭이란?
       - 클래스, 함수, 인터페이스 등을 다양한 타입으로 재 사용가능하게 해주는 문법
          ```      
-         function getSize(arr: number[] | string[] | boolean[]): number {  // 제네릭 X
+         // 제네릭 X
+         function getSize(arr: number[] | string[] | boolean[]): number {  
            return arr.length;
          }
 
@@ -231,7 +232,8 @@
          ```  
 
          ``` 
-         function getSize<T>(arr: T[]): number {   // 제네릭 O
+         // 제네릭 O
+         function getSize<T>(arr: T[]): number {   
            return arr.length;
          }
 
