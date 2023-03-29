@@ -152,7 +152,7 @@
   - padding
   - margin
 
-## <a href="./js.md">③ JavaScript</a>
+## <a href="./3_js.md">③ JavaScript</a>
 
 - `프로그래밍 🔥`
   - 프로그래밍이란?
@@ -335,7 +335,7 @@
 - `모듈 🔥`
   - 모듈이란?
 
-## <a href="./react.md">④ React</a>
+## <a href="./4_react.md">④ React</a>
 - `React 시작🔥`
 - `리액트는 라이브러리 or 프레임워크?🔥`
 - `리액트 사용 이유🔥🔥`
@@ -392,7 +392,7 @@
   - suspense란?
   - suspense로 가능한 것?
 
-## <a href="./data_structure.md">⑤ 자료구조</a>
+## <a href="./5_data_structure.md">⑤ 자료구조</a>
 
 - `자료구조란 🔥`
   - 효율적으로 데이터를 관리해야 하는 이유 (예)
