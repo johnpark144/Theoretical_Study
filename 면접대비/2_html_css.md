@@ -26,7 +26,7 @@
       <meta http-equiv="refresh" content="5;url=http://www.naver.com">
       <title>페이지 제목</title>
     </head>
-    // 시멘틱 태그도 SEO에 됨도움됨
+    // 시멘틱 태그도 SEO에 도움됨
     ```
 
 - `웹 표준 및 웹 접근성 🔥`
