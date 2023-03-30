@@ -188,4 +188,4 @@
 
 - `padding과 margin 🔥`
   - padding : 내부여백
-  - margin : 
+  - margin : 외부여백
