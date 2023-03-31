@@ -214,12 +214,49 @@
     - 일반 함수는 항상 같은 출력을 반환하지 않을 수 있으며, 외부 상태에 영향받을 수 있음
 
 - `프로토타입 🔥`
-  - 객체지향 프로그래밍 🔥
+  - 객체지향 프로그래밍(OOP, Object Oriented Programing) 🔥
+    - 절차지향적이 아닌 독립적 단위, 즉 객체의 집합으로 프로그램을 표현하려는 프로그래밍
   - 객체지향 프로그래밍의 특징 🔥
+    - 추상화 (Abstraciton) : 객체의 다양한 속성 중 프로그램에 필요한 속성만 간추려 표현한 것 (클래스가 어떻게 동작하는지 다 알 필요는 없고 사용자는 사용법만 알면됨)
+    - 캡슐화 (Encapsulation) : 데이터를 다루는 방법과 목적에 따라 결합, 변수와 함수를 하나로 묶음
+    - 상속 (Inheritance) : 포괄적으로 쓰이는 부모부분을 여러 자식들이 물려받아 동일하게 사용하게 
+    - 다형성 (Polymorphism) : 부모클레스에서 물려받은 가상 함수를 자식 클래스 내에서 오버라이딩 되어 사용되는 것
   - 자바스크립트는 객체지향 프로그래밍 언어인가요?
+    - 객체지향 프로그래밍 + 함수형 프로그래밍
+    - 자바스크립트는 클래스 기반 객체지향 (ES6), 프로토타입 기반 객체지향 (ES5 이전) 둘다 지원
   - 프로토타입이란?
-    - 
+    - 객체 간에 상속을 구현하기 위해 사용되는 객체이고, 그 객체를 참조하는 숨겨논 링크를 제공함
+    - 마치 유전자와 같음
 
+    ```
+    // 클래스 형식
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      sayHello() {
+        console.log(`Hello, my name is ${this.name}.`);
+      }
+    }
+    
+    const person1 = new Person('John', 30);
+    person1.sayHello(); // "Hello, my name is John."
+
+    // 프로토타입 형식 (함수)
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    
+      Person.prototype.sayHello = function() {
+      console.log(`Hello, my name is ${this.name}.`);
+    }
+    
+    const person1 = new Person('John', 30);
+    person1.sayHello(); // "Hello, my name is John."
+    ```
+    
 - `strict mode 🔥`
   - strict mode란?
   - strict mode로 예방할 수 있는 것
