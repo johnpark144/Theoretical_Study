@@ -36,7 +36,9 @@
   - URL (Uniform Resource Locators) 이란? 
     - 서버에 자원(resource)를 요청하기 위해 입력하는 영문 주소 href (protocol://hostname:port/pathname?search#hash) -> protocol://hostname:port부분을 origin이라고도 함
     - 숫자로 되어있는 IP주소보다 기억하기 쉬운 장점
-    - DNS(Domain Name System)를 통해 host에 해당하는 실제 IP 주소로 변환하여 서버에 요청(Request)을 보냄 
+    - DNS(Domain Name System)를 통해 host에 해당하는 실제 IP 주소로 변환하여 서버에 요청(Request)을 보냄
+  - DNS의 장점
+    - IP 주소가 바뀌어도 똑같은 도메인 주소로 사용가능
 
   - HTTP/1.1 과 HTTP/2.0의 차이
     - HTTP/1.1 : 기본적으로 커넥션 당 하나의 요청과 응답만 처리, 예를 들어 CSS 파일을 로드하는 link 태그, 이미지 파일을 로드하는 img 태그, 자바스크립트를 로드하는 script 태그 등에 의한 리소스 요청이 개별적으로 전송되고 응답 또한 개별적으로 전송되어, 응답 시간이 증가하는 단점
