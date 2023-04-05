@@ -472,17 +472,32 @@
     - defer 어트리뷰트 : HTML 파싱이 모두 끝난 뒤 스크립트가 실행된다.
 - `DOM 🔥`
   - DOM이란?
+    - HTML 문서의 계층적 구조와 정보를 표현하며 이를 제어할 수 있는 API, 즉 프로퍼티와 메서드를 제공하는 트리 자료구조이다
   - DOM의 구성?
-
+    - 문서 노드 (document) : DOM 트리의 최상위에 존재하는 루트 노드 (<!DOCTYPE>)
+    - 요소 노드 (element) : 문서의 구조를 표현 (html, head, meta, link, body, li, etc...)
+    - 어트리뷰트 노드 (attribute) : HTML 요소의 어트리뷰트를 가리키는 객체 (charset="UTF", id="apple", etc...)
+    - 텍스트 노드 (text) : 문서의 정보를 표현
+    
 - `이벤트 🔥`
   - 마우스 이벤트 타입, click 대신 쓸 수있는 이벤트
+    - click, dbclick, mousedown, mouseup, mousemove, mouseenter, mouseover(버블링 o), mouseleave, mouseout(버블링 o)
   - 그 외에 이벤트
+    - 키보드 : keydown, keyup
+    - 포커스 : focus, focusin(버블링 o), blur, foucusout(버블링 o)
+    - 값 변경 : input, change
+    - 뷰 이벤트 : resize, scroll
+    - DOM 뮤테이션 이벤트: DOMContentLoaded (DOM생성 완료)
+    - 리소스 이벤트 : load, unload, abort, error
   - 이벤트 핸들러를 등록하는 방식
+    - 이벤트 핸들러 어트리뷰트 방식 (태그안에 어트리뷰트로 이벤트 함수 지정)
+    - 이벤트 핸들러 프로퍼티 방식 (script에서 DOM에 접근한뒤, .연산자로 이벤트 지정하고, 리터럴 방식으로 이벤트 함수 지정 )
+    - addEventListener 메서드 방식 (script에서 DOM에 접근한뒤, addEventListener로 이벤트 및 이벤트함수 지정)
   - 이벤트 전파(propagation)란?
   - 이벤트 위임(delegation)이란? 🔥
   - e.preventDefault
   - e.stopPropagation
-    - 
+
 
 - `타이머 🔥`
   - 호출 스케쥴링이란?
