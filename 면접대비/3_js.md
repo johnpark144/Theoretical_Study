@@ -368,19 +368,87 @@
     - 프로토타입 메서드 : 인스턴스로 호출 (생성자 함수를 거쳐서)하기 때문에 인스턴스를 프로퍼티로 참조 가능함
     - 정적 메서드 : 클래스로 호출되어 고정된 메소드만 출력하기 때문에 인스턴스를 프로퍼티로 참조 불가능
   - 클래스의 상속
-    - extends 키워드, super 키워드
+    - extends 키워드, super 키워드를 이용하여 구현
+    ```
+    // ###### 수퍼클래스
+    class Rectangle {
+      constructor(width, height) { // 2. 인스턴스 생성과 this 바인딩
+        this.width = width;
+        this.height = height;
+      }
+      // 3. 인스턴스 초기화
+      getArea() {
+        return this.width * this.height;
+      }
+      toString() {
+        return `width = ${this.width}, height = ${this.height}`;
+      }
+    }
+
+    // ###### 서브클래스
+    class ColorRectangle extends Rectangle {   // extends 키워드를 통해 수퍼클래스를 상속받음
+      constructor(width, height, color) { 
+        super(width, height); // 1. super 호출
+        this.color = color; // 4. 서브클래스 constructor로 복귀 후 나머지 this 바인딩
+      }
+       // 5. 인스턴스 초기화
+      toString() {  // 메서드 오버라이딩
+        return super.toString() + `, color = ${this.color}`;
+      }
+    }
+
+    const colorRectangle = new ColorRectangle(2, 4, "red");  // 6. 인스턴스 반환
+    console.log(colorRectangle); // ColorRectangle {width: 2, height: 4, color: "red"}
+
+    // 상속을 통해 getArea 메서드를 호출
+    console.log(colorRectangle.getArea()); // 8
+    // 오버라이딩된 toString 메서드를 호출
+    console.log(colorRectangle.toString()); // width = 2, height = 4, color = red
+    ```
+    위 코드의 흐름
+    1. 서브클래스의 super 호출
+    2. 수퍼클래스의 인스턴스 생성과 this 바인딩
+    3. 수퍼클래스의 인스턴스 초기화
+    4. 서브클래스 constructor로의 복귀후 나머지 this 바인딩
+    5. 서브클래스의 인스턴스 초기화
+    6. 인스턴스 반환
+
+    - 오버라이딩 : 상위클래스 메서드를 하위 클래스가 재정의
+    - 오버로딩 : 함수의 이름은 동일하지만 매개변수의 타입 또는 개수가 다른 메서드를 구현하고 매개변수에 의해 메서드를 구별하여 호출하는 방식, 자바스크립트는 오버로딩을 지원하지 않지만 arguments 객체를 사용하여 구현가능
 
 - `스프레드 문법 🔥`
   - spread 문법이란?
+    - 스프레드 문법(=전개 문법) ...은 하나로 뭉쳐 있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만든다.
+    - 이전에는 concat과 splice로 구현했을 부분들을 간결하고 가독성 좋게 해결함
+    - ES6에서 도입
   - 어떤 상황에서 사용?
+    - 함수 호출문의 인수 목록
+    - 배열 및 객체 리터럴 내부
+    - 문자열을 쪼갤 때
 
 - `구조 분해 할당 🔥`
   - 구조 분해 할당이란?
+    - 배열과 같은 이터러블 또는 객체를 비구조화, 구조 파괴하여 1개 이상의 변수에 개별적으로 할당하는 것
+    - 객체 리터럴에서 필요한 값만 추출하여 변수에 할당할 때 유용
+    - ES6에서 도입됨
   - 구조 분해 할당의 종류
-    - 
+    - 배열 구조분해 할당
+    ```
+    const arr = [1, 2, 3];
+    const [one, two, three] = arr;  // 식별자 이름은 상관없이 할당 기준은 배열의 인덱스가되어 순서대로 할당
+    console.log(one, two, three); // 1 2 3
+    ```
+    - 객체 구조분해 할당
 
 - `브라우저 렌더링 과정 🔥`
-  - 브라우저의 렌더링 과정 🔥
+  - 브라우저의 렌더링 과정 🔥 (대기열, 캐싱, DNS, 라우팅, ARP, 초기연결을 거쳐 컨텐츠 다운, 브라우저 렌더링 발생 -> 비캡슐화, 캡슐화 과정을 거침)
+    - 서버에 요청 (주소창 입력 혹은 클릭을 통해 접근 <대기열, 캐싱 과정> -> URI를 DNS를 통해 IP 주소로 변환 -> 해당 IP를 가진 서버에 GET 요청)
+    - 응답으로 받은 HTML 데이터를 파싱
+    - HTML 마크업을 바탕으로 DOM 트리를 생성
+    - CSS 마크업을 바탕으로 CSSOM 트리를 생성
+    - DOM트리와 CSSOM트리를 결합하여 렌더 트리를 형성
+    - 렌더 트리에서 레이아웃을 실행 (HTML 요소의 레이아웃(위치 및 크기)를 계산)
+    - 개별 노드를 화면에 페인트 (레이아웃을 바탕으로 브라우저 화면에 픽셀을 렌더링)
   - 브라우저의 렌더링 과정에서 자바스크립트는 어떻게 동작 🔥
   - `<script></script>` 태그를 `<body></body>` 태그 밑에 둬야하는 이유
 
