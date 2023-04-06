@@ -555,14 +555,29 @@
   - Ajax로 HTTP 요청을 보내기 위한 방법
     - XMLHttpRequest, fetch
   - XMLHttpRequest와 fetch 메서드의 차이 🔥
-    - fetch는 XMLHttpRequest보다 사용법이 간단하고, 가독성에 좋고 프로미스를 위 후속 처리 메서드 (.then() .catch() . finally()) 등을 사용하여 코드를 작성할 수있다.
+    - fetch는 XMLHttpRequest보다 사용법이 간단하고, 가독성에 좋고 프로미스를 위해 후속 처리 메서드 (.then() .catch() . finally()) 등을 사용하여 코드를 작성할 수있다.
 
 - `REST API 🔥`
   - REST API란?
+    - REST는 HTTP를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처고, REST API는 REST를 기반으로 서비스 API를 구현한 것을 의미
   - REST API의 구성
+    - 자원(resource) : URI로 데이터에 접근가능
+    - 행위(verb) : HTTP 요청 메서드(GET, POST, PUT, DELETE)
+    - 표현(representations) : URL만으로도 어떤 자원이 제공되고있는지 표현되야 함 
   - REST API를 설계하는데 중요한 것
+    - URI는 리소스를 표현하는데 집중
+    - 행위에 대한 정의는 HTTP 요청 메서드를 통해 
+    - 어떤 자원이 제공되고있는지 잘 표현되도록 하고, 동사보단 명사를 사용
   - HTTP 요청 메서드에 대해
+    - GET, POST, PUT(전체수정), PATCH(일부수정), DELETE
   - HTTP 상태 코드 🔥
+    - 200 (OK) : 요청성공
+    - 201 (Created) : 요청성공 및 새로운 리소스 생
+    - 400 (Bad Request) : 잘못된 문법으로 서버요청을 이해 할 수 없음
+    - 401 (Unathorized) : 클라이언트가 인증되지 않았거나, 유효한 인증 정보가 부족
+    - 403 (Forbidden) :  접근할 권리를 가지고 있지 않음
+    - 404 (Not Found) : 리소스를 찾을 수 없음
+    - 500 (Server Error) : 서버문제
 
 - `Promise 🔥`
   - 콜백이란? 🔥
