@@ -662,7 +662,32 @@
     
 - `제너레이터와 async await 🔥`
   - 제너레이터란? 일반 함수와의 차이는?
+    - 코드 블록의 실행을 일시 중지 했다가 필요한 시점에 재개할 수 있는 특수한 함수, ES6에서 도입
+    - 함수 호출자에게 함수 실행의 제어권을 양도 할 수있다.
+    - 함수 호출자와 함수의 상태를 주고받을 수 있다.
+    - 제너레이터 객체를 반환한다
   - 제너레이터의 구조
+    - yield 키워드와 next 메서드를 통해 실행을 일시 중지했다가 필요한 시점에 다시 재개할 수 있다.
+    - next 메서드를 실행한 경우, 제너레이터 함수 내에 yield 키워드 뒤에 오는 결과를 함수 호출자에 value로 전달하여, {value , done: false} 객체형식으로 반환한다
+    - next 메서드의 인자에 어떤 값을 입력한경우, yield에 전달이 되어 input의 역할을 할 수있다.
+    ```
+    // 제너레이터 함수
+    function* genFunc() {
+      yield 1;
+      yield 2;
+      const y3 = yield 3; // next 메소드 인자 값이 전달됨
+      return y3;
+    }
+
+    // 제너레이터 함수를 호출하면 제너레이터 객체를 반환한다.
+    // 이터러블이면서 동시에 이터레이터인 제너레이터 객체는 next 메서드를 갖는다.
+    const generator = genFunc();
+    console.log(generator.next()); // {value: 1, done: false}
+    console.log(generator.next()); // {value: 2, done: false}
+    console.log(generator.next('입력')); // {value: 3, done: false}
+    console.log(generator.next()); // {value: '입력', done: true}
+    console.log(generator.next()); // {value: undefined, done: true}
+    ```
   - async/await 란? 기존의 Promise와의 차이는? 🔥
   - Promise와 async/await의 차이점 한 줄 요약 🔥
 
