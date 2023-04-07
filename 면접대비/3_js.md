@@ -714,5 +714,17 @@
     - 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각
     - 기능을 기준으로 파일 단위로 분리하고, 자신만의 파일 스코프(모듈 스코프)를 가질 수 있어야 한다.
     - 모듈은 기본적으로 비공개 상태이지만, export로 공개가 필요한 자산에 한정하여 공개가 가능하고, 공개(export)된 자산은 import로 다른 모듈 스코프 내로 불러들여 재사용할 수 있다
-    CommonJS 와 AMD(asynchronous module definition)
+    - CommonJS 와 AMD(asynchronous module definition)가 ES6이전에 많이 사용됨, CommonJS는 주로 서버 사이드 개발에서 여전히 많이 사용됩니다.
+    - CommonJS는 예시
+    ```
+    // greeting.js
+    const sayHello = (name) => {
+      console.log(`Hello, ${name}!`);
+    }
+    module.exports = { sayHello };
+
+    // index.js
+    const greet = require('./greeting');
+    greet.sayHello('Genie');     // Hello, Genie!
+    ```
 
