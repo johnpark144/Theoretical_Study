@@ -689,12 +689,28 @@
     console.log(generator.next()); // {value: undefined, done: true}
     ```
   - async/await 란? 기존의 Promise와의 차이는? 🔥
+    - 프로미스의 후속 처리 메서드 없이 마치 동기 처리처럼 프로미스가 처리 결과를 반환하도록 구현
   - Promise와 async/await의 차이점 한 줄 요약 🔥
+    - 에러 핸들링 : Promise를 활용할 시에는 .catch() 문을 통해, async/await 은 try / catch를 통해 에러를 처리
+    - 코드 가독성 : 일반 Promise는 후속처리 메서드인 .then()을 남발하게지만, async/await는 후속처리 메서드 없이 일반 동기 처리처럼 처리 결과를 반환하도록 구현해서 가독성이 좋음
 
 - `에러 🔥`
   - 에러처리하는 이유 🔥
+    - 발생한 에러에 대해 대처하지 않고 방치한다면 프로그램 강제 종료되기 때문
   - 에러를 처리하는 방법
+    - try catch finally : 일반 에러 처리
+    - throw 문 : 에러를 의도적으로 발생시킴
+    - Error 객체 : 에러를 상세히 설명하는 에러 메시지를 인수로 전달가능
+  - Error 객체
+    - Error : 일반 에러
+    - SyntaxError : 문법 에러
+    - ReferenceError : 참조 불가능 식별자 에러
+    - TypeError : 유효하지 않은 데이터 타입 에러
+    - RangeError : 숫자값의 허용 범위 에러
+    - URIError : encodeURI 또는 decodeURI 함수에 부적절한 인수를 전달 (URI에 문제가 있을 떄)
 
 - `모듈 🔥`
   - 모듈이란?
-    - 
+    - 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각
+    - 기능을 기준으로 파일 단위로 분리하고, 자신만의 파일 스코프(모듈 스코프)를 가질 수 있어야 한다.
+    - 모듈은 기본적으로 비공개 상태이지만, export로 공개가 필요한 자산에 한정하여 공개가 가능하고, 공개(export)된 자산은 import로 다른 모듈 스코프 내로 불러들여 재사용할 수 있다
