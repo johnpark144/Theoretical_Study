@@ -60,6 +60,8 @@ key props를 사용하는 이유
 - Unmounting (소멸) : componentWillUnmount(), useEffect의 뒷정리(cleanup) 함수
 
 context API와 리덕스의 차이
+- context API : 초창기 세팅이 쉬움, 어플리케이션이 커질때 관리가 점점 어려움, 상태 관리 도구는 아니고 전역 상태 공유 기능만 있음
+- 리덕스 : 초창기 세팅이 어려움, 어플리케이션이 커질때 관리가 용이함, 상태 관리 도구임
 
 리덕스 사가와 리덕스 성크의 차이
 
