@@ -7,7 +7,7 @@
 
 - 변경 사항이 있다고 항상 리플로우-리페인트가 일어나는 건 아니다. 레이아웃에 영향을 주지 않으면 리페인트만 수행하게 된다, 하지만 리플로우가 일어나면 반드시 리페인트가 수행된다.
   - 리플로우(Reflow)가 일어나는 대표적인 속성 : position, width, height, margin, padding, border, border-width, font-size, font-weight, line-height, text-align, overflow
-   - 리페인트(Repaint)만 일어나는 대표적인 속성 : background, color, text-decoration, border-style, border-radius
+  - 리페인트(Repaint)만 일어나는 대표적인 속성 : background, color, text-decoration, border-style, border-radius
 
 - 이벤트 버블링을 잘 활용하는 방법 : 이벤트 위임을 가능하게 
 
@@ -84,46 +84,55 @@
     - 테스트 및 디버깅
     - 점유율이 높은 브라우저부터 맞추는 것
 
-bundle의 사이즈를 줄이려면
+- bundle의 사이즈를 줄이려면
+  - Tree-shaking : 사용하지 않는 코드를 자동으로 제거하는 기술 (전체를 Import 하지 않고 사용하는 기능만 {} 부분적으로 Import )
+  - Code Splitting
+  - 이미지 최적화
+  - 라이브러리 최적화 : 라이브러리의 버전을 최신 버전으로 업데이트하거나, 필요한 부분만 가져와서 사용
+  - Gzip 압축
 
-웹소켓에 대해
+- 웹소켓에 대해
+  - 양방향 통신을 지원하는 네트워크 프로토콜
+  - 실시간 통신이 가능
+  - 웹소켓이 나오기전엔 단방향 통신만 지원하는 HTTP 프로토콜로 일정시간마다 request하고 response받는 Polling의 방식을 사용하였다.
+  - 게임, 채팅, 실시간 주식거래 등에 용유용
 
-cascading에 대해
+- cascading에 대해
 
-css에니메이션과 js에니메이션의 차이
+- css에니메이션과 js에니메이션의 차이
 
-package.json에서 dependencies와 devDependencies의 차이점
+- package.json에서 dependencies와 devDependencies의 차이점
 
-JSX란?
+- JSX란?
 
-ESLint에 대해
+- ESLint에 대해
 
-ES6 문법에 추가된 것들을 아는대로 설명하세요
-- String Literal, 객체 비구조화, 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
+- ES6 문법에 추가된 것들을 아는대로 설명하세요
+  - String Literal, 객체 비구조화, 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
 
-Box model에 대해
+- Box model에 대해
 
-undeclared 란? 
+- undeclared 란? 
 
-"attribute"와 "property"의 차이점
+- "attribute"와 "property"의 차이점
 
-Map()과 Set()의 설명 및 차이점
+- Map()과 Set()의 설명 및 차이점
 
-좋은 코드
+- 좋은 코드
 
-시스템 고도화를 위해 할 수 있는것
+- 시스템 고도화를 위해 할 수 있는것
 
-클로저와 가비지 컬렉션의 관계
+- 클로저와 가비지 컬렉션의 관계
 
-XMLHttpRequest와 fetch 함수의 차이
+- XMLHttpRequest와 fetch 함수의 차이
 
-WebGL에 대해서
+- WebGL에 대해서
 
-HTML5의 가장 큰 특징
+- HTML5의 가장 큰 특징
 
-브라우저마다 렌더링되는 결과(HTML 또는 CSS)가 조금씩 다른 이유
+- 브라우저마다 렌더링되는 결과(HTML 또는 CSS)가 조금씩 다른 이유
 
-mutable한 값과 immutable한 값의 저장 방식의 차이
+- mutable한 값과 immutable한 값의 저장 방식의 차이
 
 -------------------------------
 2. 개인 생각
