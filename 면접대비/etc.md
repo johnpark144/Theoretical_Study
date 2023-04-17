@@ -46,7 +46,7 @@
   - 깊은 복사(Deep Copy) : 객체를 완전히 새로운 메모리 공간에 복사하는 방법, 객체를 변경해도 다른 한쪽에서는 영향을 받지 않음
 
 - requestAnimationFrame이란
-  - requestAnimationFrame을 사용하면 효과적인 애니메이션 구현
+  - requestAnimationFrame을 사용하면 JavaScript 효과적인 애니메이션 구현
   - 콜백을 인자로 받으며, 콜백의 호출 주기는 디스플레이 주사율에 따라 결정
   - cancelAnimationFrame을 사용하면 애니메이션 중단이 가능
 
@@ -80,7 +80,7 @@
     - CSS Reset : 각 브라우저에는 margin, padding, line-height 등 각각 기본 스타일이 설정되어 있는데 그들을 초기화하여 공통화 시킴
     - 프리픽스 사용 : CSS 프리픽스를 사용하면 브라우저별로 각기 다른 CSS 속성값을 적용 (크롬,사파리:-webkit- / 파이어폭스:-moz- / 오페라:-o-)
     - 자바스크립트 라이브러리 사용
-    - 폴리필 사용
+    - 폴리필(Polyfill) 사용
     - 테스트 및 디버깅
     - 점유율이 높은 브라우저부터 맞추는 것
 
@@ -97,22 +97,41 @@
   - 웹소켓이 나오기전엔 단방향 통신만 지원하는 HTTP 프로토콜로 일정시간마다 request하고 response받는 Polling의 방식을 사용하였다.
   - 게임, 채팅, 실시간 주식거래 등에 용유용
 
-- cascading에 대해
+- cascading에 대해 : CSS에서 Cascading은 스타일 규칙들이 어떤 우선순위로 적용될지를 결정하는 방식을 말함
+  - 중요도 : 1) 태그내 style 2) style 태그 3) style 태그 안 @import 4) link태그로 연결된 css파일 5) link태그로 연결된 css파일 안 @import
+  - 명시도 :  1) !important 2) id  3) class 4) 태그
+  - 코드순서 : 늦게 선언된 스타일 우선 적용
 
-- css에니메이션과 js에니메이션의 차이
+- css에니메이션과 JS에니메이션 차이
+  - Css에니메이션 : transition/animation 속성 사용, GPU 가속기능 지원하여 속도가 빠름, 코드가 상대적으로 간결함, 반응형에 유리, 간단하게 처리하는 애니메이션인경우 사용
+  - JS에니메이션 : setInterval()/requestAnimationFrame()을 사용, CPU를 사용해서 상대적으로 느림, 코드가 상대적으로 복잡함, 크로스 브라우징 측면에서 유리, css로 처리하기에 복잡하고 무거운 애니메이션인경우 사용
 
 - package.json에서 dependencies와 devDependencies의 차이점
+  - dependencies : 애플리케이션의 실행에 필요한 필수 패키지 ex) Express.js, React, Lodash, Axios 등
+  - devDependencies : 개발 단계에서만 필요한 패키지(테스트 도구, 번들링 도구) ex) Webpack, Jest, RTL 등
 
 - JSX란?
+  - Javascript에 XML을 확장한 html과 유사한 문법
+  - Html과 다른점
+    - 모든태그는 닫는 태그를 가져야한다(self-closing tag 대신 사가능)
+    - { }로 자바스크립트 표현식 작성가능
+    - 스타일 적용시 어트리뷰트에 하이픈(-)대신 카멜 표기법으로 작성
+    - class대신 className사용 등
 
-- ESLint에 대해
+- ESLint, prettier에 대해
+  - ESLint : 코드의 문법 오류를 발견하는 것을 중점, 가독성 및 코드 퀄리티를 높인다
+  - prettier : 코드의 일관성 유지하는 것을 중점, 가독성을 높임
 
 - ES6 문법에 추가된 것들을 아는대로 설명하세요
   - String Literal, 객체 비구조화, 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
 
 - Box model에 대해
+  - 모든 HTML 엘리먼트가 가진 3개의 층의 사각형 구조의 형태 (1 Margin > 2 Border > 3 Padding > Content)
 
 - undeclared 란? 
+  - null : 변수선언 O, 빈 변수 할당 O 
+  - undefined : 변수선언 O, 변수 할당 X 
+  - undeclared : 변수선언 X, 변수 할당 X (오류)
 
 - "attribute"와 "property"의 차이점
 
