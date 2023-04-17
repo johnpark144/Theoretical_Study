@@ -1,16 +1,23 @@
 자바스크립트가 인터프리터 언어 이자 싱글스레드 언어인데 실제 사용시에는 멀티스레드 언어처럼 사용되는데 어떻게 사용되나?
-  - 브라우저와 Node.js와 같은 자바스크립트 실행 환경은 멀티 스레드를 사용
-  - 이벤트 루프는 컬백큐에 있는 것들을 컬스택이 비워질때 실행되는데 매우 미묘한 차이라 비동기적으로 실행된 것 처럼 보임
-
-비동기적으로 실행되는 것을 동기적으로 코딩 하는방법 (async/await는 동기적으로 보이게 가능)
+  - 이벤트 루프는 컬백 큐에 있는 것들을 컬 스택이 비워질때 실행되는데 매우 미묘한 차이라 비동기적으로 실행된 것 처럼 보임
 
 브라우저 렌더링 과정에서 JS 동작 과정
+  - HTML을 파싱 중 script태그를 만남 -> HTML파싱을 중단한 후 JavaScript 파일을 다운 -> JS파일 파싱 후 AST 형태로 메모리에 저장 -> Call Stack으로 관리되고 그 이후 DOM과 CSSOM을 조작할 수 있다 -> 렌더링시 레이아웃(Layout), 페인팅(Paint) 과정을 거쳐 브라우저에 결과물이 출력
+  - async/defer 어트리뷰트를 사용하면 HTML파싱과 JS파일 로드를 비동기적으로 사용 할 수있다.
 
-이벤트 버블링을 잘 활용하는 방법
+변경 사항이 있다고 항상 리플로우-리페인트가 일어나는 건 아니다. 레이아웃에 영향을 주지 않으면 리페인트만 수행하게 된다, 하지만 리플로우가 일어나면 반드시 리페인트가 수행된다.
+- 리플로우(Reflow)가 일어나는 대표적인 속성 : position, width, height, margin, padding, border, border-width, font-size, font-weight, line-height, text-align, overflow
+- 리페인트(Repaint)만 일어나는 대표적인 속성 : background, color, text-decoration, border-style, border-radius
 
-이터러블, 이터레이트 프로토콜에 대해
+이벤트 버블링을 잘 활용하는 방법 : 이벤트 위임을 가능하게 
+
+이터러블, 이터레이터 프로토콜에 대해
+- 이터러블 : ES6부터 사용, 반복 가능한 객체 (for..of 반복문을 적용가능), [Symbol.iterator]() 메소드를 가졌고, 이 메소드를 통해 이터레이터(Iterator)를 반환합니다.
+- 이터레이터 : {value : 값, done : true/false} 형태의 이터레이터 객체를 리턴하는 next() 메서드를 가진 객체이고, next() 메서드로 순환가능하며 [Symbol.iterator]() 안에 정의되있음
 
 require과 import의 차이
+- require : NodeJS에서 사용되고 있는 CommonJS 키워드, 프로그램의 어느 지점에서나 실행
+- import :  ES6(ES2015)에서 새롭게 도입된 키워드,  파일의 시작 부분에서만 실행
 
 자바스크립트 성능 최적화를 위해 할 수 있는것
 
