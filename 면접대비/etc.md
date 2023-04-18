@@ -145,6 +145,24 @@
   - undeclared : 변수선언 X, 변수 할당 X (오류)
 
 - Map()과 Set()의 설명 및 차이점
+  - Map()
+    - 이터러블한 객체
+    - 키부분이 어떤 타입이어도 상관없음 (일반객체는 문자형, 심볼형만)
+    - map.set(key,value)
+    - map.get(key)
+    - map.has(key)
+    - map.size() : length가 아닌 size로 크기 확인
+    - map.delete(key)
+    - map.clear()
+  - Set() 
+    - 배열과 비슷한 이터러블한 객체
+    - 배열처럼 value로만 이뤄져있지만, 값이 키와 동일하게 설정되어있다
+    - 값은 중복될 수 없으며, 중복될 경우 추가 입력되지 않음
+    - set.add(value) : push가 아닌 add로 추가
+    - set.has(value)
+    - set.size() : length가 아닌 size로 크기 확인
+    - set.delete(value) : splice를 사용하지 않고 delete(value) 메소드를 사용해 중간 값을 잘라낼 수 있다
+    - set.clear()
 
 - 좋은 코드
 
