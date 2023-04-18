@@ -118,6 +118,17 @@
     - 스타일 적용시 어트리뷰트에 하이픈(-)대신 카멜 표기법으로 작성
     - class대신 className사용 등
 
+- "attribute"와 "property"의 차이점
+  - attribute : 정적인 Html 안에 속성  ex) class
+  - property : 동적인 DOM tree 안에 속성 (html의 attribute를 DOM 내에서 대신해서 표현) ex) className
+  ```
+  <input value="텍스트를 입력하세요">
+  
+  //  input 박스에 "고양이" 이라는 단어를 입력한다면?
+  // Attribute value = 텍스트를 입력하세요 // (정적)
+  // Property value = 고양이 // (동적)
+  ```
+
 - ESLint, prettier에 대해
   - ESLint : 코드의 문법 오류를 발견하는 것을 중점, 가독성 및 코드 퀄리티를 높인다
   - prettier : 코드의 일관성 유지하는 것을 중점, 가독성을 높임
@@ -132,8 +143,6 @@
   - null : 변수선언 O, 빈 변수 할당 O 
   - undefined : 변수선언 O, 변수 할당 X 
   - undeclared : 변수선언 X, 변수 할당 X (오류)
-
-- "attribute"와 "property"의 차이점
 
 - Map()과 Set()의 설명 및 차이점
 
