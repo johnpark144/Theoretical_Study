@@ -70,7 +70,7 @@
   - CORS란 
       - Cross Origin Resource Sharing의 약자로, <a href="">교차 출처 공유</a>라는 의미
       - 여기서 Origin은 scheme(프로토콜), host, port 로 이루어진 도메인을 의미
-      - <a href="">SOP</a>(Same Origin Policy)인 <a href="">동일 출처 정책</a>에 의해 똑같은 URL끼리만 데이터접근 가능하게 하지만 <a href="">CORS를 허용하면 그것을 풀어주는 역할</a>을 함(화이트리스트).
+      - <a href="">SOP</a>(Same Origin Policy)인 <a href="">동일 출처 정책</a>에 의해 <a href="">똑같은 URL끼리만 데이터접근 가능</a>하게 하지만 <a href="">CORS를 허용하면 그것을 풀어주는 역할</a>을 함(화이트리스트).
       - 프론트 -> WithCredentials: true / 서버 -> Access-Control-Allow-Credentials: true , 허락할 도메인
 
   - CORS 문제 해결하기
