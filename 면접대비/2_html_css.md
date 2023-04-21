@@ -1,21 +1,24 @@
 ### **HTML**
 - `DOCTYPE 🔥`
   - DOCTYPE에 대해
-    - HTML 뒤에 오는 태그들이 HTML5의 문법에 따라 작성되었음을 브라우저에 알림 (문서형식을 정의)
+    - HTML 뒤에 오는 태그들이 <a href="">HTML5의 문법에 따라 작성</a>되었음을 <a href="">브라우저에 알림</a> (문서형식을 정의)
   - meta 태그에 대해?
-    - HTML 문서 설명, 키워드, 등 정보를 담고있어 검색 엔진이 파악 할 수 있도록 돕거나, 모바일 기기에서 웹 사이트를 보기 좋게 viewport 같은 것을 설정 할 수있는 head 안에 있는 태그
+    - HTML <a href="">문서 설명, 키워드, 저자 등</a> 정보를 담고있다
+    - 그로인해 <a href="">검색 엔진이 파악</a> 할 수 있도록 돕는다
+    - 모바일 기기에서 웹 사이트를 보기 좋게 <a href="">viewport</a> 같은 것을 설정 할 수있는 head 안에 있는 태그
   - meta 태그의 요소
     ```
     // 예시
     <meta charset="utf-8" />
     <meta name="author" content="Chris Mills" />
     ```
-    - charset : 문서에서 허용하는 문자 집합 (utf-8은 전세계적인 character 집합이므로 어떤 문자라도 취급)
-    - http-equiv :  해당 문서를 어떻게 처리해야 하는지
-    - name : 메타 요소가 어떤 정보의 형태를 갖고 있는지
-    - content : 실제 메타 데이터의 컨텐츠
+    - charset : <a href="">문서에서 허용하는 문자 집합</a> (utf-8은 전세계적인 character 집합이므로 어떤 문자라도 취급)
+    - http-equiv :  해당 <a href="">문서를 어떻게 처리</a>해야 하는지
+    - name : 메타 요소가 <a href="">어떤 정보의 형태</a>를 갖고 있는지
+    - content : 실제 메타 데이터의 <a href="">컨텐츠</a>
     
   - 검색 엔진 최적화기하기 (Search Engine Optimization 또는 SEO)
+    - <a href="">meta태그</a> 이용
     ```
     <head>
       <meta charset="UTF-8">
@@ -26,9 +29,12 @@
       <meta http-equiv="refresh" content="5;url=http://www.naver.com">
       <title>페이지 제목</title>
     </head>
-    // 시멘틱 태그도 SEO에 도움됨
     ```
-
+    - <a href="">타이틀 태그</a>
+    - <a href="">시멘틱 태그</a>
+    - <a href="">이미지 alt</a>속성 이용
+    - <a href="">HTTPS</a> 사용 권장
+    - 기타 등등
 - `웹 표준 및 웹 접근성 🔥`
   - 웹 표준이란? 
     - 어떠한 브라우저에서 보더라도 동일하게 보여지도록 W3C(World Wide Web Consortium) 기구 표준에 맞추는 것 (최신 웹표준 : HTML5, CSS3)
