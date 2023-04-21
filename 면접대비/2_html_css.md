@@ -16,6 +16,7 @@
     - content : 실제 메타 데이터의 컨텐츠
     
   - 검색 엔진 최적화기하기 (Search Engine Optimization 또는 SEO)
+    - <a href="">meta태그</a> 이용
     ```
     <head>
       <meta charset="UTF-8">
@@ -26,9 +27,12 @@
       <meta http-equiv="refresh" content="5;url=http://www.naver.com">
       <title>페이지 제목</title>
     </head>
-    // 시멘틱 태그도 SEO에 도움됨
     ```
-    
+    - <a href="">타이틀 태그</a>
+    - <a href="">시멘틱 태그</a>
+    - <a href="">이미지 alt</a>속성 이용
+    - <a href="">HTTPS</a> 사용 권장
+    - 기타 등등
 
 
 - `웹 표준 및 웹 접근성 🔥`
