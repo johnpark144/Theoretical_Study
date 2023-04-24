@@ -185,7 +185,7 @@
   - 상대단위 : %, vw, vh, em(부모 요소의 폰트 크기에 따라), rem(루트 즉 최상위 요소의 폰트 크기따라)
 
 - `CSS 적용 우선순위(CSS cascading)🔥🔥`
-  - 중요도 : 1) <a href="">태그내 style</a> 2) <a href="">style 태그</a> 3) style 태그 안 @import 4) link태그로 연결된 <a href="">css파일</a> 5) link태그로 연결된 css파일 안 @import
+  - 중요도 : 1) <a href="">태그내 style속성</a> 2) <a href="">style 태그</a> 3) style 태그 안 @import 4) link태그로 연결된 <a href="">css파일</a> 5) link태그로 연결된 css파일 안 @import
   - 명시도 :  1) <a href="">!important</a> 2) 태그내 style 3) <a href="">id</a>  4) <a href="">class</a> 5) <a href="">태그</a> 6) <a href="">전체 선택자(*)</a>
   - 코드순서 : <a href="">늦게 선언된</a> 스타일 우선 적용
 
