@@ -137,7 +137,7 @@
 
 - `float가 어떻게 작동 🔥`
   - float
-    - CSS 위치지정 속성 (float 속성을 부여한 요소의 다음 요소는 <a href="">float 속성을 부여한 요소가 차지하는 위치만 제외하고 나머지 공간을 채우게함</a>, 워드로 치면 일반글자처럼 취급)
+    - CSS 위치지정 속성 (float 속성을 부여한 요소의 다음 요소는 <a href="">float 속성을 부여한 요소가 차지하는 위치만 제외하고 나머지 공간을 채우게함</a>,
     - <a href="">페이지의 흐름의 일부가 되어</a> 주로 페이지의 <a href="">텍스트와 이미지를 묶는 레이아웃</a>을 만들 때 사용 (position: absolute는 페이지의 흐름에서 제거)
     - <a href="">left, right, none 값</a> 중 하나를 가질 수 있다 (center나 middle 값은 없고 그렇게 이용하고 싶으면 margin:0 auto 로 이용)
     - position 속성의 absolute 값과 같이 쓰일 수 없고, <a href="">겹치면 absolute가 우선순위</a>임
