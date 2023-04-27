@@ -561,43 +561,43 @@
 
 - `Ajax 🔥`
   - Ajax란?
-    - 자바스크립트를 사용하여 브라우저가 서버에게 비동기 방식으로 데이터를 요청하고, 서버가 응답한 데이터를 수신하여 웹페이지를 동적으로 갱신하는 프로그래밍 방식
+    - 자바스크립트를 사용하여 브라우저가 서버에게 <a href="">비동기 방식으로 데이터를 요청</a>하고, 서버가 응답한 <a href="">데이터를 수신하여 웹페이지를 동적으로 갱신</a>하는 프로그래밍 방식
     - 브라우저에서 제공하는 호스트 객체 Web API인 XMLHttpRequest 객체를 기반으로 동작하고, XMLHttpRequest는 HTTP 비동기 통신을 위한 메서드와 프로퍼티를 제공
   - Ajax와 기존 방식의 차이
-    - 필요한 데이터만 서버로부터 전송받기 때문에 불필요한 데이터 통신이 발생하지 않음
-    - 변경할 필요가 없는 부분은 다시 렌더링하지 않으므로 화면 깜박이는 현상이 발생하지 않음
-    - 비동기적으로 동작하기 때문에 블로킹이 발생하지 않음
+    - <a href="">필요한 데이터만</a> 서버로부터 전송받기 때문에 <a href="">불필요한 데이터 통신이 발생하지 않음</a>
+    - <a href="">변경할 필요가 없는 부분은 다시 렌더링하지 않으므로</a> 화면 깜박이는 현상이 발생하지 않음
+    - 비동기적으로 동작하기 때문에 <a href="">블로킹이 발생하지 않음</a>
   - JSON이란?
-    - 클라이언트와 서버 간의 HTTP 통신을 위한 텍스트 데이터 포맷
+    - 클라이언트와 서버 간의 <a href="">HTTP 통신을 위한 텍스트 데이터 포맷</a>
     - 대부분의 프로그래밍 언어에서 사용가능
-    - 키와 값으로 구성된 순수한 텍스트
+    - <a href="">키와 값으로 구성</a>된 순수한 텍스트
   - JSON이 제공하는 정적 프로토타입 메서드에 대해
-    - JSON.stringify() : 객체(클라이언트) -> JSON 포맷의 문자열(서버) [직렬화]
-    - JSON.parse() : JSON 포맷의 문자열(서버) -> 객체(클라이언트) [역직렬화]
+    - <a href="">JSON.stringify()</a> : 객체(클라이언트) -> JSON 포맷의 <a href="">문자열</a>(서버) [<a href="">직렬화</a>]
+    - <a href="">JSON.parse()</a> : JSON 포맷의 문자열(서버) -> <a href="">객체</a>(클라이언트) [<a href="">역직렬화</a>]
   - Ajax로 HTTP 요청을 보내기 위한 방법
     - XMLHttpRequest, fetch
   - XMLHttpRequest와 fetch 메서드의 차이 🔥
-    - fetch는 XMLHttpRequest보다 사용법이 간단하고, 가독성에 좋고 프로미스를 위해 후속 처리 메서드 (.then() .catch() . finally()) 등을 사용하여 코드를 작성할 수있다.
+    - <a href="">fetch는</a> XMLHttpRequest보다 <a href="">사용법이 간단</a>하고, <a href="">가독성에 좋고</a> 프로미스를 위해 <a href="">후속 처리 메서드 (.then() .catch() . finally())</a> 등을 사용하여 코드를 작성할 수있다.
 
 - `REST API 🔥`
   - REST API란?
-    - REST는 HTTP를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처고, REST API는 REST를 기반으로 서비스 API를 구현한 것을 의미
+    - REST는 HTTP를 기반으로 클라이언트가 <a href="">서버의 리소스에 접근하는 방식을 규정한 아키텍처</a>고, REST API는 REST를 기반으로 서비스 API를 구현한 것을 의미
   - REST API의 구성
-    - 자원(resource) : URI로 데이터에 접근가능
-    - 행위(verb) : HTTP 요청 메서드(GET, POST, PUT, DELETE)
-    - 표현(representations) : URL만으로도 어떤 자원이 제공되고있는지 표현되야 함 
+    - <a href="">자원</a>(resource) : URI로 <a href="">데이터에 접근</a>가능
+    - <a href="">행위</a>(verb) : HTTP <a href="">요청 메서드</a>(GET, POST, PUT, DELETE)
+    - <a href="">표현</a>(representations) : <a href="">URL만으로도 어떤 자원이 제공되고있는지 표현</a>되야 함 
   - REST API를 설계하는데 중요한 것
-    - URI는 리소스를 표현하는데 집중
-    - 행위에 대한 정의는 HTTP 요청 메서드를 통해 
-    - 어떤 자원이 제공되고있는지 잘 표현되도록 하고, 동사보단 명사를 사용
+    - <a href="">URI는 리소스를 표현하는데 집중</a>
+    - <a href="">행위</a>에 대한 정의는 <a href="">HTTP 요청 메서드를 통해</a> 
+    - <a href="">어떤 자원</a>이 제공되고있는지 <a href="">잘 표현</a>되도록 하고, <a href="">동사보단 명사를 사용</a>
   - HTTP 요청 메서드에 대해
     - GET, POST, PUT(전체수정), PATCH(일부수정), DELETE
   - HTTP 상태 코드 🔥
     - 200 (OK) : 요청성공
-    - 201 (Created) : 요청성공 및 새로운 리소스 생성
-    - 400 (Bad Request) : 잘못된 문법으로 서버요청을 이해 할 수 없음
-    - 401 (Unathorized) : 클라이언트가 인증되지 않았거나, 유효한 인증 정보가 부족
-    - 403 (Forbidden) :  접근할 권리를 가지고 있지 않음
+    - <a href="">201 (Created)</a> : 요청성공 및 새로운 리소스 <a href="">생성</a>
+    - <a href="">400 (Bad Request)</a> : <a href="">잘못된 문법</a>으로 서버요청을 이해 할 수 없음
+    - <a href="">401 (Unathorized)</a> : 클라이언트가 인증되지 않았거나, <a href="">유효한 인증 정보가 부족</a>
+    - <a href="">403 (Forbidden)</a> :  <a href="">접근할 권리가 없음</a>
     - 404 (Not Found) : 리소스를 찾을 수 없음
     - 500 (Server Error) : 서버문제
 
