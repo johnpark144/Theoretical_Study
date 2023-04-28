@@ -474,7 +474,7 @@
     - 자바스크립트 코드를 파싱하기 위해 자바스크립트 엔진에 제어권을 넘기고, <a href="">자바스크립트 파싱과 실행이 종료되면</a>, 렌더링 엔진으로 다시 제어권을 넘겨 <a href="">HTML 파싱이 중단된 지점부터 다시 DOM 생성</a>을 재개
     - <a href="">자바스크립트 엔진은</a> 자바스크립트 코드를 파싱하여 CPU가 이해할 수 있는 <a href="">저수준 언어(low-level language)로 변환하고 실행</a>하는 역할을 함
     - 자바스크립트 엔진은 자바스크립트를 해석하여 <a href="">AST(Abstract Syntax Tree: 추상적 구문 트리)를 생성</a>
-    - 그 후 <a href="">자바스크립트 코드로 인해 변경된 DOM과 CSSOM은</a> 다시 렌더 트리로 결합되고 재렌더링 되는 <a href="">리플로우와 리페인트</a>를 겪는다
+    - 그 후 <a href="">자바스크립트 코드로 인해 변경된 DOM과 CSSOM은 다시 렌더 트리로 재 결합</a>되고 재렌더링 되는 <a href="">리플로우와 리페인트</a>를 겪는다
   - 변경 사항이 있다고 항상 리플로우-리페인트가 일어나는 건 아니다. <a href="">레이아웃에 영향을 주지 않으면 리페인트만 수행</a>하게 된다, 하지만 <a href="">리플로우가 일어나면 반드시 리페인트가 수행</a>된다.
     - 리플로우(Reflow)가 일어나는 대표적인 속성 : position, width, height, margin, padding, border, border-width, font-size, font-weight, line-height, text-align, overflow --> <a href="">위치나 크기</a>변경
     - 리페인트(Repaint)만 일어나는 대표적인 속성 : background, color, text-decoration, border-style, border-radius --> <a href="">색이나 모양</a>변경
