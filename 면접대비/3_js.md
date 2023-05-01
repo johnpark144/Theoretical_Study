@@ -646,7 +646,7 @@
     const promise = new Promise((resolve) => resolve([1, 2, 3]));
     promise.then(console.log); // [1, 2, 3]
     ```
-    - Promise.all : 여러 개의 비동기 처리를 직렬처리 하면 더 오래걸릴 것을 한번에 병렬처리할 때 사용, 인수로 전달받은 배열의 모든 프로미스가 fulfilled 상태가 되면 종료, 하나라도 rejected되면 즉시 종료
+    - Promise.all : 여러 개의 비동기 처리를 직렬처리 하면 더 오래걸릴 것을 한번에 <a href="">병렬처리할 때</a> 사용, 인수로 전달받은 배열의 <a href="">모든 프로미스가 fulfilled 상태가 되면 종료</a>, <a href="">하나라도 rejected되면 즉시 종료</a>
     ```
     const requestData1 = () =>
       new Promise((resolve) => setTimeout(() => resolve(1), 3000));
@@ -659,7 +659,7 @@
       .then(console.log) // [ 1, 2, 3 ] ⇒ 약 3초 정도 소요  // 참고로 프로미스 리턴값과 콜백의 인자가 같으면 인자를 생략해 줘도 됨
       .catch(console.error);
     ```
-    - Promise.race : 가장 먼저 fulfilled 상태가 된 프로미스의 resolve한 처리 결과를 반환
+    - Promise.race : <a href="">가장 먼저 fulfilled 상태</a>가 된 프로미스의 <a href="">resolve한 처리 결과를 반환</a>
     ```
     Promise.race([
       new Promise((resolve) => setTimeout(() => resolve(1), 3000)), // 1
@@ -669,7 +669,7 @@
       .then(console.log) // 3  
       .catch(console.log);
     ```
-    - Promise.allSettled : 전달받은 프로미스가 모두 settled 상태(fulfilled / rejected 상태)가 되면 오류 상관없 처리 결과를 배열로 반환한다.
+    - Promise.allSettled : 전달받은 프로미스가 <a href="">모두 settled 상태</a>(fulfilled / rejected 상태)가 되면 <a href="">오류 상관없이 처리 결과를 배열로 반환</a>한다.
     ```
     Promise.allSettled([
       new Promise((resolve) => setTimeout(() => resolve(1), 2000)),
@@ -686,19 +686,19 @@
     ```
     
 - 이터러블, 이터레이터 프로토콜에 대해
-  - 이터러블 : ES6부터 사용, 반복 가능한 객체 (for..of 반복문을 적용가능), [Symbol.iterator]() 메소드를 가졌고, 이 메소드를 통해 이터레이터(Iterator)를 반환합니다.
-  - 이터레이터 : {value : 값, done : true/false} 형태의 이터레이터 객체를 리턴하는 next() 메서드를 가진 객체이고, next() 메서드로 순환가능하며 [Symbol.iterator]() 안에 정의되있음
+  - 이터러블 : ES6부터 사용, <a href="">반복 가능한 객체</a> (for..of 반복문을 적용가능), <a href="">[Symbol.iterator]() 메소드</a>를 가졌고, <a href="">이 메소드를 통해 이터레이터(Iterator)를 반환</a>합니다.
+  - 이터레이터 : <a href="">{value : 값, done : true/false} 형태</a>의 이터레이터 객체를 리턴하는 <a href="">next() 메서드를 가진 객체</a>이고, next() 메서드로 순환가능하며 <a href="">[Symbol.iterator]() 안에 정의</a>되있음
     
 - `제너레이터와 async await 🔥`
   - 제너레이터란? 일반 함수와의 차이는?
-    - 코드 블록의 실행을 일시 중지 했다가 필요한 시점에 재개할 수 있는 특수한 함수, ES6에서 도입
-    - 함수 호출자에게 함수 실행의 제어권을 양도 할 수있다.
-    - 함수 호출자와 함수의 상태를 주고받을 수 있다.
+    - 코드 블록의 <a href="">실행을 일시 중지 했다가 필요한 시점에 재개 할 수 있는 특수한 함수</a>, ES6에서 도입
+    - <a href="">함수 호출자에게 함수 실행의 제어권을 양도</a> 할 수있다.
+    - 함수 호출자와 <a href="">함수의 상태를 주고받을 수 있다.</a>
     - 제너레이터 객체를 반환한다
   - 제너레이터의 구조
-    - yield 키워드와 next 메서드를 통해 실행을 일시 중지했다가 필요한 시점에 다시 재개할 수 있다.
-    - next 메서드를 실행한 경우, 제너레이터 함수 내에 yield 키워드 뒤에 오는 결과를 함수 호출자에 value로 전달하여, {value , done: false} 객체형식으로 반환한다
-    - next 메서드의 인자에 어떤 값을 입력한경우, yield에 전달이 되어 input의 역할을 할 수있다.
+    - <a href="">yield 키워드와 next 메서드를 통해</a> 실행을 <a href="">일시 중지했다가</a> 필요한 시점에 <a href="">다시 재개</a>할 수 있다.
+    - <a href="">next 메서드를 실행한 경우</a>, 제너레이터 함수 내에 <a href="">yield 키워드 뒤에 오는 결과를 함수 호출자에 value로 전달</a>하여, <a href="">{value , done: false}</a> 객체형식으로 반환한다
+    - <a href="">next 메서드의 인자에 어떤 값을 입력한경우</a>, <a href="">yield에 전달이 되어 input의 역할</a>을 할 수있다.
     ```
     // 제너레이터 함수
     function* genFunc() {
