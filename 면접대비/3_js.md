@@ -606,10 +606,10 @@
 
 - `Promise 🔥`
   - 콜백이란? 🔥
-    - 다른 함수의 매개변수로 함수를 전달하고, 어떠한 이벤트가 발생한 후 매개변수로 전달한 함수가 다시 호출되는 것을 의미
-    - 비동기 방식의 함수라고 할 수 있음
+    - 다른 함수의 <a href="">매개변수로 함수를 전달</a>하고, 어떠한 이벤트가 발생한 후 <a href="">매개변수로 전달한 함수가 다시 호출</a>되는 것을 의미
+    - <a href="">비동기 방식의 함수</a>라고 할 수 있음
   - 프로미스란? 🔥
-    - 콜백 헬과 같은 문제들을 해결하기 위해 ES6에 고안된 비동기식 처리 패턴
+    - <a href="">콜백 헬과 같은 문제들을 해결</a>하기 위해 ES6에 고안된 <a href="">비동기식 처리 패턴</a>
   - 프로미스 생성 방법
     ```
     const promise = new Promise((resolve, reject) => {
@@ -629,9 +629,9 @@
       });
     ```
   - 프로미스의 상태 🔥
-    - pending : 비동기 처리 수행 전
-    - fulfilled : 비동기 처리 성공 (settled 상태) --> resolve 함수 호출
-    - rejected : 비동기 처리 실패 (settled 상태) --> reject 함수 호출
+    - <a href="">pending</a> : 비동기 처리 <a href="">수행 전</a>
+    - <a href="">fulfilled</a> : 비동기 처리 <a href="">성공</a> (settled 상태) --> <a href="">resolve 함수 호출</a>
+    - <a href="">rejected</a> : 비동기 처리 <a href="">실패</a> (settled 상태) --> <a href="">reject 함수 호출</a>
   - 프로미스 빌트인 객체가 제공하는 정적 메서드 🔥
     - Promise.resolve/ Promise.reject
     다음 두 예제는 동일하게 동작
