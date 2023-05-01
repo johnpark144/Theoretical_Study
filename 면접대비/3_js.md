@@ -757,7 +757,8 @@
     greet.sayHello('Genie');     // Hello, Genie!
     ```
   - require과 import의 차이 (두 키워드를 동시사용 X, import가 더많이 사용되지만 ES6를 변환하는 <a href="">Babel같은 도구가 없는경우 require을 사용</a>해야 함)
-    - require : <a href="">script태그 안에서와 NodeJS에서 여전히 사용</a>되고 있는 <a href="">CommonJS 키워드</a>, 프로그램의 <a href="">어느 지점에서나 실행가능</a>
+    - require : <a href="">s
+NodeJS에서 여전히 사용</a>되고 있는 <a href="">CommonJS 키워드</a>, 프로그램의 <a href="">어느 지점에서나 실행가능</a>
     - import : ES6(ES2015)에서 새롭게 도입된 키워드,  파일의 <a href="">시작 부분에서만 실행</a>, 필요한 모듈 부분 만 선택 가능하고 <a href="">메모리를 더 절약</a>할 수 있다
 
 - 자바스크립트 성능 최적화를 위해 할 수 있는것 -> 메 이번 변비 코돔이네
