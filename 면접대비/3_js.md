@@ -718,32 +718,32 @@
     console.log(generator.next()); // {value: undefined, done: true}
     ```
   - async/await 란? 기존의 Promise와의 차이는? 🔥
-    - 프로미스의 후속 처리 메서드 없이 마치 동기 처리처럼 프로미스가 처리 결과를 반환하도록 구현
+    - 프로미스의 <a href="">후속 처리 메서드 없이</a> 마치 <a href="">동기 처리처럼</a> 프로미스가 처리 결과를 반환하도록 구현
   - Promise와 async/await의 차이점 한 줄 요약 🔥
-    - 에러 핸들링 : Promise를 활용할 시에는 .catch() 문을 통해, async/await 은 try / catch를 통해 에러를 처리
-    - 코드 가독성 : 일반 Promise는 후속처리 메서드인 .then()을 남발하게지만, async/await는 후속처리 메서드 없이 일반 동기 처리처럼 처리 결과를 반환하도록 구현해서 가독성이 좋음
+    - 에러 핸들링 : <a href="">Promise를 활용할 시에는 .catch() 문</a>을 통해, <a href="">async/await 은 try / catch</a>를 통해 에러를 처리
+    - 코드 가독성 : 일반 <a href="">Promise는 후속처리 메서드인 .then()</a>을 남발하게지만, <a href="">async/await는 후속처리 메서드 없이</a> 일반 동기 처리처럼 처리 결과를 반환하도록 구현해서 <a href="">가독성이 좋음</a>
 
 - `에러 🔥`
   - 에러처리하는 이유 🔥
-    - 발생한 에러에 대해 대처하지 않고 방치한다면 프로그램 강제 종료되기 때문
+    - 발생한 <a href="">에러에 대해 대처하지 않고 방치한다면 프로그램이 강제 종료</a>되기 때문
   - 에러를 처리하는 방법
-    - try catch finally : 일반 에러 처리
-    - throw 문 : 에러를 의도적으로 발생시킴
-    - Error 객체 : 에러를 상세히 설명하는 에러 메시지를 인수로 전달가능
+    - <a href="">try catch finally</a> : 일반 <a href="">에러 처리</a>
+    - <a href="">throw 문</a> : 에러를 <a href="">의도적으로 발생시킴</a>
+    - <a href="">Error 객체</a> : 에러를 상세히 설명하는 <a href="">에러 메시지를 인수로 전달가능</a>
   - Error 객체
     - Error : 일반 에러
-    - SyntaxError : 문법 에러
-    - ReferenceError : 참조 불가능 식별자 에러
-    - TypeError : 유효하지 않은 데이터 타입 에러
-    - RangeError : 숫자값의 허용 범위 에러
+    - <a href="">SyntaxError</a> : <a href="">문법</a> 에러
+    - <a href="">ReferenceError</a> : 참조 불가능 <a href="">식별자</a> 에러
+    - <a href="">TypeError</a> : 유효하지 않은 <a href="">데이터 타입</a> 에러
+    - <a href="">RangeError</a> : <a href="">숫자값의 허용 범위</a> 에러
     - URIError : encodeURI 또는 decodeURI 함수에 부적절한 인수를 전달 (URI에 문제가 있을 떄)
 
 - `모듈 🔥`
   - 모듈이란?
-    - 애플리케이션을 구성하는 개별적 요소로서 재사용 가능한 코드 조각
-    - 기능을 기준으로 파일 단위로 분리하고, 자신만의 파일 스코프(모듈 스코프)를 가질 수 있어야 한다.
-    - 모듈은 기본적으로 비공개 상태이지만, export로 공개가 필요한 자산에 한정하여 공개가 가능하고, 공개(export)된 자산은 import로 다른 모듈 스코프 내로 불러들여 재사용할 수 있다
-    - CommonJS 와 AMD(asynchronous module definition)가 ES6이전에 많이 사용됨, CommonJS는 주로 서버 사이드 개발에서 여전히 많이 사용됩니다.
+    - 애플리케이션을 구성하는 개별적 요소로서 <a href="">재사용 가능한 코드 조각</a>
+    - <a href="">기능을 기준으로 파일 단위로 분리</a>하고, <a href="">자신만의 파일 스코프(모듈 스코프)를 가질 수 있어야</a> 한다.
+    - 모듈은 기본적으로 <a href="">비공개 상태</a>이지만, <a href="">export로 공개가 필요한 자산에 한정하여 공개가 가능</a>하고, 공개(export)된 자산은 <a href="">import로 다른 모듈 스코프 내로 불러들여 재사용</a>할 수 있다
+    - CommonJS 와 AMD(asynchronous module definition)가 ES6이전에 많이 사용됨, <a href="">CommonJS는 주로 서버 사이드 개발에서 여전히 많이 사용</a>됩니다.
     - CommonJS는 예시
     ```
     // greeting.js
@@ -756,80 +756,81 @@
     const greet = require('./greeting');
     greet.sayHello('Genie');     // Hello, Genie!
     ```
-  - require과 import의 차이 (두 키워드를 동시사용 X, import가 더많이 사용되지만 ES6를 변환하는 Babel같은 도구가 없는경우 require을 사용해야 함)
-    - require : script태그 안에서와 NodeJS에서 여전히 사용되고 있는 CommonJS 키워드, 프로그램의 어느 지점에서나 실행가능
-    - import :  ES6(ES2015)에서 새롭게 도입된 키워드,  파일의 시작 부분에서만 실행, 필요한 모듈 부분 만 선택 가능하고 메모리를 더 절약할 수 있다
+  - require과 import의 차이 (두 키워드를 동시사용 X, import가 더많이 사용되지만 ES6를 변환하는 <a href="">Babel같은 도구가 없는경우 require을 사용</a>해야 함)
+    - require : <a href="">script태그 안에서와 NodeJS에서 여전히 사용</a>되고 있는 <a href="">CommonJS 키워드</a>, 프로그램의 <a href="">어느 지점에서나 실행가능</a>
+    - import : ES6(ES2015)에서 새롭게 도입된 키워드,  파일의 <a href="">시작 부분에서만 실행</a>, 필요한 모듈 부분 만 선택 가능하고 <a href="">메모리를 더 절약</a>할 수 있다
 
-- 자바스크립트 성능 최적화를 위해 할 수 있는것
-  - 변수 사용 최적화
-    - 전역변수 및 불필요한 변수 생성 자제
-  - DOM 조작 최소화
-    - DOM 작업은 모아서 하는 게 좋음
+- 자바스크립트 성능 최적화를 위해 할 수 있는것 -> 메 이번 변비 코돔이네
+  - 메모리 누수 방지
+    - DOM 참조와 <a href="">클로저 사용을 자세히 관리</a>
+    - 리액트에선 컴포넌트가 <a href="">언마운트시 자원해체</a>
   - 이미지 최적화
     - 이미지 크기를 조정
     - 이미지 포맷을 JPEG, GIF, PNG 등으로 바꿈
     - 이미지 스프라이트 기법을 사용
-  - 코드 번들링과 압축
-  - 이벤트 핸들러 관리
-    - 이벤트 위임을 사용
-    - 이벤트 처리를 최소화
-  - 메모리 누수 방지
-    - DOM 참조와 클로저 사용를 자세히 관리
-    - 리액트에선 컴포넌트가 언마운트시 자원해체
+    - 벡터이미지 사용
+  - 번들링과 압축
+  - 변수 사용 최적화
+    - <a href="">전역변수 및 불필요한 변수 생성 자제</a>
   - 비동기 프로그래밍
-    - 콜백 함수나 프로미스, async/await 같은 비동기 패턴을 사용하여 페이지 반응성을 높임
+    - 콜백 함수나 프로미스, async/await 같은 <a href="">비동기 패턴을 사용하여 페이지 반응성을 높임</a>
+  - 코드 실행 시간을 줄이기
+    - for문 대신 forEach, map, filter 같은 <a href="">고차함수 사용</a>
+    - <a href="">Memoization</a> 같은 최적화 기술을 사용
+  - DOM 조작 최소화
+    - <a href="">DOM 작업은 모아서</a> 하는 게 좋음
+  - 이벤트 핸들러 관리
+    - <a href="">이벤트 위임</a>을 사용
+    - <a href="">이벤트 처리를 최소화</a>
   - 네트워크 요청 최소화
-    - Ajax 요청 통합
-    - CDN(Content Delivery Network)을 사용
-  - 코드 실행 시간을 줄일 수 있는 방법
-    - for문 대신 forEach, map, filter 같은 고차함수 사용
-    - Memoization 같은 최적화 기술을 사용
+    - <a href="">Ajax 요청 통합</a>
+    - <a href="">CDN</a>(Content Delivery Network)을 사용  
 
 - 클로저와 가비지 컬렉션의 관계
-  - 가비지 컬렉션 : 더이상 참조되지 않는 객체를 인지하고, 불필요한 메모리를 자동으로 해제시킴
-  - 클로저는 기능을 다한뒤에도 여전히 참조하는 것으로 인식하여 메모리 누수 문제가 발생함.
-  - 클로저를 담고있는 객체를 다른 값으로 초기화 시키면, 더 이상 root에서 참조되지 않는 클로저를 가비지 컬렉터가 메모리 해제
+  - 가비지 컬렉션 : 더이상 <a href="">참조되지 않는 객체를 인지</a>하고, <a href="">불필요한 메모리를 자동으로 해제</a>시킴
+  - <a href="">클로저는 기능을 다한뒤에도 여전히 참조</a>하는 것으로 인식하여 <a href="">메모리 누수 문제가 발생함</a>.
+  - 클로저를 담고있는 객체를 <a href="">null과 같은 다른 값으로 초기화</a> 시키면, 더 이상 root에서 참조되지 않는 클로저를 <a href="">가비지 컬렉터가 메모리 해제</a>
 
 - css애니메이션과 JS애니메이션 차이
   - Css애니메이션
-    - transition/animation 속성 사용
-    - GPU 가속기능 지원하여 속도가 빠름
-    - 코드가 상대적으로 간결함
-    - 반응형에 유리
-    - 간단하게 처리하는 애니메이션인경우 사용
+    - <a href="">transition/animation</a> 속성 사용
+    - <a href="">GPU 가속기능 지원</a>하여 <a href="">속도가 빠름</a>
+    - 코드가 상대적으로 <a href="">간결함</a>
+    - <a href="">반응형에 유리</a>
+    - <a href="">간단하게 처리하는 애니메이션</a>인경우 사용
   - JS애니메이션
-    - setInterval()/requestAnimationFrame()을 사용
-    - CPU를 사용해서 상대적으로 느림
-    - 코드가 상대적으로 복잡함
-    - 크로스 브라우징 측면에서 유리
-    - css로 처리하기에 복잡하고 무거운 애니메이션인경우 사용
+    - <a href="">setInterval()/requestAnimationFrame()</a>을 사용
+    - <a href="">CPU를 사용</a>해서 <a href="">상대적으로 느림</a>
+    - 코드가 상대적으로 <a href="">복잡함</a>
+    - <a href="">크로스 브라우징 측면에서 유리</a>
+    - css로 처리하기에 복잡하고 <a href="">무거운 애니메이션</a>인경우 사용
 
 - requestAnimationFrame이란
-  - requestAnimationFrame을 사용하면 JavaScript 효과적인 애니메이션 구현
-  - 콜백을 인자로 받으며, 콜백의 호출 주기는 디스플레이 주사율에 따라 결정
-  - cancelAnimationFrame을 사용하면 애니메이션 중단이 가능
+  - requestAnimationFrame을 사용하면 <a href="">JavaScript 애니메이션</a> 구현
+  - <a href="">콜백을 인자로</a> 받으며, <a href="">콜백의 호출 주기는 디스플레이 주사율에 따라</a> 결정
+  - <a href="">cancelAnimationFrame</a>을 사용하면 <a href="">애니메이션 중단</a>이 가능
 
 - ES6 문법에 추가된 것들을 아는대로 설명하세요
-  - String Literal, 객체 비구조화, 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
+  - String Literal, 객체 비구조화(구조분해할당), 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
 
 - Map()과 Set()의 설명 및 차이점
   - Map()
-    - 이터러블한 객체
-    - 키부분이 어떤 타입이어도 상관없음 (일반객체는 문자형, 심볼형만)
-    - map.set(key,value)
-    - map.get(key)
-    - map.has(key)
-    - map.size() : length가 아닌 size로 크기 확인
-    - map.delete(key)
-    - map.clear()
-  - Set() 
-    - 배열과 비슷한 이터러블한 객체
-    - 배열처럼 value로만 이뤄져있지만, 값이 키와 동일하게 설정되어있다
-    - 값은 중복될 수 없으며, 중복될 경우 추가 입력되지 않음
-    - set.add(value) : push가 아닌 add로 추가
-    - set.has(value)
-    - set.size() : length가 아닌 size로 크기 확인
-    - set.delete(value) : splice를 사용하지 않고 delete(value) 메소드를 사용해 중간 값을 잘라낼 수 있다
+    - 이터러블한 <a href="">객체</a>
+    - <a href="">키부분이 어떤 타입이어도 상관없음</a> (<a href="">일반객체는 문자형, 심볼형만</a>)
+    - map.<a href="">set(key,value)</a> : <a href="">키와 값 추가</a>
+    - map.get(key) : <a href="">키에 맞는 값 확인</a>
+    - map.has(key) : <a href="">키가 존재하는지</a>
+    - map.<a href="">size()</a> : <a href="">length가 아닌 size로 크기 확인</a>
+    - map.delete(key) : 키에 맞는값 <a href="">삭제</a>
+    - map.clear() : 객체 <a href="">비우기</a>
+  - Set()
+    - <a href="">배열</a>과 비슷한 이터러블한 객체
+    - 배열처럼 value로만 이뤄져있지만, <a href="">값이 키와 동일하게 설정</a>되어있다
+    - <a href="">값은 중복될 수 없으며</a>, <a href="">중복될 경우 추가 입력되지 않음</a>
+    - set.<a href="">add(value)</a> : <a href="">push가 아닌 add로 추가</a>
+    - set.has(value) : <a href="">값이 존재하는지</a>
+    - set.<a href="">size()</a> : <a href="">length가 아닌 size로 크기 확인</a>
+    - set.delete(value) : splice를 사용하지 않고 <a href="">delete(value) 메소드를 사용해 중간 값을 잘라낼 수 있다</a>
     - set.clear()
 
-- WebGL이란 : Web Grapthics Library의 약자로 웹상에서 2D 및 3D 그래픽을 렌더링하기 위한 로우 레벨 JavaScript API
+- WebGL이란 : <a href="">Web Grapthics Library</a>의 약자로 웹상에서 <a href="">2D 및 3D 그래픽을 렌더링</a>하기 위한 로우 레벨 <a href="">JavaScript API</a>
