@@ -646,7 +646,7 @@
     const promise = new Promise((resolve) => resolve([1, 2, 3]));
     promise.then(console.log); // [1, 2, 3]
     ```
-    - Promise.all : 여러 개의 비동기 처리를 직렬처리 하면 더 오래걸릴 것을 한번에 <a href="">병렬처리할 때</a> 사용, 인수로 전달받은 배열의 <a href="">모든 프로미스가 fulfilled 상태가 되면 종료</a>, <a href="">하나라도 rejected되면 즉시 종료</a>
+    - Promise.all : 여러 개의 <a href="">비동기 처리를</a> 직렬처리 하면 더 오래걸릴 것을 한번에 <a href="">병렬처리할 때</a> 사용, 인수로 전달받은 배열의 <a href="">모든 프로미스가 fulfilled 상태가 되면 종료</a>, <a href="">하나라도 rejected되면 즉시 종료</a>
     ```
     const requestData1 = () =>
       new Promise((resolve) => setTimeout(() => resolve(1), 3000));
