@@ -45,7 +45,7 @@
   - 클래스
     - <a href="">객체지향 프로그래밍 구조</a>이며 초기화 하기위해 생성자(constructor) 함수를 필요로 함
     - 함수 컴포넌트에 비해서 <a href="">코드가 길어지고</a>, <a href="">사이즈가 커질 수 있어서</a>, <a href="">느려질 수 있음</a>
-    - state 기능 및 <a href="">라이프 사이클 기능</a>(componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillUnmount 등)을 사용할 수 있으며 임의 메서드를 정의할 수 있음
+    - <a href="">state 기능</a> 및 <a href="">라이프 사이클 기능</a>(componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillUnmount 등)을 사용할 수 있으며 임의 메서드를 정의할 수 있음
     - <a href="">render 함수로 JSX를 반환 해야함</a>
   - 함수
     - <a href="">Hooks를 사용</a>하여 생성자 함수를 통해 state를 초기화 안해도 사용가능
