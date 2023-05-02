@@ -646,7 +646,7 @@
     const promise = new Promise((resolve) => resolve([1, 2, 3]));
     promise.then(console.log); // [1, 2, 3]
     ```
-    - Promise.all : 여러 개의 <a href="">비동기 처리를</a> 직렬처리 하면 더 오래걸릴 것을 한번에 <a href="">병렬처리할 때</a> 사용, 인수로 전달받은 배열의 <a href="">모든 프로미스가 fulfilled 상태가 되면 종료</a>, <a href="">하나라도 rejected되면 즉시 종료</a>
+    - Promise.all : 여러 개의 비동기 처리를 직렬처리 하면 더 오래걸릴 것을 한번에 <a href="">병렬처리할 때</a> 사용, 인수로 전달받은 배열의 <a href="">모든 프로미스가 fulfilled 상태가 되면 종료</a>, <a href="">하나라도 rejected되면 즉시 종료</a>
     ```
     const requestData1 = () =>
       new Promise((resolve) => setTimeout(() => resolve(1), 3000));
@@ -757,12 +757,12 @@
     greet.sayHello('Genie');     // Hello, Genie!
     ```
   - require과 import의 차이 (두 키워드를 동시사용 X, import가 더많이 사용되지만 ES6를 변환하는 <a href="">Babel같은 도구가 없는경우 require을 사용</a>해야 함)
-    - require : <a href="">NodeJS에서 여전히 사용</a>되고 있는 <a href="">CommonJS 키워드</a>, 프로그램의 <a href="">어느 지점에서나 실행가능</a>
+    - require : <a href="">script태그 안에서와 NodeJS에서 여전히 사용</a>되고 있는 <a href="">CommonJS 키워드</a>, 프로그램의 <a href="">어느 지점에서나 실행가능</a>
     - import : ES6(ES2015)에서 새롭게 도입된 키워드,  파일의 <a href="">시작 부분에서만 실행</a>, 필요한 모듈 부분 만 선택 가능하고 <a href="">메모리를 더 절약</a>할 수 있다
 
 - 자바스크립트 성능 최적화를 위해 할 수 있는것 -> 메 이번 변비 코돔이네
   - 메모리 누수 방지
-    - DOM 참조와 <a href="">클로저 사용한 곳 자세히 관리</a>
+    - DOM 참조와 <a href="">클로저 사용을 자세히 관리</a>
     - 리액트에선 컴포넌트가 <a href="">언마운트시 자원해체</a>
   - 이미지 최적화
     - 이미지 크기를 조정
@@ -810,7 +810,7 @@
   - <a href="">콜백을 인자로</a> 받으며, <a href="">콜백의 호출 주기는 디스플레이 주사율에 따라</a> 결정
   - <a href="">cancelAnimationFrame</a>을 사용하면 <a href="">애니메이션 중단</a>이 가능
 
-- ES6 문법에 추가된 것들을 아는대로 설명하세요
+- ES6 문법에 추가된 것들
   - String Literal, 객체 비구조화(구조분해할당), 객체 리터럴, for .. of, Spread Operator, Rest Parameter, Arrow Function, Default Params, let & const, import & export, Map & Set 
 
 - Map()과 Set()의 설명 및 차이점
