@@ -161,7 +161,7 @@
   - <a href="">객체타입은</a> 주소값이 항상 변경되기 때문에 <a href="">useMemo나 useCallback을 같이 사용</a>하여 속성을 전달해줘야 한다.
 
 - 리액트에서 setState는 비동기 동작인가요 동기 동작인가요?
-  - setState는 비동기 적으로 동작
+  - <a href="">setState는 비동기 적</a>으로 동작
   - 해당 함수 내에서 <a href="">동기적으로 실행되는 함수가 모두 실행된 뒤에</a> 마지막에 <a href="">setState를 처리</a>
   ```
   const onClickButton = () => {
