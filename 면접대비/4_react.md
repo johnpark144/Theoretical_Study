@@ -253,45 +253,40 @@
   - SSR 혹은 SSG로 만들어진 정적인 HTML과 State를 수분이 없다 표현하고, 이로부터 <a href="">동적인 상태로 변화하는 것</a>이 수분을 보충하는 과정과 같아서 <a href="">하이드레이션</a>이 일어난다고 표현함.
   - <a href="">render()</a>는 빈 HTML로 <a href="">UI를 생성</a>하거나 변경사항을 업데이트하는것, <a href="">hydration()</a>은 이미 만들어진 HTML에 리액트 트리에 맞게 <a href="">이벤트를 보충</a>하는 것
 
-- Next의 렌더링 수행 방식
-  - SSR 기반으로 사전렌더링 -> 그 이후 동적인 데이터를 패치하는 경우 CSR사용
-  - 사전렌더링시 SSR기반으로 데이터 패칭 되야한다면 next.js의 데이터 패칭 방식 
-    - nextjs 13 기준 : fetch의 두번째 인수이용 (SSR은 { cache: "no-cache" }, SSG는 { cache: "force-cache" }, ISR은 { next: { revalidate: 60 } } 숫자는 시간(초)
-    - nextjs 12 기준 : getInitialProps / getStaticProps / getStaticPath / getServerSideProps 등의 함수를 이용
-
 - Next를 쓴 이유가 있나요
-  - 사전 렌더링 및 서버사이드 렌더링 (빠른 초기 로딩 속, SEO)
-  - Hot Code Reloading, HMR(Hot Module Replacement) 지원 (코드 수정 후 즉각적인 변경 사항 확인)
-  - 자동 코드 스플리팅 (코드분할)
-  - 설정이 필요없음 (기본 웹팩과 바벨을 사용, 원하는 플러그인 추가 가능)
-  - 타입스크립트 내장
-  - 파일기반 네비게이션 (리액트 라우터 없이, 폴더로 라우팅)
-  - 정적 파일 제공 (public 디렉터리를 통해)
+  - <a href="">사전 렌더링</a> 및 <a href="">서버사이드 렌더링</a> (<a href="">빠른 초기 로딩 속도</a>, <a href="">SEO</a>)
+  - <a href="">Hot Code Reloading</a>, <a href="">HMR</a>(Hot Module Replacement) 지원 (<a href="">코드 수정 후 즉각적인 변경 사항 확인</a>)
+  - <a href="">자동 코드 스플리팅</a> (코드분할하여 따로 렌더링)
+  - <a href="">설정이 필요없음</a> (기본 <a href="">웹팩과 바벨</a>을 사용, 원하는 <a href="">플러그인 추가</a> 가능)
+  - <a href="">타입스크립트</a> 내장
+  - <a href="">파일기반 네비게이션</a> (리액트 라우터 없이, <a href="">폴더로 라우팅</a>)
+  - <a href="">정적 파일 제공<a href=""> (<a href="">public 디렉토리</a>를 통해)
 
 - Next를 구성하는 기본 설정 파일에 대해서 알고 있나요?
   - nextjs 13 기준 (app 폴더)
-    - layout.jsx : 공통으로 들어갈 레이아웃
-    - head.jsx : html의 head 부분
-    - page.jsx : 라우팅될 부분의 body부분
-    - loading.jsx
-    - not-found.jsx
-    - error.jsx
-    - Template.jsx : layout과 유사
+    - <a href="">layout.jsx</a> : 공통으로 들어갈 레이아웃
+    - <a href="">head.jsx</a> : html의 head 부분
+    - <a href="">page.jsx</a> : 라우팅될 부분의 body부분
+    - <a href="">loading.jsx</a>
+    - <a href="">not-found.jsx</a>
+    - <a href="">error.jsx</a>
+    - <a href="">Template.jsx</a> : layout과 유사
   - nextjs 12 기준 (pages 폴더)
-    - _app.jsx : 공통 페이지
-    - _document.jsx : Html, Head, body 태그를 보강하는데 사용
-    - _error.jsx
-    - 404.jsx
+    - <a href="">_app.jsx</a> : 공통 페이지
+    - <a href="">_document.jsx</a> : Html, Head, body 태그를 보강하는데 사용
+    - <a href="">_error.jsx</a>
+    - <a href="">404.jsx</a>
 
 - 사전 렌더링을 위해 사용해 본 것 있나요
-  - nextjs 13 기준 (fetch의 두번째 인수 이용)
-    - SSR : { cache: "no-cache" }
-    - SSG : { cache: "force-cache" }
-    - ISR : { next: { revalidate: 60 } }  // 숫자는 시간(초)
+  - <a href="">사전렌더링</a> -> 그 이후 동적인 데이터를 패치하는 경우 <a href="">CSR사용</a>
+  - nextjs 13 기준 (<a href="">fetch의 두번째 인수</a> 이용)
+    - SSR : <a href="">{ cache: "no-cache" }</a>
+    - SSG : <a href="">{ cache: "force-cache" }</a>
+    - ISR : <a href="">{ next: { revalidate: 60 } }</a>  // 숫자는 시간(초)
   - nextjs 12 기준 (함수 이용)
-    - SSR : getServerSideProps
-    - SSG : getStaticProps 
-    - SSG + 동적라우팅 : getStaticPath
+    - SSR : <a href="">getServerSideProps</a>
+    - SSG : <a href="">getStaticProps</a>
+    - SSG + 동적라우팅 : <a href="">getStaticPath</a>
 
 - Suspense
   - `suspense가 뭔가요?`
