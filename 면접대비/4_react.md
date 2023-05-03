@@ -290,31 +290,31 @@
 
 - Suspense
   - `suspense가 뭔가요?`
-    - 컴포넌트가 읽어들이고 있는 데이터가 아직 준비되지 않아 "로딩중"과 같은 대체 메시지를 띄우게 하는 방법
+    - 컴포넌트가 읽어들이고 있는 <a href="">데이터가 아직 준비되지 않아</a> "로딩중"과 같은 <a href="">대체 메시지를 띄우게</a> 하는 방법
   - `suspense로 가능한 것은 어떤 것들이 있나요?`
-    - 데이터를 불러오는 라이브러리들과 같이 사용되어 로딩 상태관리
-    - React.lazy()와 함께 사용하여 로딩 상태관리
-    - 둘 이상의 스레드 또는 프로세스가 공유된 자원에 접근할 때, 실행 순서와 타이밍 등에 따라 결과 값이 달라지게 하는 경쟁 상태(Race Condition)를 피할 수 있도록 돕습니다
+    - <a href="">데이터를 불러오는 라이브러리들과 같이 사용</a>되어 로딩 상태관리
+    - <a href="">React.lazy()와 함께 사용</a>하여 로딩 상태관리
+    - <a href="">둘 이상의 스레드 또는 프로세스가 공유된 자원에 접근할 때</a>, 실행 순서와 타이밍 등에 따라 결과 값이 달라지게 하는 <a href="">경쟁 상태(Race Condition)를 피할 수 있도록</a> 돕습니다
 
 - key props를 사용하는 이유
-  - 리액트가 엘리먼트를 구분하기 위해
-  - 업데이트 성능을 최적화하기 위해
+  - 리액트가 <a href="">엘리먼트를 구분</a>하기 위해
+  - <a href="">업데이트 성능을 최적화</a>하기 위해
 
 - package.json에서 dependencies와 devDependencies의 차이점
-  - dependencies : 애플리케이션의 실행에 필요한 필수 패키지 ex) Express.js, React, Lodash, Axios 등
-  - devDependencies : 개발 단계에서만 필요한 패키지(테스트 도구, 번들링 도구) ex) Webpack, Jest, RTL 등
+  - <a href="">dependencies</a> : 애플리케이션의 실행에 필요한 <a href="">필수 패키지</a> ex) Express.js, React, Lodash, Axios 등
+  - <a href="">devDependencies</a> : <a href="">개발 단계에서만</a> 필요한 패키지(<a href="">테스트 도구, 번들링 도구</a>) ex) Webpack, Jest, RTL 등
 
 - JSX란?
-  - Javascript에 XML을 확장한 html과 유사한 문법
+  - <a href="">Javascript에 XML을 확장</a>한 <a href="">html과 유사</a>한 문법
   - Html과 다른점
-    - 모든태그는 닫는 태그를 가져야한다(self-closing tag 대신 사가능)
-    - { }로 자바스크립트 표현식 작성가능
-    - 스타일 적용시 어트리뷰트에 하이픈(-)대신 카멜 표기법으로 작성
-    - class대신 className사용 등
+    - 모든태그는 <a href="">닫는 태그</a>를 가져야한다(self-closing tag 대신 사가능)
+    - <a href="">{ }</a>로 <a href="">자바스크립트 표현식</a> 작성가능
+    - <a href="">스타일 적용시</a> 어트리뷰트에 하이픈(-)대신 <a href="">카멜 표기법</a>으로 작성
+    - <a href="">class대신 className사용</a> 등
 
 - "attribute"와 "property"의 차이점
-  - attribute : 정적인 Html 안에 속성  ex) class
-  - property : 동적인 DOM tree 안에 속성 (html의 attribute를 DOM 내에서 대신해서 표현) ex) className
+  - attribute : <a href="">정적</a>인 <a href="">Html 안에 속성</a>  ex) class
+  - property : <a href="">동적</a>인 <a href="">DOM tree 안에 속성</a> (html의 attribute를 DOM 내에서 대신해서 표현) ex) className
   ```
   <input value="텍스트를 입력하세요">
   
@@ -324,4 +324,4 @@
   ```
 
 - 스토리북에 대해서 
-  - 개별 컴포넌트의 기능과 상태를 다양한 시나리오로 테스트하고, 문서화하여 관리할 수 있는 환경을 제공
+  - 개별 <a href="">컴포넌트의 기능과 상태를 다양한 시나리오로 테스트</a>하고, <a href="">문서화하여 관리할 수 있는 환경</a>을 제공
