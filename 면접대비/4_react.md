@@ -180,8 +180,8 @@
 - useLayoutEffect는 무엇인가요?
   - <a href="">동기적으로 실행</a>되므로 <a href="">불필요한 렌더링을 방지</a>하여 성능 최적화에 유용
   - useEffect와 useLayoutEffect의 차이
-    - useEffect : 렌더링 될때 브라우저가 <a href="">페인팅 하고 난 후</a>에 실행됨, 주로 <a href="">데이터 가져오기</a>, <a href="">API 호출</a> 등과 같이, <a href="">화면을 먼저 보여지는게 더 효율적인 경우</a> 사용
-    - useLayoutEffect : 렌더링 될때 브라우저가 <a href="">페인팅 하기 전</a>에 실행, 주로 화면 요소의 <a href="">레이아웃 리셋</a> 등과 같이, <a href="">DOM 조작이 렌더링 결과에 바로 반영되어야 하는 경우</a> 사용
+    - useEffect : 렌더링 될때 브라우저가 <a href="">페인팅 하고 난 후</a>에 실행됨(<a href="">비동기적</a>), 주로 <a href="">데이터 가져오기</a>, <a href="">API 호출</a> 등과 같이, <a href="">화면을 먼저 보여지는게 더 효율적인 경우</a> 사용
+    - useLayoutEffect : 렌더링 될때 브라우저가 <a href="">페인팅 하기 전</a>에 실행(<a href="">동기적</a>), 주로 화면 요소의 <a href="">레이아웃 리셋</a> 등과 같이, <a href="">DOM 조작이 렌더링 결과에 바로 반영되어야 하는 경우</a> 사용
     ```
     import { useEffect, useState } from "react";
     
