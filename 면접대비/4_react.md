@@ -297,7 +297,7 @@
     - <a href="">둘 이상의 스레드 또는 프로세스가 공유된 자원에 접근할 때</a>, 실행 순서와 타이밍 등에 따라 결과 값이 달라지게 하는 <a href="">경쟁 상태(Race Condition)를 피할 수 있도록</a> 돕습니다
 
 - key props를 사용하는 이유
-  - 리액트가 <a href="">엘리먼트를 구분</a>하여 변경,추가,삭제 등을 유용하게 처리하기 위해
+  - 리액트가 <a href="">엘리먼트를 구분</a>하기 위해
   - <a href="">업데이트 성능을 최적화</a>하기 위해
 
 - package.json에서 dependencies와 devDependencies의 차이점
