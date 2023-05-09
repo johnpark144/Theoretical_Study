@@ -1,2 +1,0 @@
-# Theoretical_Study Description
-- 
