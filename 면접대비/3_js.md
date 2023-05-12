@@ -795,15 +795,15 @@
   - Css애니메이션
     - <a href="">transition/animation</a> 속성 사용
     - <a href="">GPU 가속기능 지원</a>하여 <a href="">속도가 빠름</a>
-    - 코드가 상대적으로 <a href="">간결함</a>
-    - <a href="">반응형에 유리</a>
+    - 코드가 상대적으로 <a href="">간결함</a>    
     - <a href="">간단하게 처리하는 애니메이션</a>인경우 사용
+    - <a href="">반응형에 유리</a>
   - JS애니메이션
     - <a href="">setInterval()/requestAnimationFrame()</a>을 사용
     - <a href="">CPU를 사용</a>해서 <a href="">상대적으로 느림</a>
     - 코드가 상대적으로 <a href="">복잡함</a>
-    - <a href="">크로스 브라우징 측면에서 유리</a>
     - css로 처리하기에 복잡하고 <a href="">무거운 애니메이션</a>인경우 사용
+    - <a href="">크로스 브라우징 측면에서 유리</a>
 
 - requestAnimationFrame이란
   - requestAnimationFrame을 사용하면 <a href="">JavaScript 애니메이션</a> 구현
