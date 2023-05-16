@@ -139,7 +139,6 @@
     - useEffect에서 <a href="">뒷정리(cleanup) 함수를 반환</a>해 주면 컴포넌트가 <a href="">언마운트 될시에 실행</a>된다.
   - useReducer
     - <a href="">useState보다 더 다양한 컴포넌트 상황</a>에 따라 <a href="">다양한 상태를 다른 값으로 업데이트</a> 해주고 싶을 때 사용
-    - useState Bank라 보면됨
   - useRef
       - useRef는 <a href="">.current 프로퍼티에 변경가능한 값</a>을 담고있으며, 프로퍼티가 변경되도 <a href="">리렌더링을 유발하지 않는다.</a>
       - 주로 <a href="">리렌더링 없이 값만 내부에서 변경</a>시키거나, <a href="">DOM에 접근</a>하기 위해 사용
