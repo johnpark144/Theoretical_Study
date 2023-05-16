@@ -113,6 +113,7 @@
   - inline
     - <a href="">같은라인에</a> 배치
     - <a href="">width, height, margin-top, margin-bottom 등이 적용되지 않고</a>, content 너비만큼의 영역을 차지
+    - margin, padding은 좌우만 먹힘
   - inline-block
     - <a href="">같은라인에</a> 배치
     - <a href="">width와 height 값으로 영역의 크기를 차지</a>
@@ -205,3 +206,6 @@
 - `padding과 margin 🔥`
   - padding : 내부여백
   - margin : 외부여백
+
+- CSS 가상요소에 대해
+  - 
