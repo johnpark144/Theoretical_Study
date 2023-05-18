@@ -225,7 +225,17 @@
     - <a href="">캔버스</a>(2d,3d)
     - 지리적인 <a href="">위치 정보</a>
     - <a href="">시맨틱 태그</a>
-    
+     
+- `float가 어떻게 작동 🔥`
+  - float
+    - CSS 위치지정 속성 (float 속성을 부여한 요소의 다음 요소는 <a href="">float 속성을 부여한 요소가 차지하는 위치만 제외하고 나머지 공간을 채우게함</a>,
+    - <a href="">페이지의 흐름의 일부가 되어</a> 주로 페이지의 <a href="">텍스트와 이미지를 묶는 레이아웃</a>을 만들 때 사용 (position: absolute는 페이지의 흐름에서 제거)
+    - <a href="">left, right, none 값</a> 중 하나를 가질 수 있다 (center나 middle 값은 없고 그렇게 이용하고 싶으면 margin:0 auto 로 이용)
+    - position 속성의 absolute 값과 같이 쓰일 수 없고, <a href="">겹치면 absolute가 우선순위</a>임
+  - clear
+    - <a href="">left, right, both, none 값</a>을 float요소 주변 태그에 줌으로써 <a href="">float 영향 받지않게</a>함
+    - 보통 both를 쓰면됨
+     
 - `CSS-in-JS 🔥`
   - <a href="">JavaScript 코드 안</a>에서 CSS를 작성하는 방법
   - <a href="">컴포넌트 단위로 스타일링</a>을 하기 때문에 코드 <a href="">유지보수가 용이</a>
