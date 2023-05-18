@@ -74,7 +74,7 @@
       - 프론트 -> WithCredentials: true / 서버 -> Access-Control-Allow-Credentials: true , 허락할 도메인
 
   - CORS 문제 해결하기
-      - 먼저 프론트에서 응답 헤더에 제대로 된 정보를 넣어는 지 확신(예를들면 <a href="">Credentials 관련 설정</a>을 했는지)
+      - 먼저 프론트에서 <a href="">응답 헤더에 제대로 된 정보</a>를 넣어는 지 확신 (예를들면 <a href="">Credentials 관련 설정</a>을 했는지)
       - 해당 오류를 캡쳐해서 <a href="">서버 개발자와 같이</a> 확인해보는 방법
       - 그래도 안되면 <a href="">프록시 서버 설정</a>
 
