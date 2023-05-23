@@ -347,6 +347,13 @@
     - <a href="">key값으로 index를 사용하지 않는다</a>
     - <a href="">useTransition과 useDeferredValue</a>로 <a href="">성능저하를 일으키는 부분은 나중에 처리</a>
     - <a href="">이미지 최적화</a>
+     
+- SSR이 뭔가요?
+  - <a href="">서버로부터 완전히 만들어진 html파일</a>을 받아와 페이지 <a href="">전체를 렌더링</a> 하는 방식
+  - <a href="">SEO에 최적화</a> (검색엔진들이 html태그들을 분석하는데 <a href="">CSR는 빈 html</a>이고 <a href="">SSR은 만들어진 html</a>임)
+  - <a href="">첫 페이지 로딩속도가 빠르다</a>
+  - <a href="">서버 측에서 모든 뷰를 준비하면(MPA)</a> 과부하로 성능상의 문제가 발생할 수 있어서 <a href="">느려지기 쉬우며<a href="">, 페이지 마다 이동시 <a href="">깜박이는 현상</a>이 발생됨.
+  - <a href="">처음 화면이 보이기 시작해도(TTV) 상호작용(TTI)되기 전까지 기다려야함</a> (JS파일 다운시간)
     
 - `Next를 쓴 이유가 있나요`
   - <a href="">사전 렌더링</a> 및 <a href="">서버사이드 렌더링</a> (<a href="">빠른 초기 로딩 속도</a>, <a href="">SEO</a>)
