@@ -17,7 +17,7 @@
     - name : 메타 요소가 <a href="">어떤 정보의 형태</a>를 갖고 있는지
     - content : 실제 메타 데이터의 <a href="">컨텐츠</a>
     
-  - 검색 엔진 최적화기하기 (Search Engine Optimization 또는 SEO)
+  - 검색 엔진 최적화하기 (Search Engine Optimization 또는 SEO)
     - <a href="">meta태그</a> 이용
     ```
     <head>
