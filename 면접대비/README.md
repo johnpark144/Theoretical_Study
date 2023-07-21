@@ -1,5 +1,5 @@
 참고 자료 : https://github.com/unidagit/prepare_frontend_interview    (프론트엔드 기술 면접을 위한 핸드북 만들기)
--> 이 폴더의 내용들은 위 링크 참고자료를 공부하기 위해 손으로 직접 타입한것입니다.
+-> 이 폴더의 내용들은 위 링크 참고자료를 공부하기 위해 손으로 직접 타입한것
 -> 내용은 위 링크와 동일 하거나 내가 아는 선에서 추가 및 제거 되있음.
 
 - prepare_frontend_interview
