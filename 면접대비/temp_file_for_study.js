@@ -83,7 +83,7 @@ logAllPairsOfArray(boxes); // O(n^2) --> Quadratice time
 // 문자열(String)도 문자로된 배열과 같아서 동일하게 적용됨
 // lookup  O(1)
 // push/pop  O(1)    // 동적 배열은 이에 해당하나 정적 배열은 배열 길이를 미리 정하므로 Append 할 때 0{n}이 될 수 있음
-// insert  O(n)
+// insert  O(n)    --> 반복문안에서 사용하면 O(n^2)이 되서 사용자제
 // delete  O(n)
 
 const strings = ['a', 'b', 'c', 'd'];
