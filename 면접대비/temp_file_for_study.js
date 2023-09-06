@@ -172,8 +172,9 @@ class LinkedList {
   prepend(value) {
     const newNode = {
       value,
-      next: this.head,
+      next: null,
     };
+    newNode.next = this.head;
     this.head = newNode;
     this.length++;
     return this;
