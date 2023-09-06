@@ -166,7 +166,7 @@ class LinkedList {
   }
 
   append(value) {
-    const newNode = new Node();
+    const newNode = new Node(value);
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
@@ -174,7 +174,7 @@ class LinkedList {
   }
 
   prepend(value) {
-    const newNode = new Node();
+    const newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
     this.length++;
