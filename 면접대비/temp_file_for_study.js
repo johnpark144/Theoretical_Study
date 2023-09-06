@@ -134,7 +134,21 @@ strings.splice(2, 0, '!!!'); // O(n)
 // insert O(n)
 // delete O(n)
 
+// ############## 
+// 10 --> 5 --> 16
 
+let myLinkedList = {
+    head : {
+        value : 1,
+        next : {
+            value : 5,
+            next : {
+                value : 16,
+                next : null
+            }
+        }
+    }
+}
 
 
 
