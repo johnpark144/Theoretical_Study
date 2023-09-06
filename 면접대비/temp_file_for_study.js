@@ -151,13 +151,6 @@ let myLinkedList = {
 }
 
 // ############## 링크 리스트 클래스
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
-
 class LinkedList {
   constructor(value) {
     this.head = { value, next: null };
@@ -166,7 +159,10 @@ class LinkedList {
   }
 
   append(value) {
-    const newNode = new Node(value);
+    const newNode = {
+      value,
+      next: null,
+    };
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
@@ -174,8 +170,10 @@ class LinkedList {
   }
 
   prepend(value) {
-    const newNode = new Node(value);
-    newNode.next = this.head;
+    const newNode = {
+      value,
+      next: this.head,
+    };
     this.head = newNode;
     this.length++;
     return this;
