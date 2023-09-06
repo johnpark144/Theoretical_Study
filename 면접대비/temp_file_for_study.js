@@ -123,10 +123,16 @@ strings.splice(2, 0, '!!!'); // O(n)
 // ############## 
 
 
-// ############## 링크 리스트 (Linked Lists) #################################################################################################################################################################
+// ############## 링크드 리스트, 연결 리스트 (Linked Lists) #################################################################################################################################################################
 // 배열들이 서로 머리부터 꼬리까지 연결되어 있는 자료구조
 // 자바스크립트는 링크 리스트가 내장되있지 않지만 구현은 가능
 
+// 싱글 링크드 리스트
+// -- 장점 : 메모리 효율, 구현이 간단
+// -- 단점 : 역방향 탐색 어려움, 접근 시간 오래 걸림
+// 더블 링크드 리스트
+// -- 장점 : 역방향 탐색 가능, 
+// -- 단점 : 구현하기 복잡함, 메모리 비효율
 // ############## 
 // prepend O(1)   // 앞에 추가 (unshift와 비슷하지만 시간복잡도면에서 효율적)
 // append O(1)    // 뒤에 추가(push와 비슷)
@@ -134,7 +140,7 @@ strings.splice(2, 0, '!!!'); // O(n)
 // insert O(n)
 // delete O(n)
 
-// ############## 자바스크립트 링크 리스트 형식 예시
+// ############## 자바스크립트 링크드 리스트 형식 예시
 // 10 --> 5 --> 16
 
 let myLinkedList = {
@@ -150,7 +156,7 @@ let myLinkedList = {
     }
 }
 
-// ############## 링크 리스트 클래스
+// ############## 싱글 링크드 리스트 (Singly Linked Lists)
 class LinkedList {
   constructor(value) {
     this.head = { value, next: null };
@@ -244,9 +250,109 @@ myLinkedList.insert(1, 99); // 10, 99, 5, 16
 myLinkedList.remove(2); // 10, 99, 16
 myLinkedList.printList();
 
+// ############## 더블 링크드 리스트 (Doubly Linked Lists)
+class DoublyLinkedList {
+  constructor(value) {
+    this.head = { value, next: null, prev: null };
+    this.tail = this.head;
+    this.length = 1;
+  }
 
+  // 뒤로입력
+  append(value) {
+    const newNode = {
+      value,
+      next: null,
+      prev: null,
+    };
 
+    newNode.prev = this.tail;
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
 
+  // 앞으로입력
+  prepend(value) {
+    const newNode = {
+      value,
+      next: this.head,
+      prev: null,
+    };
+    this.head.prev = newNode;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
+
+  // 중간에 삽입
+  insert(index, value) {
+    if (index >= this.length) {
+      return this.append(value);
+    } else if (index === 0) {
+      return this.prepend(value);
+    }
+    const newNode = {
+      value,
+      next: null,
+      prev: null,
+    };
+    const leader = this.traverseToIndex(index - 1);
+    const follower = leader.next;
+    newNode.next = follower;
+    leader.next = newNode;
+    newNode.prev = leader;
+    follower.prev = newNode;
+    this.length++;
+    return this;
+  }
+
+  // index이동 (lookup)
+  traverseToIndex(index) {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter++;
+    }
+    return currentNode;
+  }
+
+  // 삭제
+  remove(index) {
+    if (index >= this.length) return this;
+    else if (index <= 0) {
+      this.head = this.head.next;
+      this.head.prev = null;
+    } else {
+      const leader = this.traverseToIndex(index - 1);
+      leader.next = leader.next.next;
+      leader.next.prev = leader;
+    }
+    this.length--;
+    return this;
+  }
+
+  // 배열형태로 출력
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    console.log(array);
+    return array;
+  }
+}
+
+const myDoublyLinkedList = new DoublyLinkedList(5); // 5
+myDoublyLinkedList.append(16); // 5,16
+myDoublyLinkedList.prepend(10); // 10, 5, 16
+myDoublyLinkedList.insert(1, 99); // 10, 99, 5, 16
+myDoublyLinkedList.remove(2); // 10, 99, 16
+myDoublyLinkedList.printList();
 
 
 // ##############  #################################################################################################################################################################
