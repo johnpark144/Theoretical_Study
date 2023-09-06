@@ -89,8 +89,8 @@ logAllPairsOfArray(boxes); // O(n^2) --> Quadratice time
 // insert  O(n)    --> 반복문안에서 사용하면 O(n^2)이 되서 사용자제
 // delete  O(n)
 
-// 장점 : 검색, push, pop , 순서(정렬)
-// 단점 : (push,pop을 제외한) 삽입, 삭제가 느림, 정적 배열의 경우 비어있어도 큰 용량에 고정
+// 장점 : 조회, push, pop에 빠르다 순서(정렬)
+// 단점 : (push,pop을 제외한) 검색, 삽입, 삭제가 느림, 정적 배열의 경우 비어있어도 큰 용량에 고정
 // ############## 
 const strings = ['a', 'b', 'c', 'd'];
 strings[2] // O(1)
@@ -117,7 +117,11 @@ strings.splice(2, 0, '!!!'); // O(n)
 // lookup  O(1)
 // search  O(1)
 
+// 장점 : 조회, 검색, 삽입, 삭제에 빠르다
+// 단점 : 순서가 존재하지 않는다
 // ############## 
+
+
 
 
 
