@@ -230,6 +230,25 @@ class LinkedList {
     return this;
   }
 
+  // 반대로 뒤집기
+  reverse() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+    return this;
+  }
+
   // 배열형태로 출력
   printList() {
     const array = [];
@@ -248,7 +267,9 @@ myLinkedList.append(16); // 5,16
 myLinkedList.prepend(10); // 10, 5, 16
 myLinkedList.insert(1, 99); // 10, 99, 5, 16
 myLinkedList.remove(2); // 10, 99, 16
+myLinkedList.reverse(); // 16, 99, 10
 myLinkedList.printList();
+
 
 // ############## 더블 링크드 리스트 (Doubly Linked Lists)
 class DoublyLinkedList {
