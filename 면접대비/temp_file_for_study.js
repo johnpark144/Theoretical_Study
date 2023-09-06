@@ -134,7 +134,7 @@ strings.splice(2, 0, '!!!'); // O(n)
 // insert O(n)
 // delete O(n)
 
-// ############## 자바스크립트 링크 리스트 예시
+// ############## 자바스크립트 링크 리스트 형식 예시
 // 10 --> 5 --> 16
 
 let myLinkedList = {
@@ -158,6 +158,7 @@ class LinkedList {
     this.length = 1;
   }
 
+  // 뒤로 입력 (push 같이)
   append(value) {
     const newNode = {
       value,
@@ -169,6 +170,7 @@ class LinkedList {
     return this;
   }
 
+  // 앞으로 입력 (unshift 같이)
   prepend(value) {
     const newNode = {
       value,
@@ -178,14 +180,76 @@ class LinkedList {
     this.length++;
     return this;
   }
+
+  // 중간에 삽입
+  insert(index, value) {
+    if (index >= this.length) {
+      return this.append(value);
+    } else if (index === 0) {
+      return this.prepend(value);
+    }
+    const newNode = {
+      value,
+      next: null,
+    };
+    const leader = this.traverseToIndex(index - 1);
+    const holdingPointer = leader.next;
+    newNode.next = holdingPointer;
+    leader.next = newNode;
+    this.length++;
+    return this;
+  }
+
+  // index이동 (lookup)
+  traverseToIndex(index) {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter++;
+    }
+    return currentNode;
+  }
+
+  // 삭제
+  remove(index) {
+    if (index >= this.length) return this;
+    else if (index <= 0) {
+      this.head = this.head.next;
+    } else {
+      const leader = this.traverseToIndex(index - 1);
+      leader.next = leader.next.next;
+    }
+    this.length--;
+    return this;
+  }
+
+  // 배열형태로 출력
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    console.log(array);
+    return array;
+  }
 }
 
-const myLinkedList = new LinkedList(5);
+const myLinkedList = new LinkedList(5); // 5
+myLinkedList.append(16); // 5,16
+myLinkedList.prepend(10); // 10, 5, 16
+myLinkedList.insert(1, 99); // 10, 99, 5, 16
+myLinkedList.remove(2); // 10, 99, 16
+myLinkedList.printList();
 
-myLinkedList.append(16);
-myLinkedList.prepend(10);
-console.log(myLinkedList);
 
+
+
+
+
+// ##############  #################################################################################################################################################################
 
 // #########################################################################################################################################################################################
 // ############### 알고리즘 #################################################################################################################################################################
