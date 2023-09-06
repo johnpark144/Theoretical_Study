@@ -134,7 +134,7 @@ strings.splice(2, 0, '!!!'); // O(n)
 // insert O(n)
 // delete O(n)
 
-// ############## 
+// ############## 자바스크립트 링크 리스트 예시
 // 10 --> 5 --> 16
 
 let myLinkedList = {
@@ -150,6 +150,41 @@ let myLinkedList = {
     }
 }
 
+// ############## 링크 리스트 클래스
+class LinkedList {
+  constructor(value) {
+    this.head = { value, next: null };
+    this.tail = this.head;
+    this.length = 1;
+  }
+
+  append(value) {
+    const newNode = {
+      value,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+    return this;
+  }
+
+  prepend(value) {
+    const newNode = {
+      value,
+      next: this.head,
+    };
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
+}
+
+const myLinkedList = new LinkedList(5);
+
+myLinkedList.append(16);
+myLinkedList.prepend(10);
+console.log(myLinkedList);
 
 
 
