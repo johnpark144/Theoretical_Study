@@ -507,14 +507,16 @@ class Queue {
       this.last = newNode;
     } else {
       this.last.next = newNode;
+      this.last = newNode;
     }
     this.length++;
     return this;
   }
 
   dequeue() {
-    this.first = this.first.next;
+    if (!this.first) return null;
     if (this.length === 1) this.last = null;
+    this.first = this.first.next;
     this.length--;
     return this;
   }
@@ -523,6 +525,8 @@ class Queue {
 const myQueue = new Queue();
 myQueue.enqueue('a');
 myQueue.enqueue('b');
+myQueue.enqueue('c');
+myQueue.dequeue();
 myQueue.dequeue();
 console.log(myQueue);
 
