@@ -403,15 +403,18 @@ class Stack {
     this.arr = [];
   }
 
+  // 확인
   peek() {
     return this.arr[this.arr.length - 1];
   }
 
+  // Last In
   push(value) {
     this.arr.push(value);
     return this;
   }
 
+  // First Out
   pop() {
     this.arr.pop();
     return this;
@@ -440,10 +443,12 @@ class Stack {
     this.length = 0;
   }
 
+  // 확인
   peek() {
     return this.top;
   }
 
+  // Last In
   push(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
@@ -458,6 +463,7 @@ class Stack {
     return this;
   }
 
+  // First Out
   pop() {
     if (!this.top) return null;
     if (this.length === 1) this.bottom = null;
@@ -502,10 +508,12 @@ class Queue {
     this.length = 0;
   }
 
+  // 확인
   peek() {
     return this.first;
   }
 
+  // First In
   enqueue(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
@@ -519,6 +527,7 @@ class Queue {
     return this;
   }
 
+  // First Out
   dequeue() {
     if (!this.first) return null;
     if (this.length === 1) this.last = null;
