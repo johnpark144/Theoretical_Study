@@ -636,7 +636,7 @@ class BinarySearchTree {
     let currentNode = this.root;
     let targetNode = null;
     let parentNode = null;
-    while (currentNode) {
+    while (true) {
       if (value < currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.left;
@@ -652,10 +652,10 @@ class BinarySearchTree {
         }
         parentNode = currentNode;
         currentNode = currentNode.right;
-        while (targetNode) {
+        while (true) {
           if (!currentNode.left) {
             targetNode.value = currentNode.value;
-            parentNode.left = null;
+            parentNode.right = null;
             return this;
           } else {
             parentNode = currentNode;
@@ -696,14 +696,15 @@ tree.insert(175);
 //      1   6      15   170
 //    0  3 5  7  11 16 22  175
 
-tree.remove(11);
+tree.remove(15);
 
-console.log(tree.lookup(4));
+// console.log(tree.lookup(4));
 
 // 브라우저 console에서 조회 하려고
 console.log(JSON.stringify(tranverse(tree.root)));
 
 
+// ############## 
 
 
 // #########################################################################################################################################################################################
