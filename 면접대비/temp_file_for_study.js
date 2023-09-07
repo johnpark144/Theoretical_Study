@@ -387,14 +387,89 @@ myDoublyLinkedList.printList();
 
 // ############## 스택(Stacks) #################################################################################################################################################################
 // LIFO (Last In First Out)
-// 배열과, 링크리스트로 구현가능
+// 배열과, 링크리스트로 구현가능 (한쪽 통로만 사용해서)
 
 // ############## 
 // lookup O(n)
 // pop, push O(1)
 // peek O(1) 
 
+// ############## 배열로 스택 구현
+class Stack {
+  constructor() {
+    this.arr = [];
+  }
 
+  peek() {
+    return this.arr[this.arr.length - 1];
+  }
+
+  push(value) {
+    this.arr.push(value);
+    return this;
+  }
+
+  pop() {
+    this.arr.pop();
+    return this;
+  }
+}
+
+const myStack = new Stack();
+myStack.push('google');
+myStack.push('youtube');
+myStack.push('naver');
+myStack.pop();
+console.log(myStack.peek());
+
+// ############## 링크리스트로 스택 구현
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Stack {
+  constructor() {
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+  }
+
+  peek() {
+    return this.top;
+  }
+
+  push(value) {
+    const newNode = new Node(value);
+    if (this.length === 0) {
+      this.top = newNode;
+      this.bottom = newNode;
+    } else {
+      const holdingPointer = this.top;
+      this.top = newNode;
+      this.top.next = holdingPointer;
+    }
+    this.length++;
+    return this;
+  }
+
+  pop() {
+    if (!this.top) return null;
+    if (this.length === 1) this.bottom = null;
+    this.top = this.top.next;
+    this.length--;
+    return this;
+  }
+}
+
+const myStack = new Stack();
+myStack.push('google');
+myStack.push('youtube');
+myStack.push('naver');
+myStack.pop();
+console.log(myStack);
 
 
 // ############## 큐(Queues) #################################################################################################################################################################
