@@ -635,30 +635,30 @@ class BinarySearchTree {
     }
     let currentNode = this.root;
     let targetNode = null;
-    let prevNode = null;
+    let parentNode = null;
     while (currentNode) {
       if (value < currentNode.value) {
-        prevNode = currentNode;
+        parentNode = currentNode;
         currentNode = currentNode.left;
       } else if (value > currentNode.value) {
-        prevNode = currentNode;
+        parentNode = currentNode;
         currentNode = currentNode.right;
       } else if (currentNode.value === value) {
         targetNode = currentNode;
         if (!currentNode.right) {
-          if (prevNode.left.value === value) prevNode.left = null;
-          if (prevNode.right.value === value) prevNode.right = null;
+          if (parentNode.left.value === value) parentNode.left = null;
+          if (parentNode.right.value === value) parentNode.right = null;
           return this;
         }
-        prevNode = currentNode;
+        parentNode = currentNode;
         currentNode = currentNode.right;
         while (targetNode) {
           if (!currentNode.left) {
             targetNode.value = currentNode.value;
-            prevNode.left = null;
+            parentNode.left = null;
             return this;
           } else {
-            prevNode = currentNode;
+            parentNode = currentNode;
             currentNode = currentNode.left;
           }
         }
@@ -683,7 +683,6 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-
 tree.insert(0);
 tree.insert(3);
 tree.insert(5);
@@ -703,6 +702,7 @@ console.log(tree.lookup(4));
 
 // 브라우저 console에서 조회 하려고
 console.log(JSON.stringify(tranverse(tree.root)));
+
 
 
 
