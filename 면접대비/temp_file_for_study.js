@@ -561,7 +561,139 @@ console.log(myQueue);
 // delete O(n)
 
 // ############## 
+class Node {
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
+  }
+}
 
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  // 노드 생성
+  insert(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          // left
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            return this;
+          }
+          currentNode = currentNode.left;
+        } else {
+          // right
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
+    }
+  }
+
+  // 노드 조회
+  lookup(value) {
+    if (!this.root) {
+      return false;
+    }
+    let currentNode = this.root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        return currentNode;
+      }
+    }
+    return false;
+  }
+
+  // remove는 너무어려워서 중요하진 않음
+  remove(value) {
+    if (!this.root) {
+      return false;
+    }
+    let currentNode = this.root;
+    let targetNode = null;
+    let prevNode = null;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        prevNode = currentNode;
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        prevNode = currentNode;
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        targetNode = currentNode;
+        if (!currentNode.right) {
+          if (prevNode.left.value === value) prevNode.left = null;
+          if (prevNode.right.value === value) prevNode.right = null;
+          return this;
+        }
+        prevNode = currentNode;
+        currentNode = currentNode.right;
+        while (targetNode) {
+          if (!currentNode.left) {
+            targetNode.value = currentNode.value;
+            prevNode.left = null;
+            return this;
+          } else {
+            prevNode = currentNode;
+            currentNode = currentNode.left;
+          }
+        }
+      }
+    }
+    return false;
+  }
+}
+
+const tranverse = (node) => {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : tranverse(node.left);
+  tree.right = node.right === null ? null : tranverse(node.right);
+  return tree;
+};
+
+const tree = new BinarySearchTree();
+tree.insert(9);
+tree.insert(4);
+tree.insert(6);
+tree.insert(20);
+tree.insert(170);
+tree.insert(15);
+tree.insert(1);
+
+tree.insert(0);
+tree.insert(3);
+tree.insert(5);
+tree.insert(7);
+tree.insert(11);
+tree.insert(16);
+tree.insert(22);
+tree.insert(175);
+//               9
+//        4           20
+//      1   6      15   170
+//    0  3 5  7  11 16 22  175
+
+tree.remove(11);
+
+console.log(tree.lookup(4));
+
+// 브라우저 console에서 조회 하려고
+console.log(JSON.stringify(tranverse(tree.root)));
 
 
 
