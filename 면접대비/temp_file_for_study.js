@@ -637,6 +637,7 @@ class BinarySearchTree {
     let targetNode = null;
     let parentNode = null;
     while (true) {
+      if (!currentNode) return this;
       if (value < currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.left;
