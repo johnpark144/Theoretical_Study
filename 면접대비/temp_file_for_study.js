@@ -772,8 +772,8 @@ console.log(JSON.stringify(tranverse(tree.root)));
 // Directed : 단방향 그래프 (양방향이 될수도있음)
 // Undirected : 양방향 그래프
 
-// Weighted Graph : 노드간에 거리나 비용이나 중요도가 모두 동일
-// Unweighted Graph : 노드간에 거리나 비용이나 중요도가 다름  ex) 빠른길 찾기, 중요한 친구 등 
+// Weighted Graph : 노드간에 거리나 비용이나 중요도가 다름  ex) 빠른길 찾기, 중요한 친구 등 
+// Unweighted Graph : 노드간에 거리나 비용이나 중요도가 모두 동일
 
 // Cyclic : 노드끼리 순환적
 // Acyclic : 노드끼리 순환적이지 않음
