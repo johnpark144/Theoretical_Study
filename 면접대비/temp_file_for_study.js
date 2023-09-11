@@ -910,11 +910,29 @@ const findFactorialIteratie = (number) => {  // 0(n)
 };
 console.log(findFactorialIteratie(5));
 
-// ############## 피보나치 계산
+// ############## 피보나치 계산 (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ...)
+// 재귀적인 방법
+const fibonacciRecursive = (n) => { // 0(2^n) --> 사실 좋은 방법이 아님
+  if (n < 2) return n;
+  return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+};
+console.log(fibonacciRecursive(5));
+
+// 반복문적인 방법
+const fibonacciIterative = (n) => { // 0(n)
+  let arr = [0, 1];
+
+  for (let i = 2; i < n + 1; i++) {
+    arr.push(arr[i - 2] + arr[i - 1]);
+  }
+  return arr[n];
+};
+console.log(fibonacciIterative(5));
 
 
 
-
+// #############  ###########################################################################################################################################################
+// ##############
 
 
 
