@@ -997,10 +997,11 @@ selectionSort(numbers);
 console.log(numbers);
 
 
-// ######################################################################################################################################### 삽입 정렬 (insertion Sort) #######################
+// ######################################################################################################################################### 삽입 정렬 (Insertion Sort) #######################
 // 각 요소를 적절한 위치에 "삽입"하여 정렬
 // 가장 빠르진 않지만, 가장 빠른 경우가 있음
 // 배열 원소 수가 적거나, 기존 배열이 거이 정렬이 되어있는 상태거나, 다 정렬 되있는 경우에 매우 빠름
+// O(n^2)
 
 // ##############
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
@@ -1024,4 +1025,48 @@ insertionSort(numbers);
 console.log(numbers);
 
 
-// ######################################################################################################################################### 삽입 정렬 (insertion Sort) #######################
+// ######################################################################################################################################### 합병 정렬 (Merge Sort) #######################
+// 배열을 반으로 나눈 후 각각을 정렬하고, 그 결과를 합치면서 전체 배열을 정렬하는 방식으로 동작하는 분할 정복(Divide and Conquer) 알고리즘
+// 대규모 데이터셋에 대해서도 효율적으로 동작
+// 이는 공간 복잡도를 고려해야 할 때 주의해야 함
+// O(n log n)
+
+// ##############
+const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+const mergeSort = (arr) => {
+  if (arr.length === 1) {
+    return arr;
+  }
+
+  const length = arr.length;
+  const middle = Math.floor(length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
+};
+
+const merge = (left, right) => {
+  const result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return [...result, ...left.slice(leftIndex), ...right.slice(rightIndex)];
+};
+
+const answer = mergeSort(numbers);
+console.log(answer);
+
+// #########################################################################################################################################  정렬 ( Sort) #######################
+
+// ##############
