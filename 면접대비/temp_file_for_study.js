@@ -942,7 +942,8 @@ console.log(fibonacciIterative(5));
 // ############# 정렬(Sorting) ###########################################################################################################################################################
 // https://www.toptal.com/developers/sorting-algorithms  // Sorting 속도 참고
 
-// !!구현법은 외우지말고 종류별로 이해할것!!
+// 합병정렬 (Merge Sort), 퀵 정렬 (Quick Sort)가 가장 많이 쓰임
+// !! 구현법은 외우지말고 종류별로 이해할 것 !!
 
 // ######################################################################################################################################### 버블 정렬 (Bubble Sort) #######################
 // 인접한 두 원소를 비교하면서 정렬
@@ -1026,7 +1027,7 @@ console.log(numbers);
 
 
 // ######################################################################################################################################### 합병 정렬 (Merge Sort) #######################
-// 배열을 반으로 나눈 후 각각을 정렬하고, 그 결과를 합치고 전체 배열을 정렬하는 방식으로 동작함 (재귀 함수 이용)
+// 배열을 반으로 계속해서 쪼갠 후 각각을 정렬하고, 그 결과를 합치고 전체 배열을 정렬하는 방식 (재귀 함수 이용)
 // 분할 정복(Divide and Conquer) 알고리즘
 // 대규모 정렬에도 효율적
 // 공간 복잡도를 고려시 주의
@@ -1069,5 +1070,49 @@ const answer = mergeSort(numbers);
 console.log(answer);
 
 // ######################################################################################################################################### 퀵 정렬 (Quick Sort) #######################
+// 피벗으로 지정 --> 피벗기준 작은값은 왼쪽에, 큰 값은 오른쪽에 배치 --> 마지막에 합침 (재귀 함수 이용)
+// 최악의 경우 O(n^2)  --> 피벗이 좋다고 보이지 않을때 피하는게 좋다
+// 평균 O(n log n)
 
 // ##############
+const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+function quickSort(array, left, right){
+  const len = array.length; 
+  let pivot;
+  let partitionIndex;
+
+  if(left < right) {
+    pivot = right;
+    partitionIndex = partition(array, pivot, left, right);
+    
+    //sort left and right
+    quickSort(array, left, partitionIndex - 1);
+    quickSort(array, partitionIndex + 1, right);
+  }
+  return array;
+}
+   
+function partition(array, pivot, left, right){
+  let pivotValue = array[pivot];
+  let partitionIndex = left;
+
+  for(let i = left; i < right; i++) {
+    if(array[i] < pivotValue){
+      swap(array, i, partitionIndex);
+      partitionIndex++;
+    }
+  }
+  swap(array, right, partitionIndex);
+  return partitionIndex;
+}
+
+function swap(array, firstIndex, secondIndex){
+    var temp = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = temp;
+}
+
+//Select first and last index as 2nd and 3rd parameters
+quickSort(numbers, 0, numbers.length - 1);
+console.log(numbers);
