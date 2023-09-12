@@ -1126,7 +1126,7 @@ quickSort(numbers, 0, numbers.length - 1);
 console.log(numbers);
 
 // ############## 탐색 (Searching) / BFS, DFS ############################################################################################################################################
-// ######################################################################################################################################### 선형 탐색 (Linear Search) #######################
+// ######################################################################################################################################### 선형 탐색 (Linear Search) #####################
 // index 0부터 일일이 찾아봄 (큰 데이터 셋에선 비효율적)
 // 일반적으로 내장되있는 기능
 
@@ -1168,17 +1168,6 @@ beasts.includes('Godzilla');
 
 // BFS - [9, 4, 20, 1, 6, 15, 170]
 
-// ##############
-
-
-
-
-
-
-
-
-
-
 
 // ###################################################################################################################################### DFS(Depth First Search) / Traverser ##################
 // 트리나 그래프를 왼쪽부터 최대한 깊이 자식 노드들을 탐색하는 방법 (깊이 먼저 탐색)
@@ -1192,18 +1181,173 @@ beasts.includes('Godzilla');
 //        4           20
 //      1   6      15   170
 
-// DFS - [9, 4, 1, 6, 20, 15, 170]
-// InOrder - [1, 4, 6, 9, 15, 20, 170]
 // PreOrder - [9, 4, 1, 6, 20, 15, 170]
+// InOrder - [1, 4, 6, 9, 15, 20, 170]
 // PostOrder - [1, 6, 4, 15, 170, 20, 9]
+
+// ############################################################################################################################# BFS (반복, 재귀) / DFS (PreOrder, InOrder, PostOrder) 코드 예시 ######
+
+class Node {
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  // 노드 생성
+  insert(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          // left
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            return this;
+          }
+          currentNode = currentNode.left;
+        } else {
+          // right
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
+    }
+  }
+
+  // ... 생략 ...
+
+  // BFS (반복문)
+  BreadthFirstSearch() {
+    let currentNode = this.root;
+    let list = [];
+    let queue = [];
+    queue.push(currentNode);
+
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      list.push(currentNode.value);
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    return list;
+  }
+
+  // BFS (재귀함수 버전)
+  BreadthFirstSearchR(queue, list) {
+    if (!queue.length) {
+      return list;
+    }
+    const currentNode = queue.shift();
+    list.push(currentNode.value);
+
+    if (currentNode.left) {
+      queue.push(currentNode.left);
+    }
+    if (currentNode.right) {
+      queue.push(currentNode.right);
+    }
+
+    return this.BreadthFirstSearchR(queue, list);
+  }
+
+  // DFS (PreOrder) 초기 호출
+  DFTPreOrder() {
+    return traversePreOrder(this.root, []);
+  }
+
+  // DFS (InOrder) 초기 호출
+  DFTInOrder() {
+    return traverseInOrder(this.root, []);
+  }
+
+  // DFS (PostOrder) 초기 호출
+  DFTPostOrder() {
+    return traversePostOrder(this.root, []);
+  }
+}
+
+// DFS (PreOrder) 재귀함수
+const traversePreOrder = (node, list) => {
+  list.push(node.value);
+  if (node.left) {
+    traversePreOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePreOrder(node.right, list);
+  }
+  return list;
+};
+
+// DFS (InOrder) 재귀함수
+const traverseInOrder = (node, list) => {
+  if (node.left) {
+    traverseInOrder(node.left, list);
+  }
+  list.push(node.value);
+  if (node.right) {
+    traverseInOrder(node.right, list);
+  }
+  return list;
+};
+
+// DFS (PostOrder) 재귀함수
+const traversePostOrder = (node, list) => {
+  if (node.left) {
+    traversePostOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePostOrder(node.right, list);
+  }
+  list.push(node.value);
+  return list;
+};
+
+const tree = new BinarySearchTree();
+tree.insert(9);
+tree.insert(4);
+tree.insert(6);
+tree.insert(20);
+tree.insert(170);
+tree.insert(15);
+tree.insert(1);
+tree.insert(0);
+tree.insert(3);
+tree.insert(5);
+tree.insert(7);
+tree.insert(11);
+tree.insert(16);
+tree.insert(22);
+tree.insert(175);
+
+//               9
+//        4           20
+//      1   6      15   170
+//    0  3 5  7  11 16 22  175
+
+console.log('BFS', tree.BreadthFirstSearch()); // [9, 4, 20, 1, 6, 15, 170, 0, 3, 5, 7, 11, 16, 22, 175]
+console.log('BFS', tree.BreadthFirstSearchR([tree.root], []));
+console.log('DFSin', tree.DFTInOrder()); // [0, 1, 3, 4, 5, 6, 7, 9, 11, 15, 16, 20, 22, 170, 175]
+console.log('DFSpre', tree.DFTPreOrder()); // [9, 4, 1, 0, 3, 6, 5, 7, 20, 15, 11, 16, 170, 22, 175]
+console.log('DFSpost', tree.DFTPostOrder()); // [0, 3, 1, 5, 7, 6, 4, 11, 16, 15, 22, 175, 170, 20, 9]
+
+
+// ################################################################################################################################# ############
 // ############## 
-
-
-
-
-// 다 BFS DFS 위 코드 이해하고 넘어가기
-
-
-
-
 
