@@ -1376,7 +1376,7 @@ console.log(2, memoized(2));
 //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233...
 let calculations = 0;
 
-const fibonacci = (n) => {   // O(2^n)
+const fibonacci = (n) => {   // O(2^n) --> DP없이 재귀함수 이용
   calculations++; // 몇번 불렸는지 계산
 
   if (n < 2) {
@@ -1385,7 +1385,7 @@ const fibonacci = (n) => {   // O(2^n)
   return fibonacci(n - 1) + fibonacci(n - 2);
 };
 
-const fibonacciMaster = () => {   // O(n)
+const fibonacciMaster = () => {   // O(n) --> DP방식으로 재귀함수 이용
   let cache = {};
   return function fib(n) {
     if (n in cache) {
@@ -1401,19 +1401,10 @@ const fibonacciMaster = () => {   // O(n)
   };
 };
 
-const fibonacciMaster2 = (n) => {
-  let answer = [0, 1];
-  for (let i = 2; i <= n; i++) {
-    answer.push(answer[i - 2] + answer[i - 1]);
-  }
-  return answer.pop();
-};
-
 const fasterFib = fibonacciMaster();
 
 console.log('Slow', fibonacci(35));
 console.log('DP', fasterFib(100));
-console.log('DP2', fibonacciMaster2(100));
 console.log('we did ' + calculations + ' calculations');
 
 
