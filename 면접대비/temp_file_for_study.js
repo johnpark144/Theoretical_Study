@@ -1348,6 +1348,28 @@ console.log('DFSpre', tree.DFTPreOrder()); // [9, 4, 1, 0, 3, 6, 5, 7, 20, 15, 1
 console.log('DFSpost', tree.DFTPostOrder()); // [0, 3, 1, 5, 7, 6, 4, 11, 16, 15, 22, 175, 170, 20, 9]
 
 
-// ################################################################################################################################# ############
-// ############## 
+// ############### 다이나믹 프로그래밍 (Dynamic Programming, DP) #############################################################################################################################
+// 중복 계산을 피하고 계산 결과를 캐싱(메모이제이션)하여 효율적으로 문제를 해결
 
+// ############## 클로저를 이용한 캐싱
+const memoizeAddTo80 = (n) => {
+  let cache = {};
+  return (n) => {
+    if (n in cache) {
+      return cache[n];
+    } else {
+      console.log('long time');
+      const answer = n + 80;
+      cache[n] = answer;
+      return answer;
+    }
+  };
+};
+
+const memoized = memoizeAddTo80();
+
+console.log(1, memoized(6));
+console.log(2, memoized(2));
+console.log(2, memoized(2));
+
+// ############## 클로저를 이용한 캐싱
