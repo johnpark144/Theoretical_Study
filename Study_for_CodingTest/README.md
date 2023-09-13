@@ -6,4 +6,4 @@
 
 # Index of 'Study for Codingtest'
 
-- <a href="./counter.js">Counter</a>
+- <a href="./counter.js">Counter</a>  V
