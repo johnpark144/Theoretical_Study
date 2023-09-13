@@ -6,4 +6,9 @@
 
 # Index of 'Study for Codingtest'
 
-- <a href="./counter.js">Counter</a>  V
+- <a href="./counter.js">Counter</a> V
+- <a href="./Get.js">Get</a>
+- <a href="./Unique_Array.js">Unique Array</a> V
+- <a href="./Contact_Form.js">Contact Form</a>
+- <a href="./Holy_Grail.js">Holy Grail</a>
+- <a href="./Array_prototype_filter.js">Array.prototype.filter</a>
