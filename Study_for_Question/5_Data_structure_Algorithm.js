@@ -1,18 +1,16 @@
 // ############## 리마인더 #####################################################################################################################################################################
-// 필기 다끝나고 한번 훑어볼것
 
 // ############## 인덱스 #####################################################################################################################################################################
-
-
+// Big O notation
+// 자료구조 -- 배열, 해시 테이블, 링크드 리스트, 더블 링크드 리스트, 스택, 큐, 트리, 이진 탐색 트리, 이진 힙, 트라이, 그래프
+// 알고리즘 -- 재귀, 정렬, 탐색, BFS, DFS, 다이나믹 프로그래밍
 
 // ############## Big O notation #####################################################################################################################################################################
 // 좋은 코드는 1) No Repeat(중복성 없음), Consistent(일관성있는), Readible(가독성), Teastable(테스트하기 좋음)  2) Scalable(Big O) ---> 2-1)속도(시간복잡도 less than O(N^2)),  2-2)메모리(공간복잡도)
 // Scalable 즉, 시간복잡도, 공간복잡도가 아무리 좋아도 가독성이 안좋으면 상황에 따라 좋은 코드라 볼 수없기 때문에 트레이드오프를 잘 고려 해야함.
 
-// Big O는 알고리즘이 실행되는데 걸리는 시간 (낮을수록 더 효율적이고 빠른 코드)
-
-// 시간 복잡도(Time Complexity): 입력된 N의 크기에 따라 실행되는 조작의 수를 나타낸다.
-// 공간 복잡도(Space Complexity): 알고리즘이 실행될 때 사용하는 메모리의 양을 나타낸다.
+// 시간 복잡도(Time Complexity): 입력된 N의 크기에 따라 실행되는 조작의 수
+// 공간 복잡도(Space Complexity): 사용하는 메모리의 양
 
 // ############## 시간 복잡도를 야기하는 것
 // Looping (반복문)
@@ -27,7 +25,7 @@
 // Allocations (할당)
 
 // ############## Big O 계산의 4가지 규칙
-// Worst Case (최악의 상황을기준)
+// Worst Case (최악의 상황을 기준)
 // Remove Constants  (상수 제거)
 // Different Terms For Inputs  (입력값의 대한 분리)
 // Drop Non Dominants (상대적으로 비 지배적인부분 제거)
@@ -47,23 +45,23 @@ const findNemo = (array) => {
   console.log('call to find Nemo took', +(t1 - t0) + 'ms');
 };
 
-findNemo(large);  // O(n) --> linear time (딱 배열이 길어진 만큼만 시간이 걸림, '/' 형태의 그래프)
+findNemo(large); // O(n) --> linear time (딱 배열이 길어진 만큼만 시간이 걸림, '/' 형태의 그래프)
 
 // ############## O(1) 코드 예시
 
 const boxes = [0, 1, 2, 3, 4, 5, 6];
 const logFirstTwoBoxes = (boxes) => {
-  console.log(boxes[0]);  //  O(1)
-  console.log(boxes[1]);  //  O(1)
+  console.log(boxes[0]); //  O(1)
+  console.log(boxes[1]); //  O(1)
 };
 
-logFirstTwoBoxes(boxes);  //  O(2) but O(1)로 봄 --> constant time (딱 배열이 길어져도 정해진 시간만 걸림, 'ㅡ' 형태의 그래프)
+logFirstTwoBoxes(boxes); //  O(2) but O(1)로 봄 --> constant time (딱 배열이 길어져도 정해진 시간만 걸림, 'ㅡ' 형태의 그래프)
 
 // ############## O(n^2) 코드 예시
 const boxes = ['a', 'b', 'c', 'd', 'e'];
 
 const logAllPairsOfArray = (array) => {
-    // O(n) * O(n)
+  // O(n) * O(n)
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
       console.log(array[i], array[j]);
@@ -75,7 +73,7 @@ logAllPairsOfArray(boxes); // O(n^2) --> Quadratice time
 
 // ############## 자료구조와 알고리즘 개요 ##################################################################################################################################################
 // 자료구조 : Arrays, Trees, Stacks, Tries, Queses, Graphs, Linked List, Hash Tables
-// 알고리즘 : Sorting, Dynamic Programming, BFS + DFS (Searchong), Recursion
+// 알고리즘 : Sorting, Dynamic Programming, BFS + DFS (Searching), Recursion
 
 // #########################################################################################################################################################################################
 // ############### 자료구조 #################################################################################################################################################################
@@ -90,9 +88,9 @@ logAllPairsOfArray(boxes); // O(n^2) --> Quadratice time
 
 // 장점 : 조회, push, pop에 빠르다, 순서(정렬)
 // 단점 : (push,pop을 제외한) 검색, 삽입, 삭제가 느림, 정적 배열의 경우 비어있어도 큰 용량에 고정
-// ############## 
+// ##############
 const strings = ['a', 'b', 'c', 'd'];
-strings[2] // O(1)
+strings[2]; // O(1)
 // push
 strings.push('e'); // O(1)
 // pop
@@ -112,16 +110,15 @@ strings.splice(2, 0, '!!!'); // O(n)
 // 데이터를 효율적으로 저장하고 검색하는 데 사용되며, 암호학, 데이터베이스, 데이터 구조, 보안, 알고리즘 등에 사용
 // 특징과 역할 : 고유성, 고정된 출력 크기, 빠른 계산, 충돌 최소화, 원본 추론 어려움
 
-// ############## 
+// ##############
 // insert  O(1)
 // delete  O(1)
 // lookup  O(1)
 // search  O(1)
 
 // 장점 : 조회, 검색, 삽입, 삭제에 빠르다, 효율적인 Key사용
-// 단점 : 순서가 존재하지 않는다, 이터러블 하지않아 Key Iteration이 느리다 
-// ############## 
-
+// 단점 : 순서가 존재하지 않는다, 이터러블 하지않아 Key Iteration이 느리다
+// ##############
 
 // ############## 링크드 리스트, 연결 리스트 (Linked Lists) #################################################################################################################################################################
 // 배열들이 서로 머리부터 꼬리까지 연결되어 있는 자료구조
@@ -135,14 +132,14 @@ strings.splice(2, 0, '!!!'); // O(n)
 // -- 장점 : 메모리 효율, 구현이 간단
 // -- 단점 : 역방향 탐색 어려움, 접근 시간 오래 걸림
 // 더블 링크드 리스트
-// -- 장점 : 역방향 탐색 가능, 
+// -- 장점 : 역방향 탐색 가능,
 // -- 단점 : 구현하기 복잡함, 메모리 비효율
 
 // ############## 배열과 비교
 // 배열: '조회'가 잦을때
 // 링크드 리스트: '삽입 및 삭제' 작업이 잦을때
 
-// ############## 
+// ##############
 // prepend O(1)   // 앞에 추가 (unshift와 비슷하지만 시간복잡도면에서 효율적), 제거도 동일 시간복잡도
 // append O(1)    // 뒤에 추가(push와 비슷), 제거도 동일 시간복잡도
 // lookup O(n)
@@ -153,17 +150,17 @@ strings.splice(2, 0, '!!!'); // O(n)
 // 10 --> 5 --> 16
 
 let myLinkedList = {
-    head : {
-        value : 1,
-        next : {
-            value : 5,
-            next : {
-                value : 16,
-                next : null
-            }
-        }
-    }
-}
+  head: {
+    value: 1,
+    next: {
+      value: 5,
+      next: {
+        value: 16,
+        next: null,
+      },
+    },
+  },
+};
 
 // ############## 싱글 링크드 리스트 (Singly Linked Lists)
 class LinkedList {
@@ -279,7 +276,6 @@ myLinkedList.remove(2); // 10, 99, 16
 myLinkedList.reverse(); // 16, 99, 10
 myLinkedList.printList();
 
-
 // ############## 더블 링크드 리스트 (Doubly Linked Lists)
 class DoublyLinkedList {
   constructor(value) {
@@ -384,7 +380,6 @@ myDoublyLinkedList.insert(1, 99); // 10, 99, 5, 16
 myDoublyLinkedList.remove(2); // 10, 99, 16
 myDoublyLinkedList.printList();
 
-
 // ############## 스택(Stacks) #################################################################################################################################################################
 // LIFO (Last In First Out)
 // 배열과, 링크리스트로 구현가능 (한쪽 통로만 사용해서)
@@ -392,10 +387,10 @@ myDoublyLinkedList.printList();
 // 스택과 큐의 장단점 동일함
 // -- 장점 :  빠른 삽입 및 제거, 빠른 peek 확인, 순서(정렬)
 // -- 단점 : lookup이 느리다
-// ############## 
+// ##############
 // lookup O(n)
 // pop, push O(1)
-// peek O(1) 
+// peek O(1)
 
 // ############## 배열로 스택 구현
 class Stack {
@@ -480,7 +475,6 @@ myStack.push('naver');
 myStack.pop();
 console.log(myStack);
 
-
 // ############## 큐(Queues) #################################################################################################################################################################
 // FIFO (First In First Out)
 // 링크리스트로 구현가능 (배열은 index가 밀리기 때문에 비 효율적)
@@ -488,10 +482,10 @@ console.log(myStack);
 // 스택과 큐의 장단점 동일함
 // -- 장점 :  빠른 삽입 및 제거, 빠른 peek 확인, 순서(정렬)
 // -- 단점 : lookup이 느리다
-// ############## 
+// ##############
 // lookup O(n)
 // enqueue, dequeue O(1)
-// peek O(1) 
+// peek O(1)
 
 // ############## 링크리스트로 스택 구현
 class Node {
@@ -569,7 +563,7 @@ console.log(myQueue);
 // insert O(n)
 // delete O(n)
 
-// ############## 
+// ##############
 class Node {
   constructor(value) {
     this.left = null;
@@ -742,7 +736,6 @@ tree.remove(20);
 // 브라우저 console에서 조회 하려고
 console.log(JSON.stringify(tranverse(tree.root)));
 
-
 // ############## Balanced BST (균형 이진 탐색 트리) -> (AVL Tree, Red Black Tree)
 // AVL Tree와 Red Black Tree 같은 균형 이진 탐색 트리는 트리가 벨런스가 맞게 알아서 조절함
 
@@ -751,7 +744,7 @@ console.log(JSON.stringify(tranverse(tree.root)));
 // 왼쪽, 오른쪽 구분이 없으며 저절로 균형이 맞아감
 // 참고 !! 자료구조 힙과 자바스크립트 런타임 엔진에 사용되는 메모리 힙과는 전혀 다름.
 
-// ############## 
+// ##############
 // 장점 :  O(n)보단 낫다, 유동적인 사이즈, 삽입이 빠르다, 우선순위를 가짐
 // 단점 : lookup이 느리다
 
@@ -776,7 +769,7 @@ console.log(JSON.stringify(tranverse(tree.root)));
 // Directed : 단방향 그래프 (양방향이 될수도있음)
 // Undirected : 양방향 그래프
 
-// Weighted Graph : 노드간에 거리나 비용이나 중요도가 다름  ex) 빠른길 찾기, 중요한 친구 등 
+// Weighted Graph : 노드간에 거리나 비용이나 중요도가 다름  ex) 빠른길 찾기, 중요한 친구 등
 // Unweighted Graph : 노드간에 거리나 비용이나 중요도가 모두 동일
 
 // Cyclic : 노드끼리 순환적
@@ -876,8 +869,6 @@ myGraph.addEdge('6', '5');
 console.log(myGraph);
 myGraph.showConnections();
 
-
-
 // #########################################################################################################################################################################################
 // ############### 알고리즘 #################################################################################################################################################################
 // #########################################################################################################################################################################################
@@ -888,7 +879,7 @@ myGraph.showConnections();
 // ############## 재귀와 반복 차이
 // 반복(Iterative)
 // -- 장점 : Big O notation이 기껏해야 0(n)
-// -- 단점 : 상대적으로 가독성이 떨어짐 
+// -- 단점 : 상대적으로 가독성이 떨어짐
 
 // 재귀(Recursive)
 // -- 장점 : 가독성이 좋음 (복잡한 문제를 간단하게 작성)
@@ -896,17 +887,18 @@ myGraph.showConnections();
 
 // ############## 팩토리얼 계산 (5! = 5 * 4 * 3 * 2 * 1)
 // 재귀적인 방법
-const findFactorialRecursive = (number) => { // 0(n)
+const findFactorialRecursive = (number) => {
+  // 0(n)
   if (number === 2) {
     return 2;
   }
-  return number * findFactorialRecursive(number - 1);  // factorial(5) -> 5 * factorial(4) ->  4 * factorial(3) -> 3 * factorial(2) ...
+  return number * findFactorialRecursive(number - 1); // factorial(5) -> 5 * factorial(4) ->  4 * factorial(3) -> 3 * factorial(2) ...
 };
 console.log(findFactorialRecursive(5));
 
-
 // 반복문적인 방법
-const findFactorialIteratie = (number) => {  // 0(n)
+const findFactorialIteratie = (number) => {
+  // 0(n)
   let answer = 1;
   if (number === 2) {
     answer = 2;
@@ -921,15 +913,16 @@ console.log(findFactorialIteratie(5));
 
 // ############## 피보나치 계산 (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ...)
 // 재귀적인 방법
-const fibonacciRecursive = (n) => { // 0(2^n) --> 사실 좋은 방법이 아님
+const fibonacciRecursive = (n) => {
+  // 0(2^n) --> 사실 좋은 방법이 아님
   if (n < 2) return n;
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 };
 console.log(fibonacciRecursive(5));
 
-
 // 반복문적인 방법
-const fibonacciIterative = (n) => { // 0(n)
+const fibonacciIterative = (n) => {
+  // 0(n)
   let arr = [0, 1];
 
   for (let i = 2; i < n + 1; i++) {
@@ -948,10 +941,9 @@ console.log(fibonacciIterative(5));
 // ############## 사용할 때 추천
 // 삽입 정렬 (Insertion Sort) : 입력값이 적을 때, 어느정도 정렬이 이미 되있을 떄, 공간 복잡도를 고려할 때
 // 합병 정렬 (Merge Sort) : 최악의 경우를 생각할 때 가장 무난함, 공간 복잡도를 신경 안써도 될 때,
-// 퀵 정렬 (Quick Sort) : 공간 복잡도를 신경 써야할 때 가장 무난함(삽입이 더 낫긴함), 최악의 경우를 생각하지 않아도 될 때, 
+// 퀵 정렬 (Quick Sort) : 공간 복잡도를 신경 써야할 때 가장 무난함(삽입이 더 낫긴함), 최악의 경우를 생각하지 않아도 될 때,
 
 // 버블 정렬 (Bubble Sort), 선택 정렬 (Selection Sort) : 비추
-
 
 // ######################################################################################################################################### 버블 정렬 (Bubble Sort) #######################
 // 인접한 두 원소를 비교하면서 정렬
@@ -977,7 +969,6 @@ const bubbleSort = (arr) => {
 
 bubbleSort(numbers);
 console.log(numbers);
-
 
 // ######################################################################################################################################### 선택 정렬 (Selection Sort) #######################
 // 가장 작은 (또는 가장 큰) 원소를 찾음 --> 맨 앞 원소와 교체 --> 이미 정렬된 것을 제외하고 처음부터 끝까지 반복
@@ -1005,7 +996,6 @@ const selectionSort = (arr) => {
 selectionSort(numbers);
 console.log(numbers);
 
-
 // ######################################################################################################################################### 삽입 정렬 (Insertion Sort) #######################
 // 각 요소를 적절한 위치에 "삽입"하여 정렬
 // 가장 빠르진 않지만, 가장 빠른 경우가 있음
@@ -1032,7 +1022,6 @@ const insertionSort = (arr) => {
 
 insertionSort(numbers);
 console.log(numbers);
-
 
 // ######################################################################################################################################### 합병 정렬 (Merge Sort) #######################
 // 배열을 반으로 계속해서 쪼갠 후 각각을 정렬하고, 그 결과를 합치고 전체 배열을 정렬하는 방식 (재귀 함수 이용)
@@ -1085,28 +1074,28 @@ console.log(answer);
 // ##############
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-function quickSort(array, left, right){
-  const len = array.length; 
+function quickSort(array, left, right) {
+  const len = array.length;
   let pivot;
   let partitionIndex;
 
-  if(left < right) {
+  if (left < right) {
     pivot = right;
     partitionIndex = partition(array, pivot, left, right);
-    
+
     //sort left and right
     quickSort(array, left, partitionIndex - 1);
     quickSort(array, partitionIndex + 1, right);
   }
   return array;
 }
-   
-function partition(array, pivot, left, right){
+
+function partition(array, pivot, left, right) {
   let pivotValue = array[pivot];
   let partitionIndex = left;
 
-  for(let i = left; i < right; i++) {
-    if(array[i] < pivotValue){
+  for (let i = left; i < right; i++) {
+    if (array[i] < pivotValue) {
       swap(array, i, partitionIndex);
       partitionIndex++;
     }
@@ -1115,10 +1104,10 @@ function partition(array, pivot, left, right){
   return partitionIndex;
 }
 
-function swap(array, firstIndex, secondIndex){
-    var temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
+function swap(array, firstIndex, secondIndex) {
+  var temp = array[firstIndex];
+  array[firstIndex] = array[secondIndex];
+  array[secondIndex] = temp;
 }
 
 //Select first and last index as 2nd and 3rd parameters
@@ -1148,11 +1137,9 @@ beasts.find((item) => {
 // includes
 beasts.includes('Godzilla');
 
-
 // ######################################################################################################################################### 이진 탐색 (Binary Search) #######################
 // 분할 정복(Divide and Conquer)방식 (이진 탐색 트리를 이용함)
 // O(log n)
-
 
 // ###################################################################################################################################### BFS(Breadth First Search) / Traverser ##################
 // 트리나 그래프를 가로로 가로질러 탐색하는 방법 (너비 먼저 탐색)
@@ -1167,7 +1154,6 @@ beasts.includes('Godzilla');
 //      1   6      15   170
 
 // BFS - [9, 4, 20, 1, 6, 15, 170]
-
 
 // ###################################################################################################################################### DFS(Depth First Search) / Traverser ##################
 // 트리나 그래프를 왼쪽부터 최대한 깊이 자식 노드들을 탐색하는 방법 (깊이 먼저 탐색)
@@ -1347,7 +1333,6 @@ console.log('DFSin', tree.DFTInOrder()); // [0, 1, 3, 4, 5, 6, 7, 9, 11, 15, 16,
 console.log('DFSpre', tree.DFTPreOrder()); // [9, 4, 1, 0, 3, 6, 5, 7, 20, 15, 11, 16, 170, 22, 175]
 console.log('DFSpost', tree.DFTPostOrder()); // [0, 3, 1, 5, 7, 6, 4, 11, 16, 15, 22, 175, 170, 20, 9]
 
-
 // ############### 다이나믹 프로그래밍 (Dynamic Programming, DP) #############################################################################################################################
 // 중복 계산을 피하고 계산 결과를 캐싱(메모이제이션)하여 효율적으로 문제를 해결
 
@@ -1372,11 +1357,12 @@ console.log(1, memoized(6));
 console.log(2, memoized(2));
 console.log(2, memoized(2));
 
-// ##############  
+// ##############
 //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233...
 let calculations = 0;
 
-const fibonacci = (n) => {   // O(2^n) --> DP없이 재귀함수 이용
+const fibonacci = (n) => {
+  // O(2^n) --> DP없이 재귀함수 이용
   calculations++; // 몇번 불렸는지 계산
 
   if (n < 2) {
@@ -1385,7 +1371,8 @@ const fibonacci = (n) => {   // O(2^n) --> DP없이 재귀함수 이용
   return fibonacci(n - 1) + fibonacci(n - 2);
 };
 
-const fibonacciMaster = () => {   // O(n) --> DP방식으로 재귀함수 이용
+const fibonacciMaster = () => {
+  // O(n) --> DP방식으로 재귀함수 이용
   let cache = {};
   return function fib(n) {
     if (n in cache) {
@@ -1406,5 +1393,3 @@ const fasterFib = fibonacciMaster();
 console.log('Slow', fibonacci(35));
 console.log('DP', fasterFib(100));
 console.log('we did ' + calculations + ' calculations');
-
-
