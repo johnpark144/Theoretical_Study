@@ -108,7 +108,7 @@
 
 - 시스템 고도화를 위해 할 수 있는것
 
-## <a href="./2_html_css.md">2️⃣ HTML/ CSS</a>
+## <a href="./2_Html_Css.md">2️⃣ HTML/ CSS</a>
 
 ### **HTML**
 
@@ -194,7 +194,7 @@
   - padding
   - margin
 
-## <a href="./3_js.md">3️⃣ JavaScript</a>
+## <a href="./3_JS.md">3️⃣ JavaScript</a>
 
 - `프로그래밍 🔥`
 
@@ -409,7 +409,7 @@
 - `모듈 🔥`
   - 모듈이란?
 
-## <a href="./4_react.md">4️⃣ React</a>
+## <a href="./4_React.md">4️⃣ React</a>
 
 - `React 시작🔥`
 - `리액트는 라이브러리 or 프레임워크?🔥`
