@@ -486,3 +486,5 @@
 - `그래프 🔥`
 
 ## <a href="./6_Order_of_importance.md">6️⃣ 중요도 </a>
+
+## <a href="./7_English.md">7️⃣ 영어 </a>
