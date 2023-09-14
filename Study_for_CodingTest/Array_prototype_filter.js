@@ -1,10 +1,10 @@
 // ########### Questions #############################################################################
-// mplement Array.prototype.filter. To avoid overwriting the actual Array.prototype.filter which is being used by the autograder,
+// Implement  Array.prototype.filter. To avoid overwriting the actual Array.prototype.filter which is being used by the autograder,
 // we shall instead implement it as Array.prototype.myFilter.
 
-// [1, 2, 3, 4].myFilter((value) => value % 2 == 0); // [2, 4]
-// [1, 2, 3, 4].myFilter((value) => value < 3); // [1, 2]
-// [1, 2, 3, 4].myFilter((_, index) => index % 2 === 0); // [1, 3]
+// [1, 2, 3, 4].myFilter((value) => value % 2 == 0);        // [2, 4]
+// [1, 2, 3, 4].myFilter((value) => value < 3);             // [1, 2]
+// [1, 2, 3, 4].myFilter((_, index) => index % 2 === 0);    // [1, 3]
 // [1, 2, 3, 4].myFilter((_, index, array) => (array[index] * array[index]) % 2 === 0)  // [2, 4]
 // [1, 2, 3, 4].myFilter(function (element) { return (element * this) % 2 === 0; }, 9)  // [2, 4]
 

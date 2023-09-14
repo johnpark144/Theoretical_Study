@@ -12,3 +12,6 @@
 - <a href="./Contact_Form.js">Contact Form</a>
 - <a href="./Holy_Grail.js">Holy Grail</a>
 - <a href="./Array_prototype_filter.js">Array.prototype.filter</a>
+- <a href="./Array_prototype_map.js">Array.prototype.map</a> V
+- <a href="./Array_prototype_reduce.js">Array.prototype.reduce</a>
+- <a href="./Array_prototype_bind.js">Array.prototype.bind (햇갈림)</a>
