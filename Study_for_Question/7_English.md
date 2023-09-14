@@ -1,7 +1,18 @@
 #####################################################################################
----------참고 예시-----------
-- `business logic 🔥`
-  - business logic 이란?
-      - 프로그램의 핵심 로직
-      - <a href="">어떻게 데이터가 생성되고 저장되고 수정되는지</a> 등을 <a href="">논리적으로</a> 정의한 것
-#####################################################################################
+
+- `Describe the difference between '<script>', '<script async>' and '<script defer>'`
+
+  - <script>
+    - HTML parsing is blocked, when script is encountered
+    - the script is fetched and executed immediately
+    - HTML parsing continues after that
+  - <script async>
+    - common : the script is fetched alongside HTML parsing 
+    - difference : It runs when it's ready
+  - <script defer>
+    - common : the script is fetched alongside HTML parsing 
+    - difference : It runs when HTML parsing is finished
+
+- `Explain how prototypal inheritance works`
+  - Used for object inheritance (similar with class)
+  - When accessing, it searches via the prototype chain if the property/method isn't found on the object.
