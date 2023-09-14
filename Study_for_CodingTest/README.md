@@ -16,3 +16,5 @@
 - <a href="./Array_prototype_reduce.js">Array.prototype.reduce</a>
 - <a href="./Array_prototype_bind.js">Array.prototype.bind (햇갈림)</a>
 - <a href="./jQuery_css.js">jQuery.css</a>
+- <a href="./Sum.js">Sum</a>
+- <a href="./Progress_Bar.js">Progress Bar</a>
