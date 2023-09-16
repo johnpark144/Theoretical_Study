@@ -23,3 +23,4 @@
 - <a href="./Debounce.js">Debounce</a>
 - <a href="./Curry.js">Curry</a>
 - <a href="./Throttle.js">Throttle</a>
+- <a href="./Flatten.js">Flatten</a>
