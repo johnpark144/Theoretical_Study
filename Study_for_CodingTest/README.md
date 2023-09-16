@@ -20,3 +20,4 @@
 - <a href="./Progress_Bar.js">Progress Bar</a> V
 - <a href="./Temperature_Converter.js">Temperature Converter</a> V
 - <a href="./Tweet.js">Tweet</a> V
+- <a href="./Debounce.js">Debounce</a>
