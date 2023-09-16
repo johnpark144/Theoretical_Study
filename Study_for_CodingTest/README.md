@@ -21,3 +21,4 @@
 - <a href="./Temperature_Converter.js">Temperature Converter</a> V
 - <a href="./Tweet.js">Tweet</a> V
 - <a href="./Debounce.js">Debounce</a>
+- <a href="./Curry.js">Curry</a>
