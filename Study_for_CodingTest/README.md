@@ -22,3 +22,4 @@
 - <a href="./Tweet.js">Tweet</a> V
 - <a href="./Debounce.js">Debounce</a>
 - <a href="./Curry.js">Curry</a>
+- <a href="./Throttle.js">Throttle</a>
