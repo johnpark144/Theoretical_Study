@@ -24,3 +24,4 @@
 - <a href="./Curry.js">Curry</a>
 - <a href="./Throttle.js">Throttle</a>
 - <a href="./Flatten.js">Flatten</a>
+- <a href="./Promise_all.js">Promise.all</a>
