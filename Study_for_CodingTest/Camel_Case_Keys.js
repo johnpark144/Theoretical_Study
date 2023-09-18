@@ -49,7 +49,7 @@ console.log(
 function changeToCamelCase(str) {
   let newMsg = str.toLowerCase().split('');
   const idx = newMsg.indexOf('_');
-  if (idx === -1) return str;
+  if (idx === -1) return str; // '_'가 없는경우
   newMsg[idx + 1] = newMsg[idx + 1].toUpperCase();
   newMsg.splice(idx, 1);
   return newMsg.join('');
