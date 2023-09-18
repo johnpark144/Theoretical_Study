@@ -29,3 +29,4 @@
 - <a href="./Camel_Case_Keys.js">Camel Case Keys</a>
 - <a href="./Classnames.js">Classnames</a>
 - <a href="./CurryII.js">Curry II</a>
+- <a href="./GetElementsByTagName.js">getElementsByTagName</a>
