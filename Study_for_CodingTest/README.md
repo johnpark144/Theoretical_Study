@@ -28,3 +28,4 @@
 - <a href="./Todo_List.js">Todo List</a> V
 - <a href="./Camel_Case_Keys.js">Camel Case Keys</a>
 - <a href="./Classnames.js">Classnames</a>
+- <a href="./Curry_II.js">Curry II</a>
