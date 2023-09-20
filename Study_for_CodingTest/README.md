@@ -30,3 +30,4 @@
 - <a href="./22_Classnames.js">22.Classnames</a>
 - <a href="./23_CurryII.js">23.Curry II</a>
 - <a href="./24_GetElementsByTagName.js">24.getElementsByTagName</a>
+- <a href="./25_Identical DOM Trees.js">25.Identical DOM Trees (햇갈림)</a>
