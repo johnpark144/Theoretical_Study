@@ -1,4 +1,6 @@
 // ########### Questions #############################################################################
+// Implement the toggleClass(), addClass() and removeClass() methods according to the following specifications.
+
 // <button class="foo bar">Click me</button>
 $('button').toggleClass('bar'); // <button class="foo">Click me</button>
 $('button').addClass('baz'); // <button class="foo baz">Click me</button>
