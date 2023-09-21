@@ -36,3 +36,4 @@
 - <a href="./28_List_Format.js">28.List Format</a>
 - <a href="./29_Promise_allSettled.js">29.Promise.allSettled</a>
 - <a href="./30_Promise_any.js">30.Promise.any</a> Examples의 resolve와 err 부분 문제제기함
+- <a href="./31_Squash_Object.js">31.Squash Object (햇갈림)</a>
