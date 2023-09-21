@@ -34,3 +34,4 @@
 - <a href="./26_jQuery_Class_Manipulation.js">26.jQuery Class Manipulation</a>
 - <a href="./27_JSON_stringify.js">27.JSON.stringify</a>
 - <a href="./28_List_Format.js">28.List Format</a>
+- <a href="./29_Promise_allSettled.js">29.Promise.allSettled</a>
