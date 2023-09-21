@@ -33,3 +33,4 @@
 - <a href="./25_Identical_DOM_Trees.js">25.Identical DOM Trees (햇갈림)</a>
 - <a href="./26_jQuery_Class_Manipulation.js">26.jQuery Class Manipulation</a>
 - <a href="./27_JSON_stringify.js">27.JSON.stringify</a>
+- <a href="./28_List_Format.js">28.List Format</a>
