@@ -38,3 +38,4 @@
 - <a href="./30_Promise_any.js">30.Promise.any</a>
 - <a href="./31_Squash_Object.js">31.Squash Object</a>
 - <a href="./32_Text_Search.js">32.Text Search</a>
+- <a href="./33_Star_Rating.js">33.Star Rating</a> 🙆
