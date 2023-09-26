@@ -40,3 +40,4 @@
 - <a href="./32_Text_Search.js">32.Text Search</a>
 - <a href="./33_Star_Rating.js">33.Star Rating</a> 🙆
 - <a href="./34_Deep_Clone.js">34.Deep Clone</a> 🙆
+- <a href="./35_Digital_Clock.js">35.Digital Clock</a>
