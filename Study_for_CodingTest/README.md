@@ -6,15 +6,15 @@
 
 # Index of 'Study for Codingtest'
 
-- <a href="./1_counter.js">1.Counter</a> 🙆
-- <a href="./2_Get.js">2.Get</a>
-- <a href="./3_Unique_Array.js">3.Unique Array</a> 🙆
-- <a href="./4_Contact_Form.js">4.Contact Form</a>
-- <a href="./5_Holy_Grail.js">5.Holy Grail</a>
-- <a href="./6_Array_prototype_filter.js">6.Array.prototype.filter</a>
-- <a href="./7_Array_prototype_map.js">7.Array.prototype.map</a> 🙆
-- <a href="./8_Array_prototype_reduce.js">8.Array.prototype.reduce</a>
-- <a href="./9_Array_prototype_bind.js">9.Array.prototype.bind (햇갈림)</a>
+- <a href="./01_counter.js">01.Counter</a> 🙆
+- <a href="./02_Get.js">02.Get</a>
+- <a href="./03_Unique_Array.js">03.Unique Array</a> 🙆
+- <a href="./04_Contact_Form.js">04.Contact Form</a>
+- <a href="./05_Holy_Grail.js">05.Holy Grail</a>
+- <a href="./06_Array_prototype_filter.js">06.Array.prototype.filter</a>
+- <a href="./07_Array_prototype_map.js">07.Array.prototype.map</a> 🙆
+- <a href="./08_Array_prototype_reduce.js">08.Array.prototype.reduce</a>
+- <a href="./09_Array_prototype_bind.js">09.Array.prototype.bind (햇갈림)</a>
 - <a href="./10_JQuery_css.js">10.JQuery.css</a>
 - <a href="./11_Sum.js">11.Sum</a>
 - <a href="./12_Progress_Bar.js">12.Progress Bar</a> 🙆
