@@ -41,3 +41,4 @@
 - <a href="./33_Star_Rating.js">33.Star Rating</a> 🙆
 - <a href="./34_Deep_Clone.js">34.Deep Clone</a> 🙆
 - <a href="./35_Digital_Clock.js">35.Digital Clock</a>
+- <a href="./36_Deep_Equal.js">36.Deep Equal</a>
