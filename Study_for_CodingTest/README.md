@@ -45,3 +45,4 @@
 - <a href="./37_getElementsByClassName.js">37.getElementsByClassName</a>
 - <a href="./38_Text_Search_II.js">38.Text Search II</a>
 - <a href="./39_Signup_Form.js">39.Signup Form</a>
+- <a href="./40_Data_Selection.js">40.Data Selection</a>
