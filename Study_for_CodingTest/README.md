@@ -43,4 +43,5 @@
 - <a href="./35_Digital_Clock.js">35.Digital Clock</a>
 - <a href="./36_Deep_Equal.js">36.Deep Equal</a>
 - <a href="./37_getElementsByClassName.js">37.getElementsByClassName</a>
-- <a href="./38.Text Search II.js">38.Text Search II</a>
+- <a href="./38_Text_Search_II.js">38.Text Search II</a>
+- <a href="./39_Signup_Form.js">39.Signup Form</a>
