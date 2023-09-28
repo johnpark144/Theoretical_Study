@@ -1,8 +1,9 @@
 # Plan for study
 
-3개월 플랜 --> 전체 --> 리트코드 인터뷰 150 --> 리트코드 100 liked
+- 3개월 플랜 --> 전체 --> 리트코드 75 ( --> 리트코드 인터뷰 150 --> 리트코드 100 liked )
 
 - 5개문제, 10개질문 공부
+- Practical Study 리파지토리에도 공부한거 정리
 
 # Index of 'Study for Codingtest'
 
@@ -45,4 +46,4 @@
 - <a href="./37_getElementsByClassName.js">37.getElementsByClassName</a>
 - <a href="./38_Text_Search_II.js">38.Text Search II</a>
 - <a href="./39_Signup_Form.js">39.Signup Form</a>
-- <a href="./40_Data_Selection.js">40.Data Selection</a>
+- <a href="./40_Data_Selection.js">40.Data Selection (햇갈림)</a>
