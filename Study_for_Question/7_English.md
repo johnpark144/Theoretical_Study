@@ -35,7 +35,7 @@
 <!-- About box-sizing -->
 
 - "content-box" (defaults) : It expands border, padding, and margin upon content size
-- "border-box" : Its size includes all (within specified width and height)
+- "border-box" : Its size includes all except for margin (within specified width and height)
 
 - `What are the differences between variables created using 'let', 'var' or 'const'?`
 
@@ -43,5 +43,13 @@
 
   - let : 1. no multiple declarations, block-scoped is local scope, it is like no variable hoisting (TDZ), multiple assignments.
   - const : 1. no multiple declarations, block-scoped is local scope, it is like no variable hoisting (TDZ), requires immediate assignment with declaration together
+
+- `What does '* { box-sizing: border-box; }' do?`
+
+  - It simplifies layout by including content, padding, and borders when calculating element dimensions for all page elements. (No margin included)
+
+- `What is CSS selector specificity and how does it work?`
+
+  - Priority : !important > Inline Style > Id > Class > Tag(element) > Universal Selector (\*)
 
 - ``
