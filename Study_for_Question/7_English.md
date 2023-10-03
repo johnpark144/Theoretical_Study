@@ -76,4 +76,33 @@
   - Common : They are innvoked as method with the first parameter as 'this' value.
   - Difference: For the rest arguments, 'Call' uses 'Commas', 'Apply' uses 'Array'. (CCAA)
 
-- ``
+- `Describe the difference between a cookie, 'sessionStorage' and 'localStorage'.`
+
+  - Local Storage:
+    - accessible by other websites
+    - Long-term storage
+    - store large data.
+  - Session Storage: Tab-specific, data vanishes when tab closes, secure and fast.
+    - inaccessible by other websites.
+    - Tab-specific storage (data vanishes when tab closes)
+    - secure and fast.
+  - Cookies: Small data, expires after a set time, accessible by other websites.
+    - accessible by other websites.
+    - expiration-time-set-storage
+    - Small data
+
+- `What's the difference between a 'relative', 'fixed', 'absolute'and 'static'-ally positioned element?`
+  - static
+    - According to the flow (Default)
+    - Top, right, z-index don't work
+  - relative
+    - From its original location, It positions with "top, bottom, left, right" values
+    - Occupied original space. (its flow still stand)
+  - absolute
+    - From parents factor's "x:0 y:0" point, It positions with "top, bottom, left, right" values
+    - No occupied original space. (outside of the flow)
+  - Fixed
+    - Always stays in one place on the screen.
+  - Sticky
+    - Moves with the flow before specific point.
+    - After reaching a specific point while scrolling, Stays in one place on the screen.
