@@ -134,3 +134,12 @@
 
   - Assigning an event to a parent element allows event bubbling to propagate the event to child elements,
   - Saving memory, improving performance, and simplifying the code
+
+- `Explain 'Function.prototype.bind'`
+
+  - 'call' and 'apply' immediately call the function, while 'bind' creates a new function with a specific context but doesn't execute it immediately.
+
+- `Explain "hoisting"`
+  - "var" declarations are like driven to the top, and become "undefind" until assignments
+  - "let" and "const" variables are hoisted but uninitialized until declared, causing a ReferenceError if accessed before declaration due to the "TDZ"
+  - Function declarations undergo function hoisting, while function expressions experience variable hoisting.
