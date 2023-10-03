@@ -119,7 +119,18 @@
   - Method in object
 
 - `Why is it generally a good idea to position CSS '<link>'s between '<head></head>' and JS '<script>'s just before '</body>'?`
+
   - link tag in head tag
     - It loads stylesheets early in rendering, and show visually first.
   - script tag in the end of body tag
     - HTML parsing pauses when a script tag is downloaded and executed, making the content temporarily invisible.
+
+- `Describe event bubbling`
+
+  - When an event is triggered on a DOM element, it naturally bubbles up to its parent elements.
+  - e.stopPropagation() can stop this event bubbling.
+
+- `Explain event delegation`
+
+  - Assigning an event to a parent element allows event bubbling to propagate the event to child elements,
+  - Saving memory, improving performance, and simplifying the code
