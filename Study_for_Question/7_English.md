@@ -62,5 +62,18 @@
   - grid: It's useful for 2-dimensional layouts with rows and columns.
 
 - `What is the difference between '==' and '==='?`
+
   - '==' is the abstract equality operator while '===' is the strict equality operator.
   - namely, '===' chech even type equality.
+
+- `What's the difference between a variable that is: 'null', 'undefined' or undeclared?`
+
+  - undefined: Variable declared but not assigned any value.
+  - null: Variable assigned as empty or absent value.
+
+- `What's the difference between '.call' and '.apply'?`
+
+  - Common : They are innvoked as method with the first parameter as 'this' value.
+  - Difference: For the rest arguments, 'Call' uses 'Commas', 'Apply' uses 'Array'. (CCAA)
+
+- ``
