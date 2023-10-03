@@ -53,11 +53,12 @@
   - Priority : !important > Inline Style > Id > Class > Tag(element) > Universal Selector (\*)
 
 - `What is the CSS 'display' property and can you give a few examples of its use?`
+- `What's the difference between 'inline' and 'inline-block'?`
 
   - none: Element is invisible and doesn't take up space.
-  - block: Element displayed on a new line ex)<div>, <p>, <h1>
-  - inline: Element placed within a line alongside other elements ex) <span>
-  - inline-block: Element with block-like width and height control.
+  - block: Element displayed on a new line ex) div, p, h1
+  - inline: Element placed within a line alongside other elements ex) span
+  - inline-block: Element placed within a line in width, height, pading and margin control.
   - flex: It's useful for 1-dimensional layouts, such as rows or columns.
   - grid: It's useful for 2-dimensional layouts with rows and columns.
 
@@ -92,6 +93,7 @@
     - Small data
 
 - `What's the difference between a 'relative', 'fixed', 'absolute'and 'static'-ally positioned element?`
+
   - static
     - According to the flow (Default)
     - Top, right, z-index don't work
@@ -106,3 +108,18 @@
   - Sticky
     - Moves with the flow before specific point.
     - After reaching a specific point while scrolling, Stays in one place on the screen.
+
+- `Can you offer a use case for the new arrow => function syntax?`
+
+  - Shorter Function Expressions
+  - Implicit Return
+  - No Binding of 'this'
+  - Simplifying Callbacks
+  - Iterating Over Arrays
+  - Method in object
+
+- `Why is it generally a good idea to position CSS '<link>'s between '<head></head>' and JS '<script>'s just before '</body>'?`
+  - link tag in head tag
+    - It loads stylesheets early in rendering, and show visually first.
+  - script tag in the end of body tag
+    - HTML parsing pauses when a script tag is downloaded and executed, making the content temporarily invisible.
