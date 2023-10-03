@@ -52,4 +52,15 @@
 
   - Priority : !important > Inline Style > Id > Class > Tag(element) > Universal Selector (\*)
 
-- ``
+- `What is the CSS 'display' property and can you give a few examples of its use?`
+
+  - none: Element is invisible and doesn't take up space.
+  - block: Element displayed on a new line ex)<div>, <p>, <h1>
+  - inline: Element placed within a line alongside other elements ex) <span>
+  - inline-block: Element with block-like width and height control.
+  - flex: It's useful for 1-dimensional layouts, such as rows or columns.
+  - grid: It's useful for 2-dimensional layouts with rows and columns.
+
+- `What is the difference between '==' and '==='?`
+  - '==' is the abstract equality operator while '===' is the strict equality operator.
+  - namely, '===' chech even type equality.
