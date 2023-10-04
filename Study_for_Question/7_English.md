@@ -155,4 +155,10 @@
   - Synchronous : Guaranteed execution order, but blocking for subsequent tasks.
   - Asynchronous : No guaranteed execution order, and no blocking for pending tasks.
 
+- `Have you played around with the new CSS Flexbox or Grid specs?`
+
+  - Flexbox : 1-dimensional layouts (Horizontal and Vertical alignment)
+  - Grid : 2-dimensional layouts (Table-like-alignment)
+
 - ``
+  -
