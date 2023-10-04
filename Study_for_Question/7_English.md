@@ -140,6 +140,19 @@
   - 'call' and 'apply' immediately call the function, while 'bind' creates a new function with a specific context but doesn't execute it immediately.
 
 - `Explain "hoisting"`
+
   - "var" declarations are like driven to the top, and become "undefind" until assignments
   - "let" and "const" variables are hoisted but uninitialized until declared, causing a ReferenceError if accessed before declaration due to the "TDZ"
   - Function declarations undergo function hoisting, while function expressions experience variable hoisting.
+
+- `Explain how a browser determines what elements match a CSS selector.`
+
+  - Browsers match selectors from rightmost to the left.
+  - For the selector "p span," browsers find all 'span' elements and stop when they locate the nearest 'p' element.
+
+- `Explain the difference between synchronous and asynchronous functions`
+
+  - Synchronous : Guaranteed execution order, but blocking for subsequent tasks.
+  - Asynchronous : No guaranteed execution order, and no blocking for pending tasks.
+
+- ``
