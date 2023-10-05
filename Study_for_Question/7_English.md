@@ -160,5 +160,10 @@
   - Flexbox : 1-dimensional layouts (Horizontal and Vertical alignment)
   - Grid : 2-dimensional layouts (Table-like-alignment)
 
-- ``
-  -
+- `Is there any reason you'd want to use 'translate()' instead of 'absolute' positioning, or vice-versa? And why?`
+  - Absolute : Great for positioning, affects nearby elements
+    - Slower performance (CPU usage)
+    - But, better Readability, Simplicity, Cross-browser Compatibility
+  - Translate() : Great for animations, doesn't affect nearby elements
+    - Better performance (GPU usage)
+    - But, Complicated
