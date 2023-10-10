@@ -20,7 +20,7 @@
   - Used for object inheritance (similar with class)
   - When accessing, it searches via the prototype chain if the property/method isn't found on the object.
 
-- `Explain how `this` works`
+- `Explain how 'this' works`
 
   - "this" is a dynamic self-reference object tied to how a function is invoked.
   - "this" can explicitly be bound using "apply," "call," or "bind."
@@ -195,9 +195,11 @@
 - `What language constructions do you use for iterating over object properties and array items?`
 
   - Objects
+
     - for...in statement : For enumerable properties
     - Object.keys().forEach : For enumerable properties
     - Object.getOwnPropertyNames().forEach : For all properties including unenumerable
+
   - Arrays
 
     - for
@@ -208,4 +210,23 @@
     - "for" can break midway and have better flexibility, "forEach" cannot.
     - "forEach" offers better readability and reduces the likelihood of errors
 
-``
+- `What's a typical use case for anonymous functions?`
+
+  - Callback, IIFE, Closures, Event Handler, Array Method, etc
+
+- `Describe Block Formatting Context (BFC) and how it works.`
+
+  - Part of the visual CSS rendering of a web page in which block boxes are set
+  - an HTML box that fulfills at least one of these conditions : (Think of Boundary)
+    - 'float' --> 'right' or 'left'
+    - 'position' --> 'absolute' or 'fixed'
+    - 'overflow'--> no 'visible'
+    - 'display' --> table-cell, table-caption, inline-block, flex, or inline-flex, grid, or inline-grid
+
+- `Describe 'float's and how they work.`
+
+  - Make elements become part of the page's flow and Arrange text and images
+  - "left," "right," or "none" can be values of "Float"
+  - "clear" can be used with values like "left," "right," "both," or "none" to clear "float."
+
+- ``
