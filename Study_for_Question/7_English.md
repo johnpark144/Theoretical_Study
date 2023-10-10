@@ -187,4 +187,25 @@
   - How use ?
     - An inner function referencing an outer identifier should be the outer function's 'return value'
 
--
+- `What is event loop?`
+
+  - Single-threaded process
+  - Monitor the call stack and executes pending tasks from the queue when the stack is empty
+
+- `What language constructions do you use for iterating over object properties and array items?`
+
+  - Objects
+    - for...in statement : For enumerable properties
+    - Object.keys().forEach : For enumerable properties
+    - Object.getOwnPropertyNames().forEach : For all properties including unenumerable
+  - Arrays
+
+    - for
+    - Array.prototype.forEach()
+    - for...of statement
+
+  - Difference between for(in,of) and forEach
+    - "for" can break midway and have better flexibility, "forEach" cannot.
+    - "forEach" offers better readability and reduces the likelihood of errors
+
+``
