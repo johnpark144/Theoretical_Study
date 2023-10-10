@@ -229,4 +229,13 @@
   - "left," "right," or "none" can be values of "Float"
   - "clear" can be used with values like "left," "right," "both," or "none" to clear "float."
 
-- ``
+- `Describe pseudo-elements and discuss what they are used for.`
+
+  - Create virtual elements that are not in HTML and use it to style
+  - before or after contents, it can add some icon, characters or style
+  - ::before, ::after, ::first-letter, ::first-line
+
+- `Describe 'z-index' and how stacking context is formed`
+  - Without "z-index," lower elements are on top based on DOM order.
+  - Higher "z-index" value brings forward, lower sends back.
+  - "z-index" in a stacking context is relative, not affecting elements outside.
