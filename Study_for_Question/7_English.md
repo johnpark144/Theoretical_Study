@@ -1,7 +1,3 @@
-- ``
-
-#####################################################################################
-
 - `Describe the difference between '<script>', '<script async>' and '<script defer>'`
 
   - <script>
@@ -28,14 +24,14 @@
   - Arrow functions inherit "this" from their surrounding scope at creation.
 
 - `Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.`
+
   - Block elements size depends on width, height, paddings, and borders.
   - Without a specified height, paddings are added to the content's dimensions
   - Inline elements adjust to content dimensions with left and right margins/paddings.
 
-<!-- About box-sizing -->
-
-- "content-box" (defaults) : It expands border, padding, and margin upon content size
-- "border-box" : Its size includes all except for margin (within specified width and height)
+  - About box-sizing
+    - "content-box" (defaults) : It expands border, padding, and margin upon content size
+    - "border-box" : Its size includes all except for margin (within specified width and height)
 
 - `What are the differences between variables created using 'let', 'var' or 'const'?`
 
