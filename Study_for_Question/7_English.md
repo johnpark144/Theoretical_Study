@@ -161,9 +161,30 @@
   - Grid : 2-dimensional layouts (Table-like-alignment)
 
 - `Is there any reason you'd want to use 'translate()' instead of 'absolute' positioning, or vice-versa? And why?`
+
   - Absolute : Great for positioning, affects nearby elements
     - Slower performance (CPU usage)
     - But, better Readability, Simplicity, Cross-browser Compatibility
   - Translate() : Great for animations, doesn't affect nearby elements
     - Better performance (GPU usage)
     - But, Complicated
+
+- `What are the pros and cons of using Promises instead of callbacks?`
+
+  - pros
+    - Avoid callback hell
+    - Makes it easy and readable to write sequential or parallel asynchronous code.(.then(), Promise.all())
+    - Mitigate issues like callback timing errors, parameter passing errors, and ignoring error occurrences that might happen with callbacks
+  - Cons
+    - In older browsers where ES2015 is not supported, you need to load a polyfill
+
+- `What is a closure, and how/why would you use one?`
+
+  - The combination of a function and the lexical environment within which that function was declared.
+  - Enable it to reference and modify values even after the context has ended.
+  - Why use ?
+    - for Data privacy (only certain function can change the state)
+  - How use ?
+    - An inner function referencing an outer identifier should be the outer function's 'return value'
+
+-
