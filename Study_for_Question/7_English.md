@@ -232,6 +232,22 @@
   - ::before, ::after, ::first-letter, ::first-line
 
 - `Describe 'z-index' and how stacking context is formed`
+
   - Without "z-index," lower elements are on top based on DOM order.
   - Higher "z-index" value brings forward, lower sends back.
   - "z-index" in a stacking context is relative, not affecting elements outside.
+
+- `What kind of things must you be wary of when designing or developing for multilingual sites?`
+
+  - Use the 'lang' attribute on the 'html' tag (For SEO)
+  - Consider language reading direction
+  - Consider differences in the length of text
+  - Don't concatenate translated strings
+  - Formatting dates and currencies
+  - Be mindful of how colors are perceived
+  - Do not put text in images
+
+- `Difference between: 'function Person(){}', 'var person = Person()', and 'var person = new Person()'?`
+  - 'function Person(){}' : Functions intended to be used as constructors (PascalCase).
+  - 'var person = Person()' : it calls the constructor function and returns 'undefined' without object instance,
+  - 'var person = new Person()' : it creates and assigns an object instance.
