@@ -274,4 +274,4 @@
   - Used to bypass cross-origin restrictions on Ajax requests from the current page.
   - Not recommended for security; CORS is preferred.
 
-- ``
+- `Explain the difference between mutable and immutable objects`
