@@ -248,6 +248,13 @@
   - Do not put text in images
 
 - `Difference between: 'function Person(){}', 'var person = Person()', and 'var person = new Person()'?`
+
   - 'function Person(){}' : Functions intended to be used as constructors (PascalCase).
   - 'var person = Person()' : it calls the constructor function and returns 'undefined' without object instance,
   - 'var person = new Person()' : it creates and assigns an object instance.
+
+- `Explain Ajax in as much detail as possible.`
+  - Ajax is web development technique that enables asynchronous communication between a web application and a server
+  - It doesn't require full page refresh for updates.
+  - JSON format is commonly used instead of XML.
+  - These days, the fetch API is used more frequently, between XMLHttpRequest and fetch API,
