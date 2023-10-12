@@ -275,3 +275,21 @@
   - Not recommended for security; CORS is preferred.
 
 - `Explain the difference between mutable and immutable objects`
+
+  - Object.defineProperty(obj, prop, {writable: false, configurable: false}): --> Add new property (O), Edit and Delete (X)
+  - Object.preventExtensions(obj): --> Add new property (X), Edit and Delete (O)
+  - Object.seal(obj): --> Add new property (X), Edit and Delete (X)
+  - Object.freeze(obj): --> Most Strict (Read only)
+
+  - Pros
+
+    - Easier change detection
+    - Less complicated
+    - Thread-safe
+    - No need for defensive copying
+
+  - Cons
+
+    - Complex to implement
+    - Potential negative performance by Allocation of many small objects
+    - Complexity for cyclic data structures (When 2 object have to be linked, Former one can't be editted)
