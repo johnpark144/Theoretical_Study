@@ -254,7 +254,24 @@
   - 'var person = new Person()' : it creates and assigns an object instance.
 
 - `Explain Ajax in as much detail as possible.`
+
   - Ajax is web development technique that enables asynchronous communication between a web application and a server
   - It doesn't require full page refresh for updates.
   - JSON format is commonly used instead of XML.
   - These days, the fetch API is used more frequently, between XMLHttpRequest and fetch API,
+
+- `Explain CSS sprites, and how you would implement them on a page or site.`
+
+  - CSS sprites combine multiple images into one large image file, using CSS to display specific parts of it as needed
+  - Using the CSS properties background-image, background-position, and background-size.
+  - Advantages
+    - Reduce the number of HTTP requests
+    - Prevent flickering from multiple image requests and pseudo-classes.
+
+- `Explain how JSONP works (and how it's not really Ajax)`
+
+  - Using the 'script' tag with the 'src' attribute to fetch data from a different domain.
+  - Used to bypass cross-origin restrictions on Ajax requests from the current page.
+  - Not recommended for security; CORS is preferred.
+
+- ``
