@@ -361,5 +361,11 @@
   - Normalize.css : Focus on correcting some differences between browsers
 
 - `What advantage is there for using the arrow syntax for a method in a constructor?`
+
   - Arrow functions keep the value of 'this' from their surroundings consistently, even with methods like call, apply, or bind.
   - This enhances code clarity and maintenance, especially in React class components.
+
+- `What are 'data-' attributes good for?`
+  - Data attributes (data-) has been commonly used to store extra data in the DOM, before JavaScript frameworks
+  - Not recommended anymore due to their easy modification through browser "Inspect"
+  - But It is useful for providing identifiers for end-to-end testing without adding unnecessary classes or IDs to the markup.
