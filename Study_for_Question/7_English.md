@@ -317,3 +317,18 @@
     - SEO challenges due to JavaScript reliance,
   - SEO-friendly Way
     - Server-side rendering or Prerender services.
+
+- `Have you ever used a grid system, and if so, what do you prefer?`
+
+  - "float"-based grid system was the most reliable until 2014,
+  - Now, 'flex' and 'grid' are more popular due to their ease and efficiency.
+  - "Flex" is one-dimensional, and "grid" is two-dimensional.
+
+- `How do you serve a page with content in multiple languages?`
+  - Order
+    - 1. Extract language preferences from the Accept-Language header
+    - 2. Provide content in the user's preferred language
+  - Use the lang attribute in the 'html' tag, like '<html lang="en">....' To inform the page's language.
+  - Use 'link' tags with rel="alternate" and hreflang="..." To link to the same content in different languages
+  - SSR --> Server dynamically generates the page
+  - CSR --> JS dynamically adds language-specific content while maintaining page structure.
