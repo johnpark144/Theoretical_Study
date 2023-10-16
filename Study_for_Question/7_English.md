@@ -293,3 +293,12 @@
     - Complex to implement
     - Potential negative performance by Allocation of many small objects
     - Complexity for cyclic data structures (When 2 object have to be linked, Former one can't be editted)
+
+- `Explain the differences on the usage of 'foo' between 'function foo() {}' and 'var foo = function() {}'`
+  - Function declarations
+    - Hoist their bodies
+    - Function can be called even if it comes before the function definition.
+  - Function expressions
+    - Hoist like variables
+    - Function should be called after the function definition.
+    - If before, variables hoisting is like (var --> undefined // let,const --> TDZ exist)
