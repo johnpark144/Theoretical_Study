@@ -352,4 +352,9 @@
     - download resources tailored to the detected device (Fast loading),
     - should manage multiple website
 
-- ``
+- `How would you approach fixing browser-specific styling issues?`
+  - Browser-specific Style Sheets (prefix)
+  - Autoprefixer
+  - Use libraries like Bootstrap
+  - Reset CSS : Reset default styles for different browsers
+  - Normalize.css : Focus on correcting some differences between browsers
