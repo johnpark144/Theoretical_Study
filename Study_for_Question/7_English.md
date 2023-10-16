@@ -295,6 +295,7 @@
     - Complexity for cyclic data structures (When 2 object have to be linked, Former one can't be editted)
 
 - `Explain the differences on the usage of 'foo' between 'function foo() {}' and 'var foo = function() {}'`
+
   - Function declarations
     - Hoist their bodies
     - Function can be called even if it comes before the function definition.
@@ -302,3 +303,17 @@
     - Hoist like variables
     - Function should be called after the function definition.
     - If before, variables hoisting is like (var --> undefined // let,const --> TDZ exist)
+
+- `Explain what a single page app is and how to make one SEO-friendly`
+
+  - SPA : Updating only the necessary parts using JavaScript on a single blank page
+  - Pros
+    - No flickering during page transitions
+    - Fewer HTTP requests (each page HTTP download is not needed)
+    - Clear separation of client and server
+  - Cons
+    - Heavier initial page load
+    - Additional server-side configuration step.
+    - SEO challenges due to JavaScript reliance,
+  - SEO-friendly Way
+    - Server-side rendering or Prerender services.
