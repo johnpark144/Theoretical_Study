@@ -353,8 +353,13 @@
     - should manage multiple website
 
 - `How would you approach fixing browser-specific styling issues?`
+
   - Browser-specific Style Sheets (prefix)
   - Autoprefixer
   - Use libraries like Bootstrap
   - Reset CSS : Reset default styles for different browsers
   - Normalize.css : Focus on correcting some differences between browsers
+
+- `What advantage is there for using the arrow syntax for a method in a constructor?`
+  - Arrow functions keep the value of 'this' from their surroundings consistently, even with methods like call, apply, or bind.
+  - This enhances code clarity and maintenance, especially in React class components.
