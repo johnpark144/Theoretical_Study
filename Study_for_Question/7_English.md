@@ -325,6 +325,7 @@
   - "Flex" is one-dimensional, and "grid" is two-dimensional.
 
 - `How do you serve a page with content in multiple languages?`
+
   - Order
     - 1. Extract language preferences from the Accept-Language header
     - 2. Provide content in the user's preferred language
@@ -332,3 +333,11 @@
   - Use 'link' tags with rel="alternate" and hreflang="..." To link to the same content in different languages
   - SSR --> Server dynamically generates the page
   - CSR --> JS dynamically adds language-specific content while maintaining page structure.
+
+- `How do you serve your pages for feature-constrained browsers?`
+  - Graceful degradation : Use modern browser features, disabling or replacing them in older browsers
+  - Progressive enhancement : Offers consistent functionality across all browsers with extra features for modern ones.
+  - caniuse.com
+  - Autoprefixer : Automatic vendor prefix insertion
+  - Modernizr : JS library for detecting HTML5 and CSS3 features and handling browser compatibility by providing alternative content or styles
+  - @support : for example --> If "@supports (display: flex)" supports, it can apply
