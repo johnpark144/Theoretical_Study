@@ -335,9 +335,21 @@
   - CSR --> JS dynamically adds language-specific content while maintaining page structure.
 
 - `How do you serve your pages for feature-constrained browsers?`
+
   - Graceful degradation : Use modern browser features, disabling or replacing them in older browsers
   - Progressive enhancement : Offers consistent functionality across all browsers with extra features for modern ones.
   - caniuse.com
   - Autoprefixer : Automatic vendor prefix insertion
   - Modernizr : JS library for detecting HTML5 and CSS3 features and handling browser compatibility by providing alternative content or styles
   - @support : for example --> If "@supports (display: flex)" supports, it can apply
+
+- `How is responsive design different from adaptive design?`
+
+  - Responsive
+    - Download all resources for both PC and mobile (Slow loading)
+    - can manage only one website
+  - Adaptive
+    - download resources tailored to the detected device (Fast loading),
+    - should manage multiple website
+
+- ``
