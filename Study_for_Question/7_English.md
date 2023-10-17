@@ -372,6 +372,7 @@
   - But It is useful for providing identifiers for end-to-end testing without adding unnecessary classes or IDs to the markup.
 
 - `What are the advantages/disadvantages of using CSS preprocessors?`
+
   - Advantages
     - CSS is made more maintainable
     - Simplify nested selectors
@@ -380,3 +381,24 @@
   - Disadvantages
     - Re-compilation time can be slow.
     - Compatibility issues may arise
+
+- `What are the differences between ES2015 class and ES5 function constructors?`
+
+  - Constructor Function:
+    - Can be called without "new" as a regular function.
+    - No inheritance keywords.
+    - Doesn't enforce strict mode by default.
+  - Class:
+    - Requires "new" and raises an error when called without it.
+    - Offers "extends" and "super" for inheritance.
+    - Automatically enforces strict mode in the class with no exceptions.
+
+- `What are the different ways to visually hide content (and make it available only for screen readers)?`
+
+  - Small size --> "width: 1px; height: 1px" (Using "width: 0; height; 0" is not recommended)
+  - Absolute positioning --> "position: absolute; left: -99999px"
+  - Text indentation --> "text-indent: -9999px"
+
+  - Incorrect ways ("display: none", "visibility: hidden", "'hidden' attribute")
+
+- ``
