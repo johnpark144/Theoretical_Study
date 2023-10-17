@@ -402,6 +402,12 @@
   - Incorrect ways ("display: none", "visibility: hidden", "'hidden' attribute")
 
 - `What is progressive rendering?`
+
   - To speed up webpage performance, specifically by displaying content as quickly as possible to enhance perceived load time.
   - Lazy loading of images : img tag -> loading="lazy"
   - Prioritizing visible content :" You can defer scripts or use events like DOMContentLoaded/load to load additional resources and content later."
+
+- `What is the definition of a higher-order function?`
+  - A higher-order function takes one or more functions as arguments or returns a function as its result.
+  - Simplify by eliminating conditions, loops, and variables for easy result generation.
+  - sort, forEach, map, filter, reduce, some, every, find
