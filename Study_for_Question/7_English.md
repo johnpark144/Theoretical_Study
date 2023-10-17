@@ -366,6 +366,17 @@
   - This enhances code clarity and maintenance, especially in React class components.
 
 - `What are 'data-' attributes good for?`
+
   - Data attributes (data-) has been commonly used to store extra data in the DOM, before JavaScript frameworks
   - Not recommended anymore due to their easy modification through browser "Inspect"
   - But It is useful for providing identifiers for end-to-end testing without adding unnecessary classes or IDs to the markup.
+
+- `What are the advantages/disadvantages of using CSS preprocessors?`
+  - Advantages
+    - CSS is made more maintainable
+    - Simplify nested selectors
+    - Use 'Mixins' and 'include' to generate repeated CSS.
+    - Efficient coding with conditionals and loops is possible.
+  - Disadvantages
+    - Re-compilation time can be slow.
+    - Compatibility issues may arise
