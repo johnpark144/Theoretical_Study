@@ -414,6 +414,7 @@
   - sort, forEach, map, filter, reduce, some, every, find
 
 - `What is '"use strict";' ?`
+
   - It Reduces mistakes from typos or grammar gaps, to create stable code.
   - Pros
     - Prevents accidental global variable creation
@@ -425,3 +426,7 @@
     - Miss many features familiar to some developers.
     - No more access to 'function.caller' and 'function.arguments'.
     - Concatenating scripts with different strict modes may cause issues.
+
+- `What's the difference between an "attribute" and a "property"?`
+  - Attribute : defined on the HTML markup (Static)
+  - Property : defined on the DOM (Dynamic)
