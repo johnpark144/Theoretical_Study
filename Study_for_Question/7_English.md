@@ -408,6 +408,20 @@
   - Prioritizing visible content :" You can defer scripts or use events like DOMContentLoaded/load to load additional resources and content later."
 
 - `What is the definition of a higher-order function?`
+
   - A higher-order function takes one or more functions as arguments or returns a function as its result.
   - Simplify by eliminating conditions, loops, and variables for easy result generation.
   - sort, forEach, map, filter, reduce, some, every, find
+
+- `What is '"use strict";' ?`
+  - It Reduces mistakes from typos or grammar gaps, to create stable code.
+  - Pros
+    - Prevents accidental global variable creation
+    - Raises exceptions when trying to delete undeletable properties
+    - Prevents from duplicate parameter names
+    - 'this' is 'undefined' in the global context
+    - Raises explicit errors for problematic code
+  - Cons
+    - Miss many features familiar to some developers.
+    - No more access to 'function.caller' and 'function.arguments'.
+    - Concatenating scripts with different strict modes may cause issues.
