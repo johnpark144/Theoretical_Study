@@ -1,14 +1,14 @@
 - `Describe the difference between '<script>', '<script async>' and '<script defer>'`
 
-  - <script>
+  - script
     - HTML parsing is blocked, when script is encountered
     - the script is fetched and executed immediately
     - HTML parsing continues after that
-  - <script async>
-    - common : the script is fetched alongside HTML parsing 
+  - script async
+    - common : the script is fetched alongside HTML parsing
     - difference : It runs when it's ready
-  - <script defer>
-    - common : the script is fetched alongside HTML parsing 
+  - script defer
+    - common : the script is fetched alongside HTML parsing
     - difference : It runs when HTML parsing is finished
 
 - `Explain how prototypal inheritance works`
@@ -428,5 +428,15 @@
     - Concatenating scripts with different strict modes may cause issues.
 
 - `What's the difference between an "attribute" and a "property"?`
+
   - Attribute : defined on the HTML markup (Static)
   - Property : defined on the DOM (Dynamic)
+
+- `What's the difference between feature detection, feature inference, and using the UA string?`
+  - Feature Detection (recommended)
+    - It checks if a browser supports specific code and runs different code based on support.
+    - Modernizr is representitive library
+  - Feature Inference (not recommended)
+    - It checks for a feature like feature detection but assumes support based on another function.
+  - UA(User Agent) String (not recommended)
+    - This is browser-reported string to identify the application type, including the web browser type.
