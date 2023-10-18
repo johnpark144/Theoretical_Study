@@ -443,8 +443,13 @@
     - This is a browser-reported string to identify the application type, including the web browser type.
 
 - `What's the difference between "resetting" and "normalizing" CSS?`
+
   - Resetting
     - removes default browser styles from elements
     - margins, paddings, and font sizes are standardized.
   - Normalizing
     - keeps useful default styles and fixes common browser bugs.
+
+- `Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?`
+  - 'Implicit Coupling', 'Memory Wastage', 'Increased Dependencies', 'Namespace Pollution' can happen
+  - Encapsulate variables with IIFE for local scoping
