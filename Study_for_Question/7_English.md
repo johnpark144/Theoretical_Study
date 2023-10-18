@@ -451,5 +451,14 @@
     - keeps useful default styles and fixes common browser bugs.
 
 - `Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?`
+
   - 'Implicit Coupling', 'Memory Wastage', 'Increased Dependencies', 'Namespace Pollution' can happen
   - Encapsulate variables with IIFE for local scoping
+
+- `Why you would use a 'srcset' attribute in an image tag?`
+  - It is to provide different images based on users' device display width
+  - High-quality for Retina, low-resolution for low-end devices (better performance, no data waste)
+  - The first value is the image name and the second is the image width
+  - x => Actual image width / device display width = closest 1x (regular), closest 2x (Retina)
+  - w => Input image width(w) should be closest with device display width
+  - ex) img srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 2000w" src="..." alt=""
