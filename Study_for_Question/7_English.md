@@ -433,10 +433,18 @@
   - Property : defined on the DOM (Dynamic)
 
 - `What's the difference between feature detection, feature inference, and using the UA string?`
+
   - Feature Detection (recommended)
     - It checks if a browser supports specific code and runs different code based on support.
     - Modernizr is representitive library
   - Feature Inference (not recommended)
     - It checks for a feature like feature detection but assumes support based on another function.
   - UA(User Agent) String (not recommended)
-    - This is browser-reported string to identify the application type, including the web browser type.
+    - This is a browser-reported string to identify the application type, including the web browser type.
+
+- `What's the difference between "resetting" and "normalizing" CSS?`
+  - Resetting
+    - removes default browser styles from elements
+    - margins, paddings, and font sizes are standardized.
+  - Normalizing
+    - keeps useful default styles and fixes common browser bugs.
