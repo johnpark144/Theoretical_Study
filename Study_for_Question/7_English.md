@@ -1,4 +1,4 @@
-- `Describe the difference between '<script>', '<script async>' and '<script defer>'`
+- `1. Describe the difference between '<script>', '<script async>' and '<script defer>'`
 
   - script
     - HTML parsing is blocked, when script is encountered
