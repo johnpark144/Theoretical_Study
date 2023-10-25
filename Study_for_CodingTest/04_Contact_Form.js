@@ -14,6 +14,7 @@ export default function App() {
   return (
     <form
       onSubmit={submitForm}
+      // e.target.action, e.target.method 로 전달됨
       action='https://www.greatfrontend.com/api/questions/contact-form'
       method='post'
     >
