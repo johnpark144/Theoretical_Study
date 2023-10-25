@@ -15,7 +15,7 @@ Array.prototype.myFilter = function (callbackFn, thisArg) {
   for (let k = 0; k < len; k++) {
     const kValue = this[k];
     // call의 첫째 인수는 this로 묶을 값, 둘째 부터는 callbackFn에 들어갈 인수
-    // Object.hasOwn() 는 첫째 인수 (배열)안에, 둘째 인수와 같은 숫자의 Index가 있는지 확인
+    // Object.hasOwn() 는 첫째 인수인 배열이나 객체 안에, 둘째 인수와 같은 값의 Index나 키(속성)값이 있는지 확인
     if (Object.hasOwn(this, k) && callbackFn.call(thisArg, kValue, k, this)) {
       results.push(kValue);
     }
