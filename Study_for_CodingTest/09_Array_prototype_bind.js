@@ -26,9 +26,7 @@ const john = {
 
 // ########### Solution #############################################################################
 Function.prototype.myBind = function (thisArg, ...argArray) {
-  return (...argArray2) => {
-    return this.apply(thisArg, [...argArray, ...argArray2]);
-  };
+  return (...argArray2) => this.apply(thisArg, argArray, argArray2);
 };
 
 const unboundGetAge = john.getAge;
