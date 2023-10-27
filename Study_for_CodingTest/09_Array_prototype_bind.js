@@ -10,7 +10,7 @@ const john = {
   getAge: function () {
     return this.age;
   },
-  greeting(prefix, message) {
+  greeting: function (prefix, message) {
     return `${prefix} ${this.name}, ${message}`;
   },
 };
