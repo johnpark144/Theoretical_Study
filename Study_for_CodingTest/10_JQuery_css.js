@@ -25,21 +25,14 @@ $('button').css('color'); // 'red'
 // ########### Solution #############################################################################
 export default function $(selector) {
   const buttonEl = document.querySelector(selector);
-
   return {
-    // this를 리턴해야 되서 화살표 함수X
-    css: function (prop, value) {
+    css: (prop, value) => {
       // 정해주는 value가 없으면, 단순 value 조회
       if (!value) {
-        if (!buttonEl) return undefined; // 매칭 X
-        return buttonEl.style[prop] === '' ? undefined : buttonEl.style[prop];
+        return buttonEl.style[prop] || undefined;
       }
       // 정해준 value 입력
-      if (buttonEl) {
-        buttonEl.style[prop] = value;
-      }
-
-      return this;
+      buttonEl.style[prop] = value;
     },
   };
 }
