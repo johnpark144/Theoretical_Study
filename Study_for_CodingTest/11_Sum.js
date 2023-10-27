@@ -8,7 +8,7 @@
 // ########### Solution 1 #############################################################################
 function _sum(numberA) {
   return (numberB) => {
-    return numberB === undefined ? numberA : sum(numberA + numberB);
+    return numberB === undefined ? numberA : _sum(numberA + numberB);
   };
 }
 
