@@ -26,8 +26,15 @@ const john = {
 
 // ########### Solution #############################################################################
 Function.prototype.myBind = function (thisArg, ...argArray) {
-  return (...argArray2) => this.apply(thisArg, argArray, argArray2);
+  return (...argArray2) => this.apply(thisArg, [...argArray, ...argArray2]);
 };
+
+// Function.prototype.myBind = function (thisArg, ...boundArgs) {
+//   const originalMethod = this;
+//   return function (...args) {
+//     return originalMethod.call(thisArg, ...boundArgs, ...args);
+//   };
+// };
 
 const unboundGetAge = john.getAge;
 console.log(unboundGetAge()); // undefined
