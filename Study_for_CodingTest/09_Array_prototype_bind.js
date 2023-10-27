@@ -25,10 +25,9 @@ const john = {
 // console.log(greeting('good morning!'));  // Mr. John, good morning!
 
 // ########### Solution #############################################################################
-Function.prototype.myBind = function (thisArg, ...boundArgs) {
-  const originalMethod = this;
-  return function (...args) {
-    return originalMethod.call(thisArg, ...boundArgs, ...args);
+Function.prototype.myBind = function (thisArg, ...argArray) {
+  return (...argArray2) => {
+    return this.apply(thisArg, [...argArray, ...argArray2]);
   };
 };
 
