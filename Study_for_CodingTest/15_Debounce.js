@@ -20,7 +20,7 @@ function debounce(func, wait) {
 
     // wait 만큼 기다리고 실행되지만 연속 실행되면 다음실행에서 clearTimeout 만나게 되있음
     timeoutId = setTimeout(() => {
-      timeoutId = null;
+      timeoutId = null; // 필수는 아니지만 해두는게 좋음
       func.apply(context, args); // this가 있으면 context.func(args) 처럼됨
     }, wait);
   };
