@@ -27,9 +27,11 @@ promiseAll([p3, p4]).then(console.log).catch(console.log);
 // ########### Solution #############################################################################
 function promiseAll(iterable) {
   return new Promise((resolve, reject) => {
-    // 배열이 빈 경우, 빈 배열 resolve 시키고 그냥 리턴
+    // iterable 개수와 그 개수에 맞는 빈 배열 생성
     let unresolved = iterable.length;
     const results = new Array(unresolved);
+
+    // 배열이 빈 경우, 빈 배열 resolve 시키고 그냥 리턴
     if (unresolved === 0) {
       resolve(results);
       return;
