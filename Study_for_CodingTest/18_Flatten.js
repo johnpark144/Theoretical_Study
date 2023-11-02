@@ -18,7 +18,7 @@
 // ########### Solution 1 (some) #############################################################################
 function flatten(value) {
   while (value.some(Array.isArray)) {
-    value = [].concat(...value);
+    value = [].concat(...value); // value = value.flat()로 바꿔도 됨
   }
   return value;
 }
