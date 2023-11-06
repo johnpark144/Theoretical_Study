@@ -47,10 +47,10 @@ console.log(
 
 // ########### Solution2 (정규표현식 대신) ###########################################################################
 function changeToCamelCase(str) {
-  let newMsg = str.toLowerCase().split('');
-  const idx = newMsg.indexOf('_');
+  let newStr = str.toLowerCase().split('');
+  const idx = newStr.indexOf('_');
   if (idx === -1) return str; // '_'가 없는경우
-  newMsg[idx + 1] = newMsg[idx + 1].toUpperCase();
-  newMsg.splice(idx, 1);
-  return newMsg.join('');
+  newStr[idx + 1] = newStr[idx + 1].toUpperCase();
+  newStr.splice(idx, 1);
+  return newStr.join('');
 }
