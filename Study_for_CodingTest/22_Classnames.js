@@ -19,12 +19,6 @@ function classNames(...args) {
 
     const argType = typeof arg;
 
-    // 문자열이나 숫자의 경우 배열에 바로 추가
-    if (argType === 'string' || argType === 'number') {
-      classes.push(arg);
-      return;
-    }
-
     // 배열인 경우, 비구조화하여 재귀함수 인수로 넣어 리턴값을 배열에 추가
     if (Array.isArray(arg)) {
       classes.push(classNames(...arg));
@@ -40,10 +34,14 @@ function classNames(...args) {
       }
       return;
     }
+
+    // 문자열이나 숫자의 경우 배열에 바로 추가
+    classes.push(arg);
   });
 
   return classes.join(' '); // 배열을 다시 문자열로
 }
+
 console.log(classNames('foo', 'bar'));
 console.log(classNames('foo', { bar: true }));
 console.log(classNames({ foo: true }, { bar: true }));
