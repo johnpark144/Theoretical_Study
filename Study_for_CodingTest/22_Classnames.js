@@ -17,8 +17,6 @@ function classNames(...args) {
       return;
     }
 
-    const argType = typeof arg;
-
     // 배열인 경우, 비구조화하여 재귀함수 인수로 넣어 리턴값을 배열에 추가
     if (Array.isArray(arg)) {
       classes.push(classNames(...arg));
@@ -26,9 +24,9 @@ function classNames(...args) {
     }
 
     // 객체인 경우, 객체에 key가 존재하고, value가 false가 아니면 배열에 key값 추가
-    if (argType === 'object') {
+    if (typeof arg === 'object') {
       for (const key in arg) {
-        if (Object.hasOwn(arg, key) && arg[key]) {
+        if (arg[key]) {
           classes.push(key);
         }
       }
